@@ -1,6 +1,7 @@
 ---
 import logo from '@assets/logo.svg';
-import arrow from '@assets/arrow.svg';
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
 ---
 
 <!doctype html>
@@ -16,38 +17,13 @@ import arrow from '@assets/arrow.svg';
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
   </head>
   <body class="flex flex-col">
-    <header class="container flex p-6">
-      <img src={logo.src} alt="" class="" />
-    </header>
+    <Header />
 
     <div class="container px-6 flex-1">
       <slot />
     </div>
 
-    <footer class="bg-black text-white flex flex-col px-6 py-10 gap-8">
-      <p class="text-2xl leading-8">Vamos conversar?</p>
-      <button class="bg-white rounded-full text-black py-4 px-12 inline-block w-fit">contato@gdallagnol.com</button>
-      <ul class="space-y-4">
-        <li>
-          <a href="#" class="flex justify-between">
-            LinkedIn
-            <button><img src={arrow.src} /></button>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="flex justify-between">
-            Behance
-            <button><img src={arrow.src} /></button>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="flex justify-between">
-            Medium
-            <button><img src={arrow.src} /></button>
-          </a>
-        </li>
-      </ul>
-    </footer>
+    <Footer />
   </body>
 </html>
 
