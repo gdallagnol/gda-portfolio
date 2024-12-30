@@ -4,7 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        foreground: '#666666',
+        'blue-black': '#1E283A',
+        'blue-gray': '#849499',
+        'cold-gray': '#374664',
       },
       fontFamily: {
         sans: ['Manrope', 'system-ui'],

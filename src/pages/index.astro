@@ -1,14 +1,19 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import About from '@components/About.astro';
+import { Tabs } from '@components/Tabs';
 ---
 
 <Layout>
-  <section>
-    <h1 class="text-4xl font-thin">
+  <section class="mb-10">
+    <h1 class="text-[2rem] leading-9 text-cold-gray">
       Designer que cria conexões entre
-      <span class="text-foreground block">pessoas, negócios e soluções estratégicas.</span>
+      <span class="text-blue-gray">pessoas, negócios e soluções estratégicas.</span>
     </h1>
   </section>
 
-  <main></main>
+  <main>
+    <Tabs client:load />
+    <About />
+  </main>
 </Layout>
