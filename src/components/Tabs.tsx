@@ -1,6 +1,6 @@
 import { Root, List, Trigger, Content } from '@radix-ui/react-tabs';
 import { Image } from 'astro:assets';
-// import pd1Apisul from '../assets/pd-1.png';
+import pd1Apisul from '../assets/pd-1.png';
 
 export function Tabs() {
   return (
@@ -25,24 +25,14 @@ export function Tabs() {
         </Trigger>
       </List>
       <Content className="mt-10" value="tab1">
-        {/* <p className="Text">Make changes to your account here. Click save when you're done.</p>
-        <fieldset className="Fieldset">
-          <label className="Label" htmlFor="name">
-            Name
-          </label>
-          <input className="Input" id="name" defaultValue="Pedro Duarte" />
-        </fieldset>
-        <fieldset className="Fieldset">
-          <label className="Label" htmlFor="username">
-            Username
-          </label>
-          <input className="Input" id="username" defaultValue="@peduarte" />
-        </fieldset>
-        <div style={{ display: 'flex', marginTop: 20, justifyContent: 'flex-end' }}>
-          <button className="Button green">Save changes</button>
-        </div> */}
-
-        {/* <Image src={pd1Apisul} alt="" class="my-class" /> */}
+        <div className="space-y-4">
+          <img src={pd1Apisul.src} alt="" className="" />
+          <p className="text-blue-gray text-sm font-extralight">Estratégia | UX & UI | Plataforma | B2B</p>
+          <p className="text-blue-gray font-light">Grupo Apisul</p>
+          <p className="text-cold-gray text-xl font-light">
+            Centralizando fluxos e dados em uma plataforma modular e intuitiva.
+          </p>
+        </div>
       </Content>
       <Content className="mt-10" value="tab2">
         <p className="Text">Change your password here. After saving, you'll be logged out.</p>

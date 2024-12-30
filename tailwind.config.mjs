@@ -7,6 +7,7 @@ export default {
         'blue-black': '#1E283A',
         'blue-gray': '#849499',
         'cold-gray': '#374664',
+        'lilac-blue': '#EDF4FD',
       },
       fontFamily: {
         sans: ['Manrope', 'system-ui'],
