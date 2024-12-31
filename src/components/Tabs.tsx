@@ -1,6 +1,16 @@
 import { Root, List, Trigger, Content } from '@radix-ui/react-tabs';
 import { Image } from 'astro:assets';
 import pd1Apisul from '../assets/pd-1.png';
+import pd2 from '../assets/pd-2.png';
+import pd3 from '../assets/pd-3.png';
+import pd4 from '../assets/pd-4.png';
+import brandingTaller from '../assets/branding/01-branding-taller.png';
+import brandingTechsens from '../assets/branding/02-branding-techsens.png';
+import brandingNoia from '../assets/branding/03-branding-noia.png';
+import brandingRancho from '../assets/branding/04-branding-rancho.png';
+import brandingPousada from '../assets/branding/05-branding-pousada.png';
+import brandingSilva from '../assets/branding/06-branding-silva.png';
+import brandingAmaterasu from '../assets/branding/07-branding-amaterasu.png';
 
 export function Tabs() {
   return (
@@ -24,7 +34,15 @@ export function Tabs() {
           BRANDING
         </Trigger>
       </List>
-      <Content className="mt-10" value="tab1">
+
+      {/* animating the Content component doesnt work properly */}
+      {/* try to wrap the content in a div, change opacity and then animate */}
+      {/* https://www.restack.io/p/radix-ui-tabs-animation-answer-cat-ai */}
+
+      <Content
+        className="mt-10 space-y-10 data-[state=inactive]:animate-fadeOut data-[state=inactive]:hidden data-[state=active]:animate-fadeIn"
+        value="tab1"
+      >
         <div className="space-y-4">
           <img src={pd1Apisul.src} alt="" className="" />
           <p className="text-blue-gray text-sm font-extralight">Estratégia | UX & UI | Plataforma | B2B</p>
@@ -33,29 +51,79 @@ export function Tabs() {
             Centralizando fluxos e dados em uma plataforma modular e intuitiva.
           </p>
         </div>
+
+        <div className="space-y-4">
+          <img src={pd2.src} alt="" className="" />
+          <p className="text-blue-gray text-sm font-extralight">UX & UI | Plataforma | B2B</p>
+          <p className="text-blue-gray font-light">Mais Nítido</p>
+          <p className="text-cold-gray text-xl font-light">
+            Possibilitando uma evolução profissional prática e fluída.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          <img src={pd3.src} alt="" className="" />
+          <p className="text-blue-gray text-sm font-extralight">UI | Website Desktop & Mobile</p>
+          <p className="text-blue-gray font-light">DBC</p>
+          <p className="text-cold-gray text-xl font-light">
+            Site para apresentar o novo posicionamento e marca de uma empresa de TI.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          <img src={pd4.src} alt="" className="" />
+          <p className="text-blue-gray text-sm font-extralight">UI | Website Desktop & Mobile</p>
+          <p className="text-blue-gray font-light">Grupo Apisul</p>
+          <p className="text-cold-gray text-xl font-light">Transformando dados em decisões estratégicas.</p>
+        </div>
       </Content>
-      <Content className="mt-10" value="tab2">
-        <p className="Text">Change your password here. After saving, you'll be logged out.</p>
-        <fieldset className="Fieldset">
-          <label className="Label" htmlFor="currentPassword">
-            Current password
-          </label>
-          <input className="Input" id="currentPassword" type="password" />
-        </fieldset>
-        <fieldset className="Fieldset">
-          <label className="Label" htmlFor="newPassword">
-            New password
-          </label>
-          <input className="Input" id="newPassword" type="password" />
-        </fieldset>
-        <fieldset className="Fieldset">
-          <label className="Label" htmlFor="confirmPassword">
-            Confirm password
-          </label>
-          <input className="Input" id="confirmPassword" type="password" />
-        </fieldset>
-        <div style={{ display: 'flex', marginTop: 20, justifyContent: 'flex-end' }}>
-          <button className="Button green">Change password</button>
+      <Content
+        className="mt-10 space-y-10 data-[state=inactive]:animate-fadeOut data-[state=inactive]:hidden data-[state=active]:animate-fadeIn"
+        value="tab2"
+      >
+        <div className="space-y-4">
+          <img src={brandingTaller.src} alt="" className="" />
+          <p className="text-blue-gray text-sm font-extralight">Identidade Visual</p>
+          <p className="text-blue-gray font-light">Taller Arquitetura</p>
+          <p className="text-cold-gray text-xl font-light">
+            Precisão e geometria no design de soluções arquitetônicas.
+          </p>
+        </div>
+        <div className="space-y-4">
+          <img src={brandingTechsens.src} alt="" className="" />
+          <p className="text-blue-gray text-sm font-extralight">Identidade Visual</p>
+          <p className="text-blue-gray font-light">techsens</p>
+          <p className="text-cold-gray text-xl font-light">Inovação e funcionalidade em automação.</p>
+        </div>
+        <div className="space-y-4">
+          <img src={brandingNoia.src} alt="" className="" />
+          <p className="text-blue-gray text-sm font-extralight">Identidade Visual</p>
+          <p className="text-blue-gray font-light">Nóia Gráfica</p>
+          <p className="text-cold-gray text-xl font-light">Conectando arte urbana e movimento independente.</p>
+        </div>
+        <div className="space-y-4">
+          <img src={brandingRancho.src} alt="" className="" />
+          <p className="text-blue-gray text-sm font-extralight">Identidade Visual</p>
+          <p className="text-blue-gray font-light">Rancho Raposo</p>
+          <p className="text-cold-gray text-xl font-light">Conceito de aconchego e tradição dos ranchos.</p>
+        </div>
+        <div className="space-y-4">
+          <img src={brandingPousada.src} alt="" className="" />
+          <p className="text-blue-gray text-sm font-extralight">Identidade Visual</p>
+          <p className="text-blue-gray font-light">Pousada da Rainha</p>
+          <p className="text-cold-gray text-xl font-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div className="space-y-4">
+          <img src={brandingSilva.src} alt="" className="" />
+          <p className="text-blue-gray text-sm font-extralight">Identidade Visual</p>
+          <p className="text-blue-gray font-light">Silva Schardong</p>
+          <p className="text-cold-gray text-xl font-light">Segurança e estabilidade na construção.</p>
+        </div>
+        <div className="space-y-4">
+          <img src={brandingAmaterasu.src} alt="" className="" />
+          <p className="text-blue-gray text-sm font-extralight">Identidade Visual</p>
+          <p className="text-blue-gray font-light">Amaterasu</p>
+          <p className="text-cold-gray text-xl font-light">Reflexão da elegância e mitologia japonesa no design.</p>
         </div>
       </Content>
     </Root>

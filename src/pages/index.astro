@@ -1,12 +1,10 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import About from '@components/About.astro';
 import { Tabs } from '@components/Tabs';
 ---
 
 <Layout>
-  <!-- <div class="container px-6 flex-1"> -->
-  <section class="mb-10">
+  <section class="mb-12">
     <h1 class="text-[2rem] leading-9 text-cold-gray font-light">
       Designer que cria conexões entre
       <span class="text-blue-gray">pessoas, negócios e soluções estratégicas.</span>
@@ -15,6 +13,5 @@ import { Tabs } from '@components/Tabs';
 
   <main>
     <Tabs client:load />
-    <!-- <About /> -->
   </main>
 </Layout>
