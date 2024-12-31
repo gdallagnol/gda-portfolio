@@ -1,17 +1,25 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import { Tabs } from '@components/Tabs';
+import backgroundGlass from '@assets/background-glass.png';
 ---
 
 <Layout>
-  <section class="mb-12">
-    <h1 class="text-[2rem] leading-9 text-cold-gray font-light">
-      Designer que cria conexões entre
+  <div class="hidden md:flex md:justify-end md:container md:pt-8 md:absolute lg:pt-24 lg:pr-16">
+    <img src={backgroundGlass.src} alt="" class="h-[30rem]" />
+    <!-- <p>oi</p> -->
+  </div>
+  <section class="mb-12 z-20 relative">
+    <h1
+      class="text-[2rem] leading-[2.5rem] text-cold-gray font-light md:text-[2.5rem] md:leading-[3.5rem] lg:text-[4rem] lg:leading-[5rem]"
+    >
+      Designer que cria <span class="whitespace-nowrap">conexões entre</span>
+      <br />
       <span class="text-blue-gray">pessoas, negócios e soluções estratégicas.</span>
     </h1>
   </section>
 
-  <main>
+  <main class="relative">
     <Tabs client:load />
   </main>
 </Layout>
