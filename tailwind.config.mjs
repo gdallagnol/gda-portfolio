@@ -8,6 +8,7 @@ export default {
         'blue-gray': '#849499',
         'cold-gray': '#374664',
         'lilac-blue': '#EDF4FD',
+        background: '#FAFAFF',
       },
       fontFamily: {
         sans: ['Manrope', 'system-ui'],
