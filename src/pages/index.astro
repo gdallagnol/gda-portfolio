@@ -5,11 +5,14 @@ import backgroundGlass from '@assets/background-glass.png';
 ---
 
 <Layout>
-  <div class="hidden md:flex md:justify-end md:container md:pt-8 md:absolute lg:pt-24 lg:pr-16">
-    <img src={backgroundGlass.src} alt="" class="h-[30rem]" />
-    <!-- <p>oi</p> -->
+  <div class="hidden md:block md:relative">
+    <img
+      src={backgroundGlass.src}
+      alt=""
+      class="md:absolute md:top-14 md:left-72 lg:top-48 lg:left-96 xl:top-24 xl:left-[30rem]"
+    />
   </div>
-  <section class="mb-12 z-20 relative">
+  <section class="mb-12">
     <h1
       class="text-[2rem] leading-[2.5rem] text-cold-gray font-light md:text-[2.5rem] md:leading-[3.5rem] lg:text-[4rem] lg:leading-[5rem]"
     >
@@ -19,7 +22,7 @@ import backgroundGlass from '@assets/background-glass.png';
     </h1>
   </section>
 
-  <main class="relative">
+  <main class="relative md:mt-28">
     <Tabs client:load />
   </main>
 </Layout>
