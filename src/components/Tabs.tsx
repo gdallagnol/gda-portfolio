@@ -52,7 +52,7 @@ export function Tabs() {
           </p>
         </div>
 
-        <div className="space-y-4">
+        {/* <div className="space-y-4">
           <img src={pd2.src} alt="" className="w-full" />
           <p className="text-blue-gray text-sm font-extralight">UX & UI | Plataforma | B2B</p>
           <p className="text-blue-gray font-light">Mais Nítido</p>
@@ -75,7 +75,7 @@ export function Tabs() {
           <p className="text-blue-gray text-sm font-extralight">UI | Website Desktop & Mobile</p>
           <p className="text-blue-gray font-light">Grupo Apisul</p>
           <p className="text-cold-gray text-xl font-light">Transformando dados em decisões estratégicas.</p>
-        </div>
+        </div> */}
       </Content>
       <Content
         className="mt-10 space-y-10 data-[state=inactive]:animate-fadeOut data-[state=inactive]:hidden data-[state=active]:animate-fadeIn"
