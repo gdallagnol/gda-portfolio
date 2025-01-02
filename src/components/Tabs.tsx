@@ -1,16 +1,15 @@
 import { Root, List, Trigger, Content } from '@radix-ui/react-tabs';
-import { Image } from 'astro:assets';
-import pd1Apisul from '../assets/pd-1.png';
-import pd2 from '../assets/pd-2.png';
-import pd3 from '../assets/pd-3.png';
-import pd4 from '../assets/pd-4.png';
-import brandingTaller from '../assets/branding/01-branding-taller.png';
-import brandingTechsens from '../assets/branding/02-branding-techsens.png';
-import brandingNoia from '../assets/branding/03-branding-noia.png';
-import brandingRancho from '../assets/branding/04-branding-rancho.png';
-import brandingPousada from '../assets/branding/05-branding-pousada.png';
-import brandingSilva from '../assets/branding/06-branding-silva.png';
-import brandingAmaterasu from '../assets/branding/07-branding-amaterasu.png';
+import pd1Apisul from '@assets/pd-1.png';
+import pd2 from '@assets/pd-2.png';
+import pd3 from '@assets/pd-3.png';
+import pd4 from '@assets/pd-4.png';
+import brandingTaller from '@assets/branding/01-branding-taller.png';
+import brandingTechsens from '@assets/branding/02-branding-techsens.png';
+import brandingNoia from '@assets/branding/03-branding-noia.png';
+import brandingRancho from '@assets/branding/04-branding-rancho.png';
+import brandingPousada from '@assets/branding/05-branding-pousada.png';
+import brandingSilva from '@assets/branding/06-branding-silva.png';
+import brandingAmaterasu from '@assets/branding/07-branding-amaterasu.png';
 
 export function Tabs() {
   return (
@@ -52,7 +51,7 @@ export function Tabs() {
           </p>
         </div>
 
-        {/* <div className="space-y-4">
+        <div className="space-y-4">
           <img src={pd2.src} alt="" className="w-full" />
           <p className="text-blue-gray text-sm font-extralight">UX & UI | Plataforma | B2B</p>
           <p className="text-blue-gray font-light">Mais Nítido</p>
@@ -75,7 +74,7 @@ export function Tabs() {
           <p className="text-blue-gray text-sm font-extralight">UI | Website Desktop & Mobile</p>
           <p className="text-blue-gray font-light">Grupo Apisul</p>
           <p className="text-cold-gray text-xl font-light">Transformando dados em decisões estratégicas.</p>
-        </div> */}
+        </div>
       </Content>
       <Content
         className="mt-10 space-y-10 data-[state=inactive]:animate-fadeOut data-[state=inactive]:hidden data-[state=active]:animate-fadeIn"
