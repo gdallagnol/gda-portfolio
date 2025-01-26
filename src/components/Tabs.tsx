@@ -42,14 +42,14 @@ export function Tabs() {
         className="mt-10 space-y-16 data-[state=inactive]:animate-fadeOut data-[state=inactive]:hidden data-[state=active]:animate-fadeIn"
         value="tab1"
       >
-        <div className="space-y-4">
+        <a className="space-y-4" href="/product-design/apisul">
           <img src={pd1Apisul.src} alt="" className="w-full" />
           <p className="text-blue-gray text-sm font-extralight">Estratégia | UX & UI | Plataforma | B2B</p>
           <p className="text-blue-gray font-light">Grupo Apisul</p>
           <p className="text-cold-gray text-xl font-light">
             Centralizando fluxos e dados em uma plataforma modular e intuitiva.
           </p>
-        </div>
+        </a>
 
         <div className="space-y-4">
           <img src={pd2.src} alt="" className="w-full" />
