@@ -1,20 +1,23 @@
 ---
 import logo from '@assets/logo.svg';
 import copy from '@assets/copy.svg';
+import Container from '@components/Container.astro';
 ---
 
-<header class="flex py-10 justify-between">
-  <img src={logo.src} alt="" class="" />
+<Container>
+  <header class="flex py-10 justify-between mb-8 lg:mb-32">
+    <img src={logo.src} alt="" class="" />
 
-  <p class="text-blue-black hidden md:block">Gabi Dall'Agnol</p>
-  <p class="text-blue-black hidden md:block">Designer</p>
+    <p class="text-blue-black hidden md:block">Gabi Dall'Agnol</p>
+    <p class="text-blue-black hidden md:block">Designer</p>
 
-  <button
-    class="flex items-center gap-2 w-auto h-8 px-3 text-sm py-1 border rounded-md cursor-pointer font-light text-blue-gray
+    <button
+      class="flex items-center gap-2 w-auto h-8 px-3 text-sm py-1 border rounded-md cursor-pointer font-light text-blue-gray
      border-neutral-200/60 hover:bg-neutral-100 hover:text-neutral-600"
-  >
-    <span>contato@gdallagnol.com</span>
+    >
+      <span>contato@gdallagnol.com</span>
 
-    <img src={copy.src} />
-  </button>
-</header>
+      <img src={copy.src} />
+    </button>
+  </header>
+</Container>
