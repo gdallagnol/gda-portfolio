@@ -1,28 +1,36 @@
 ---
 import arrow from '@assets/arrow.svg';
+import Container from './Container.astro';
 ---
 
-<footer class="bg-cold-gray text-white flex flex-col px-6 py-10 gap-8">
-  <p class="text-2xl leading-8">Vamos conversar?</p>
-  <button class="bg-white rounded-full text-cold-gray py-4 px-12 inline-block w-fit">contato@gdallagnol.com</button>
-  <ul class="space-y-4">
-    <li>
-      <a href="#" class="flex justify-between">
-        LinkedIn
-        <img src={arrow.src} alt="" />
-      </a>
-    </li>
-    <li>
-      <a href="#" class="flex justify-between">
-        Behance
-        <img src={arrow.src} alt="" />
-      </a>
-    </li>
-    <li>
-      <a href="#" class="flex justify-between">
-        Medium
-        <img src={arrow.src} alt="" />
-      </a>
-    </li>
-  </ul>
+<footer class="bg-cold-gray text-white">
+  <Container>
+    <div class="flex flex-col px-6 py-10 gap-8 md:flex-row md:justify-between md:px-12 md:py-16">
+      <div>
+        <p class="text-2xl leading-8 mb-4 lg:text-4xl">Vamos conversar?</p>
+        <button class="text-white inline-block w-fit underline">contato@gdallagnol.com</button>
+      </div>
+
+      <ul class="space-y-4 md:space-y-6">
+        <li>
+          <a href="https://linkedin.com/in/gabriela-dall-agnol" target="_blank" class="flex justify-between md:gap-12">
+            LinkedIn
+            <img src={arrow.src} alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.behance.net/gabrieladallagnol" target="_blank" class="flex justify-between md:gap-12">
+            Behance
+            <img src={arrow.src} alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="https://medium.com/@gdallagnol" target="_blank" class="flex justify-between md:gap-12">
+            Medium
+            <img src={arrow.src} alt="" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </Container>
 </footer>
