@@ -1,0 +1,237 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Container from '@components/Container.astro';
+import { Image } from 'astro:assets';
+
+import img1 from '@assets/pd/mais-nitido/01.png';
+import img2 from '@assets/pd/mais-nitido/02.png';
+import img3 from '@assets/pd/mais-nitido/03.png';
+import img4 from '@assets/pd/mais-nitido/04.png';
+import img5 from '@assets/pd/mais-nitido/05.png';
+import img6 from '@assets/pd/mais-nitido/06.png';
+import img7 from '@assets/pd/mais-nitido/07.png';
+import img8 from '@assets/pd/mais-nitido/08.png';
+import img9 from '@assets/pd/mais-nitido/09.png';
+import img10 from '@assets/pd/mais-nitido/10.png';
+import img11 from '@assets/pd/mais-nitido/11.png';
+import img12 from '@assets/pd/mais-nitido/12.png';
+import img13 from '@assets/pd/mais-nitido/13.png';
+import img14 from '@assets/pd/mais-nitido/14.png';
+import img15 from '@assets/pd/mais-nitido/15.png';
+---
+
+<Layout>
+  <Container>
+    <section class="mb-12 flex flex-col gap-6 md:flex-row md:gap-24">
+      <div>
+        <p class="text-blue-gray mb-3 font-light text-lg">Segmento</p>
+        <p class="text-cold-gray text-lg">Mentoria Executiva e Profissional</p>
+      </div>
+      <div>
+        <p class="text-blue-gray mb-3 font-light text-lg">Cliente</p>
+        <p class="text-cold-gray text-lg">Mais Nítido</p>
+      </div>
+      <div>
+        <p class="text-blue-gray mb-3 font-light text-lg">Ano</p>
+        <p class="text-cold-gray text-lg">2024</p>
+      </div>
+    </section>
+
+    <main class="relative space-y-20 mb-24 md:mt-28">
+      <div class="">
+        <h1
+          class="text-[2rem] leading-[2.8rem] text-cold-gray font-light md:text-[2.5rem] md:leading-[3.5rem] lg:text-[4rem] lg:leading-[5rem]"
+        >
+          Mais Nítido
+        </h1>
+
+        <h2
+          class="text-[2rem] leading-[2.8rem] text-blue-gray font-light md:text-[2.5rem] md:leading-[3.5rem] lg:text-[4rem] lg:leading-[5rem]"
+        >
+          Conexão de pessoas a partir de conhecimentos e habilidades,
+          <span class="sm:whitespace-nowrap">dentro e fora das organizações.</span>
+        </h2>
+      </div>
+
+      <Image src={img1} alt="" class="rounded-3xl" />
+
+      <section>
+        <div class="flex flex-col mb-10 md:flex-row md:justify-between">
+          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">O desafio</h2>
+          <p class="text-cold-gray leading-7 md:basis-2/3 xl:basis-1/2">
+            As principais soluções de educação e treinamento são pouco aderentes pois não entregam aprendizado
+            personalizado.
+            <br />
+            Como podemos promover a troca de conhecimento para profissionais que buscam um aprendizado leve e personalizado,
+            propondo solução com bom custo-benefício em termos de tempo e aplicabilidade?
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="flex flex-col md:flex-row md:justify-between">
+          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Insights das pesquisas</h2>
+          <div class="md:basis-2/3 xl:basis-1/2">
+            <p class="text-cold-gray leading-7">
+              Por meio de pesquisas primárias e secundárias, chegamos em algumas hipóteses para a construção da nossa
+              solução.
+            </p>
+            <ul class="text-cold-gray leading-7 mt-10 space-y-8 list-inside">
+              <li
+                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
+              >
+                Na maioria das vezes em que as empresas de mentoria são contatadas, os gestores já chegam com resultados
+                prontos do que querem atingir, como desempenho em projetos/comercial, engajamento. Então as mentorias
+                são formatadas seguindo essas orientações primariamente, para em segundo plano considerarem as
+                necessidades dos mentorados;
+              </li>
+              <li
+                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
+              >
+                É importante entregar a visibilidade da curva de aprendizagem para o RH e para o mentorado;
+              </li>
+              <li
+                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
+              >
+                Considerar em algum nível a conexão do mentorado com os desafios da empresa/estratégia e entender como
+                isso pode acontecer na prática.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="flex flex-col md:flex-row md:justify-between">
+          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Conheça o Mais Nítido</h2>
+          <div class="md:basis-2/3 xl:basis-1/2">
+            <p class="text-cold-gray leading-7">
+              Um SaaS B2B para evolução de profissionais. As mentorias economizam tempo e agilizam o aprendizado em
+              relação a cursos, treinamentos, palestras e consultorias.
+            </p>
+            <ul class="text-cold-gray leading-7 mt-10 space-y-8 list-inside">
+              <li
+                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
+              >
+                Mapeamento de ofertas e demandas de conhecimento;
+              </li>
+              <li
+                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
+              >
+                Compreensão e organização das expertises internas;
+              </li>
+              <li
+                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
+              >
+                Oferta de benefícios reais para a aprendizagem;
+              </li>
+              <li
+                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
+              >
+                Ampliação do networking dos colaboradores;
+              </li>
+              <li
+                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
+              >
+                Estímulo ao interesse pelo desenvolvimento pessoal;
+              </li>
+              <li
+                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
+              >
+                Aumento da retenção de talentos;
+              </li>
+              <li
+                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
+              >
+                Promoção do intercâmbio entre os colaboradores e mentores externos.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="flex flex-col md:flex-row md:justify-between">
+          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Objetivos</h2>
+
+          <div class="space-y-6 md:basis-2/3 xl:basis-1/2">
+            <p class="text-xl text-cold-gray mb-4">
+              Desenvolver um MVP com objetivo de criar uma ferramenta para promover a mentoria dentro da empresa com
+              mentores internos (colaboradores) e externos.
+            </p>
+
+            <p class="text-xl text-cold-gray mb-4">
+              🎯 Oferecer inteligência para conexões relevantes de qualidade a partir da ciência do match (Conjunto de
+              perguntas-chave para mapear estilo, desejos, necessidades).
+            </p>
+
+            <p class="text-xl text-cold-gray mb-4">
+              👨‍💻 Promover a aprendizagem para valorização da carreira por meio de mentorias online.
+            </p>
+
+            <p class="text-xl text-cold-gray mb-4">
+              🤝 Incentivar os colaboradores de empresas a serem mentores e mentorados.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="space-y-14">
+        <Image src={img2} alt="" class="rounded-3xl" />
+        <Image src={img3} alt="" class="rounded-3xl" />
+        <Image src={img5} alt="" class="rounded-3xl" />
+        <Image src={img6} alt="" class="rounded-3xl" />
+        <Image src={img7} alt="" class="rounded-3xl" />
+        <Image src={img8} alt="" class="rounded-3xl" />
+        <Image src={img9} alt="" class="rounded-3xl" />
+        <Image src={img10} alt="" class="rounded-3xl" />
+        <Image src={img11} alt="" class="rounded-3xl" />
+        <Image src={img12} alt="" class="rounded-3xl" />
+        <Image src={img13} alt="" class="rounded-3xl" />
+        <Image src={img14} alt="" class="rounded-3xl" />
+        <Image src={img15} alt="" class="rounded-3xl" />
+      </div>
+
+      <section>
+        <div class="flex flex-col md:flex-row md:justify-between md:gap-4">
+          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Resultados e aprendizados</h2>
+          <p class="text-cold-gray leading-7 md:basis-2/3 xl:basis-1/2">
+            Com o desenvolvimento da plataforma (responsiva - desktop e mobile) com apoio da Vista/pub e a realização de
+            testes de usabilidade moderados e remotos via Google Meet, além da observação do comportamento dos usuários
+            via Microsoft Clarity, foram realizadas diversas atualizações na interface e na experiência para melhorar a
+            usabilidade e lançar o produto no mercado.
+            <br />
+            O Mais Nítido é um produto digital que passará por evolução contínua, com diversas possibilidades de adaptação
+            dependendo do contexto da empresa contratante.
+          </p>
+        </div>
+
+        <!-- carrossel -->
+      </section>
+
+      <section>
+        <div class="flex flex-col md:flex-row md:justify-between md:gap-4">
+          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Ferramentas</h2>
+          <div class="space-y-8 md:basis-2/3 xl:basis-1/2">
+            <p class="text-cold-gray leading-7">Google Forms</p>
+            <p class="text-cold-gray leading-7">Figma</p>
+            <p class="text-cold-gray leading-7">Miro</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="flex flex-col md:flex-row md:justify-between md:gap-4">
+          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">A Equipe</h2>
+          <div class="space-y-8 md:basis-2/3 xl:basis-1/2">
+            <p class="text-cold-gray leading-7">Aron Krause Litvin (Inovação e Design Estratégico)</p>
+            <p class="text-cold-gray leading-7">Clara Celina (Research)</p>
+            <p class="text-cold-gray leading-7">Daniel Caminha (Founder e Psicólogo)</p>
+            <p class="text-cold-gray leading-7">Gabriela Dall’Agnol (Coordenadora e Product Designer)</p>
+            <p class="text-cold-gray leading-7">Lucas Weinmann (Vistapub. - No Code Developer & Designer)</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </Container>
+</Layout>

@@ -39,10 +39,10 @@ export function Tabs() {
       {/* https://www.restack.io/p/radix-ui-tabs-animation-answer-cat-ai */}
 
       <Content
-        className="mt-10 space-y-16 data-[state=inactive]:animate-fadeOut data-[state=inactive]:hidden data-[state=active]:animate-fadeIn"
+        className="mt-10 space-y-20 data-[state=inactive]:animate-fadeOut data-[state=inactive]:hidden data-[state=active]:animate-fadeIn"
         value="tab1"
       >
-        <a className="space-y-4" href="/product-design/apisul">
+        <a className="space-y-4 block" href="/product-design/apisul">
           <img src={pd1Apisul.src} alt="" className="w-full" />
           <p className="text-blue-gray text-sm font-extralight">Estratégia | UX & UI | Plataforma | B2B</p>
           <p className="text-blue-gray font-light">Grupo Apisul</p>
@@ -51,14 +51,14 @@ export function Tabs() {
           </p>
         </a>
 
-        <div className="space-y-4">
+        <a className="space-y-4" href="/product-design/mais-nitido">
           <img src={pd2.src} alt="" className="w-full" />
           <p className="text-blue-gray text-sm font-extralight">UX & UI | Plataforma | B2B</p>
           <p className="text-blue-gray font-light">Mais Nítido</p>
           <p className="text-cold-gray text-xl font-light">
             Possibilitando uma evolução profissional prática e fluída.
           </p>
-        </div>
+        </a>
 
         <div className="space-y-4">
           <img src={pd3.src} alt="" className="w-full" />
