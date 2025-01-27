@@ -3,7 +3,9 @@ import pd1Apisul from '@assets/pd-1.png';
 import pd2 from '@assets/pd-2.png';
 import pd3 from '@assets/pd-3.png';
 import pd4 from '@assets/pd-4.png';
+
 import brandingTaller from '@assets/branding/taller/home.png';
+
 import brandingTechsensSquare from '@assets/branding/techsens/home-square.png';
 import brandingTechsensWide from '@assets/branding/techsens/home-wide.png';
 
@@ -63,7 +65,7 @@ export function Tabs() {
           </p>
         </a>
 
-        <a className="space-y-4" href="/product-design/mais-nitido">
+        <a className="space-y-4 block" href="/product-design/mais-nitido">
           <img src={pd2.src} alt="" className="w-full rounded-2xl" />
           <p className="text-blue-gray text-sm font-extralight">UX & UI | Plataforma | B2B</p>
           <p className="text-blue-gray font-light">Mais Nítido</p>
@@ -72,7 +74,7 @@ export function Tabs() {
           </p>
         </a>
 
-        <a className="space-y-4" href="/product-design/dbc">
+        <a className="space-y-4 block" href="/product-design/dbc">
           <img src={pd3.src} alt="" className="w-full rounded-2xl" />
           <p className="text-blue-gray text-sm font-extralight">UI | Website Desktop & Mobile</p>
           <p className="text-blue-gray font-light">DBC</p>
@@ -81,7 +83,7 @@ export function Tabs() {
           </p>
         </a>
 
-        <a className="space-y-4" href="/product-design/apisul-web">
+        <a className="space-y-4 block" href="/product-design/apisul-web">
           <img src={pd4.src} alt="" className="w-full rounded-2xl" />
           <p className="text-blue-gray text-sm font-extralight">UI | Website Desktop & Mobile</p>
           <p className="text-blue-gray font-light">Grupo Apisul</p>
