@@ -56,7 +56,7 @@ export function Tabs() {
         className="mt-10 space-y-20 data-[state=inactive]:animate-fadeOut data-[state=inactive]:hidden data-[state=active]:animate-fadeIn"
         value="tab1"
       >
-        <a className="space-y-4 block mb-20" href="/product-design/apisul">
+        <a className="space-y-4 block mb-20" href="/gda-portfolio/product-design/apisul">
           <img src={pd1Apisul.src} alt="" className="w-full rounded-2xl" />
           <p className="text-blue-gray text-sm font-extralight">Estratégia | UX & UI | Plataforma | B2B</p>
           <p className="text-blue-gray font-light">Grupo Apisul</p>
@@ -65,7 +65,7 @@ export function Tabs() {
           </p>
         </a>
 
-        <a className="space-y-4 block" href="/product-design/mais-nitido">
+        <a className="space-y-4 block" href="/gda-portfolio/product-design/mais-nitido">
           <img src={pd2.src} alt="" className="w-full rounded-2xl" />
           <p className="text-blue-gray text-sm font-extralight">UX & UI | Plataforma | B2B</p>
           <p className="text-blue-gray font-light">Mais Nítido</p>
@@ -74,7 +74,7 @@ export function Tabs() {
           </p>
         </a>
 
-        <a className="space-y-4 block" href="/product-design/dbc">
+        <a className="space-y-4 block" href="/gda-portfolio/product-design/dbc">
           <img src={pd3.src} alt="" className="w-full rounded-2xl" />
           <p className="text-blue-gray text-sm font-extralight">UI | Website Desktop & Mobile</p>
           <p className="text-blue-gray font-light">DBC</p>
@@ -83,7 +83,7 @@ export function Tabs() {
           </p>
         </a>
 
-        <a className="space-y-4 block" href="/product-design/apisul-web">
+        <a className="space-y-4 block" href="/gda-portfolio/product-design/apisul-web">
           <img src={pd4.src} alt="" className="w-full rounded-2xl" />
           <p className="text-blue-gray text-sm font-extralight">UI | Website Desktop & Mobile</p>
           <p className="text-blue-gray font-light">Grupo Apisul</p>
@@ -96,7 +96,7 @@ export function Tabs() {
         className="mt-10 space-y-20 data-[state=inactive]:animate-fadeOut data-[state=inactive]:hidden data-[state=active]:animate-fadeIn"
         value="tab2"
       >
-        <a className="block space-y-4" href="/branding/taller">
+        <a className="block space-y-4" href="/gda-portfolio/branding/taller">
           <img src={brandingTaller.src} alt="" className="rounded-2xl" />
           <p className="text-blue-gray text-sm font-extralight">Identidade Visual</p>
           <p className="text-blue-gray font-light">Taller Arquitetura</p>
@@ -106,7 +106,7 @@ export function Tabs() {
         </a>
 
         <div className="flex flex-col gap-20 md:flex-row md:gap-6 md:justify-between">
-          <a className="block space-y-4" href="/branding/techsens">
+          <a className="block space-y-4" href="/gda-portfolio/branding/techsens">
             <picture>
               <source srcSet={brandingTechsensSquare.src} media="(min-width: 768px)" />
               <source srcSet={brandingTechsensWide.src} media="(max-width: 767px)" />
@@ -118,7 +118,7 @@ export function Tabs() {
             <p className="text-cold-gray text-xl font-light">Inovação e funcionalidade em automação.</p>
           </a>
 
-          <a className="block space-y-4" href="/branding/noia-grafica">
+          <a className="block space-y-4" href="/gda-portfolio/branding/noia-grafica">
             <picture>
               <source srcSet={brandingNoiaSquare.src} media="(min-width: 768px)" />
               <source srcSet={brandingNoiaWide.src} media="(max-width: 767px)" />
@@ -131,7 +131,7 @@ export function Tabs() {
         </div>
 
         <div className="flex flex-col gap-20 md:flex-row md:gap-6 md:justify-between">
-          <a className="block space-y-4" href="/branding/rancho-raposo">
+          <a className="block space-y-4" href="/gda-portfolio/branding/rancho-raposo">
             <picture>
               <source srcSet={brandingRanchoSquare.src} media="(min-width: 768px)" />
               <source srcSet={brandingRanchoWide.src} media="(max-width: 767px)" />
@@ -143,7 +143,7 @@ export function Tabs() {
             <p className="text-cold-gray text-xl font-light">Conceito de aconchego e tradição dos ranchos.</p>
           </a>
 
-          <a className="block space-y-4" href="/branding/pousada-rainha">
+          <a className="block space-y-4" href="/gda-portfolio/branding/pousada-rainha">
             <picture>
               <source srcSet={brandingPousadaSquare.src} media="(min-width: 768px)" />
               <source srcSet={brandingPousadaWide.src} media="(max-width: 767px)" />
@@ -155,7 +155,7 @@ export function Tabs() {
           </a>
         </div>
         <div className="flex flex-col gap-20 md:flex-row md:gap-6 md:justify-between">
-          <a className="block space-y-4" href="/branding/silva-schardong">
+          <a className="block space-y-4" href="/gda-portfolio/branding/silva-schardong">
             <picture>
               <source srcSet={brandingSilvaSquare.src} media="(min-width: 768px)" />
               <source srcSet={brandingSilvaWide.src} media="(max-width: 767px)" />
@@ -166,7 +166,7 @@ export function Tabs() {
             <p className="text-cold-gray text-xl font-light">Segurança e estabilidade na construção.</p>
           </a>
 
-          <a className="block space-y-4" href="/branding/amaterasu">
+          <a className="block space-y-4" href="/gda-portfolio/branding/amaterasu">
             <picture>
               <source srcSet={brandingAmaterasuSquare.src} media="(min-width: 768px)" />
               <source srcSet={brandingAmaterasuWide.src} media="(max-width: 767px)" />
