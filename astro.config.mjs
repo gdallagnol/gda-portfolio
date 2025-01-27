@@ -11,5 +11,5 @@ export default defineConfig({
     open: true,
   },
   site: 'https://rafael-ac.github.io',
-  // base: 'gda-portfolio',
+  base: 'gda-portfolio',
 });
