@@ -1,20 +1,17 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import Container from '@components/Container.astro';
+
 import { Image } from 'astro:assets';
 
-import img1 from '@assets/pd/apisul/01.png';
-import img1_1 from '@assets/pd/apisul/01-1.png';
-import img2 from '@assets/pd/apisul/02.png';
-import img3 from '@assets/pd/apisul/03.png';
-import img5 from '@assets/pd/apisul/05.png';
-import img6 from '@assets/pd/apisul/06.png';
-import img7 from '@assets/pd/apisul/07.png';
-import img8 from '@assets/pd/apisul/08.png';
-import img9 from '@assets/pd/apisul/09.png';
-import img10 from '@assets/pd/apisul/10.png';
-import img11 from '@assets/pd/apisul/11.png';
-import img12 from '@assets/pd/apisul/12.png';
-import Container from '@components/Container.astro';
+import img1 from '@assets/branding/noia/01.gif';
+import img2 from '@assets/branding/noia/02.webp';
+import img3 from '@assets/branding/noia/03.webp';
+import img4 from '@assets/branding/noia/04.webp';
+import img5 from '@assets/branding/noia/05.webp';
+import img6 from '@assets/branding/noia/06.webp';
+import img7 from '@assets/branding/noia/07.webp';
+import img8 from '@assets/branding/noia/08.webp';
 ---
 
 <Layout>
@@ -22,15 +19,15 @@ import Container from '@components/Container.astro';
     <section class="mb-12 flex flex-col gap-6 md:flex-row md:gap-24">
       <div>
         <p class="text-blue-gray mb-3 font-light text-lg">Segmento</p>
-        <p class="text-cold-gray text-lg">Transporte e Logística</p>
+        <p class="text-cold-gray text-lg">Cultura</p>
       </div>
       <div>
         <p class="text-blue-gray mb-3 font-light text-lg">Cliente</p>
-        <p class="text-cold-gray text-lg">Noia</p>
+        <p class="text-cold-gray text-lg">Nóia Gráfica</p>
       </div>
       <div>
         <p class="text-blue-gray mb-3 font-light text-lg">Ano</p>
-        <p class="text-cold-gray text-lg">2023</p>
+        <p class="text-cold-gray text-lg">2024</p>
       </div>
     </section>
 
@@ -39,170 +36,38 @@ import Container from '@components/Container.astro';
         <h1
           class="text-[2rem] leading-[2.8rem] text-cold-gray font-light md:text-[2.5rem] md:leading-[3.5rem] lg:text-[4rem] lg:leading-[5rem]"
         >
-          Plataforma Apisul
+          Nóia Gráfica
         </h1>
-
-        <h2
-          class="text-[2rem] leading-[2.8rem] text-blue-gray font-light md:text-[2.5rem] md:leading-[3.5rem] lg:text-[4rem] lg:leading-[5rem]"
-        >
-          Integração de soluções <span class="sm:whitespace-nowrap">para transporte de carga.</span>
-        </h2>
       </div>
 
       <Image src={img1} alt="" class="rounded-3xl" />
 
       <section>
         <div class="flex flex-col mb-10 md:flex-row md:justify-between">
-          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">O desafio</h2>
+          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Conceito</h2>
           <p class="text-cold-gray leading-7 md:basis-2/3 xl:basis-1/2">
-            O Grupo Apisul oferece soluções em seguros, gerenciamento de risco, logística, meios de pagamento e
-            sinistros. Porém, a separação em plataformas distintas complica a contratação e implantação, além de
-            dispersar dados dos clientes. Diante da demanda do mercado por centralização, agilidade e eficiência, como
-            podemos construir um ecossistema integrado de soluções para o Grupo Apisul que permita aos clientes
-            contratar módulos de forma mais rápida e assertiva em uma única plataforma?
+            A identidade visual da Nóia Gráfica 2 foi desenvolvida para o evento realizado nos dias 7 e 8 de setembro de
+            2024, na Casa das Artes, em Novo Hamburgo. Inspirada na estética da arte urbana dos anos 90, a linguagem
+            gráfica foi construída com formas simples e uma paleta monocromática de alto contraste, utilizando cores
+            frequentemente associadas à serigrafia. Esses elementos reforçam a conexão com o universo independente.
+            <br />
+            <br />
+            O design foi aplicado em diversos materiais, como cartazes, sinalização e peças digitais, garantindo uma comunicação
+            visual coesa e impactante. A identidade refletiu o espírito criativo da feira, que reuniu artistas independentes
+            em exposições, bate-papos e oficinas.
           </p>
         </div>
-
-        <Image src={img1_1} alt="" class="rounded-3xl" />
       </section>
 
-      <section>
-        <div class="flex flex-col md:flex-row md:justify-between">
-          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Insights das pesquisas</h2>
-          <div class="md:basis-2/3 xl:basis-1/2">
-            <p class="text-cold-gray leading-7">
-              Para entendermos a operação da Apisul foram realizadas diversas entrevistas em profundidade com executivos
-              das áreas, colaboradores da operação e clientes externos (transportadoras de diversos portes e localização
-              + embarcadores). Para análise de mercado, foi feita uma desk research com aprofundamento em dados do
-              segmento, tendências de tecnologia, benchmark dos principais concorrentes e a visão de intérpretes de
-              mercado por meio de entrevistas (fundadores de insurtechs consagradas no mercado).
-            </p>
-            <ul class="text-cold-gray leading-7 mt-10 space-y-8 list-inside">
-              <li
-                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
-              >
-                Clientes do Grupo Apisul valorizam profundamente identificar oportunidades de melhoria nas operações e
-                esperam soluções práticas nos sistemas digitais.
-              </li>
-              <li
-                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
-              >
-                Apenas 5% das empresas utilizam inteligência de dados nos negócios, segundo a TOTVS, mostrando um
-                potencial para a Apisul se destacar ao ajudar na redução de custos e sinistros. (Fonte: ABRALOG)
-              </li>
-              <li
-                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
-              >
-                O mercado de Insurtech cresce 53,5% ao ano, com previsão de atingir US$ 264,9 bilhões até 2032,
-                evidenciando a maturidade do setor em soluções 100% digitais. (Fonte: Market Research Future)
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="flex flex-col md:flex-row md:justify-between">
-          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Objetivos</h2>
-
-          <div class="space-y-6 md:basis-2/3 xl:basis-1/2">
-            <section>
-              <h3 class="text-xl text-cold-gray mb-4">🔗 Promover a integração das soluções</h3>
-              <p class="text-cold-gray leading-7">
-                Unificar os produtos e serviços em uma plataforma de produto com uma segmentação de uso intuitiva
-                conforme o comportamento do cliente, para que o foco na contratação seja a necessidade do cliente.
-              </p>
-            </section>
-
-            <section>
-              <h3 class="text-xl text-cold-gray mb-4">
-                🖥 Melhorar a usabilidade dos usuários, criando uma interface moderna e intuitiva
-              </h3>
-              <p class="text-cold-gray leading-7">
-                Necessidade de modernização na interface e padronização de componentes voltada para escalabilidade da
-                solução através da elaboração de um Style Guide.
-              </p>
-            </section>
-
-            <section>
-              <h3 class="text-xl text-cold-gray mb-4">📥 Ampliar a base de clientes</h3>
-              <p class="text-cold-gray leading-7">
-                Atrair pequenas transportadoras e autônomos por meio da automatização no processo de contratação via
-                site da Apisul.
-              </p>
-            </section>
-
-            <section>
-              <h3 class="text-xl text-cold-gray mb-4">⚙️ Fortalecer a automação e ampliar a autonomia</h3>
-              <p class="text-cold-gray leading-7">
-                Ampliar a autonomia do cliente para gerir sua operação, incluindo a implantação de dados de forma
-                independente. Automatizar processos como a contratação via site da Apisul, atraindo pequenas
-                transportadoras e autônomos, e ajustando os sistemas para diferentes momentos da jornada de interação.
-              </p>
-            </section>
-
-            <section>
-              <h3 class="text-xl text-cold-gray mb-4">⚙️ Fortalecer a automação e ampliar a autonomia</h3>
-              <p class="text-cold-gray leading-7">
-                Ampliar a autonomia do cliente para gerir sua operação, incluindo a implantação de dados de forma
-                independente. Automatizar processos como a contratação via site da Apisul, atraindo pequenas
-                transportadoras e autônomos, e ajustando os sistemas para diferentes momentos da jornada de interação.
-              </p>
-            </section>
-          </div>
-        </div>
-      </section>
-
-      <div class="space-y-14">
+      <div class="space-y-14 overflow-clip">
         <Image src={img2} alt="" class="rounded-3xl" />
         <Image src={img3} alt="" class="rounded-3xl" />
+        <Image src={img4} alt="" class="rounded-3xl" />
         <Image src={img5} alt="" class="rounded-3xl" />
         <Image src={img6} alt="" class="rounded-3xl" />
         <Image src={img7} alt="" class="rounded-3xl" />
         <Image src={img8} alt="" class="rounded-3xl" />
-        <Image src={img9} alt="" class="rounded-3xl" />
-        <Image src={img10} alt="" class="rounded-3xl" />
-        <Image src={img11} alt="" class="rounded-3xl" />
-        <Image src={img12} alt="" class="rounded-3xl" />
       </div>
-
-      <section>
-        <div class="flex flex-col md:flex-row md:justify-between md:gap-4">
-          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Resultados e aprendizados</h2>
-          <p class="text-cold-gray leading-7 md:basis-2/3 xl:basis-1/2">
-            A integração do ecossistema de soluções aumentará a eficiência operacional e a satisfação do cliente,
-            atendendo à crescente demanda por automação e inteligência de dados. A jornada de aquisição online e a
-            integração das soluções se mostraram fundamentais para atender às expectativas dos clientes e do mercado. O
-            roadmap do projeto inclui a evolução das telas, a implementação do dark mode e testes contínuos de
-            usabilidade. Em 2024, iniciamos o desenvolvimento do Portal do Cliente, com previsão de lançamento no início
-            de 2025.
-          </p>
-        </div>
-
-        <!-- carrossel -->
-      </section>
-
-      <section>
-        <div class="flex flex-col md:flex-row md:justify-between md:gap-4">
-          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Ferramentas</h2>
-          <div class="space-y-8 md:basis-2/3 xl:basis-1/2">
-            <p class="text-cold-gray leading-7">Figma</p>
-            <p class="text-cold-gray leading-7">Miro</p>
-            <p class="text-cold-gray leading-7">Typeform</p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="flex flex-col md:flex-row md:justify-between md:gap-4">
-          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">A Equipe</h2>
-          <div class="space-y-8 md:basis-2/3 xl:basis-1/2">
-            <p class="text-cold-gray leading-7">Aron Krause Litvin (Inovação e Design Estratégico)</p>
-            <p class="text-cold-gray leading-7">Gabriela Dall’Agnol (Coordenadora e Product Designer)</p>
-            <p class="text-cold-gray leading-7">Stéphanie Gonzaga (Product Designer)</p>
-          </div>
-        </div>
-      </section>
     </main>
   </Container>
 </Layout>
