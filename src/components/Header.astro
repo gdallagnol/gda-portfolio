@@ -13,13 +13,20 @@ import Container from '@components/Container.astro';
     <p class="text-blue-black hidden md:block">Gabi Dall'Agnol</p>
     <p class="text-blue-black hidden md:block">Designer</p>
 
-    <button
-      class="flex items-center gap-2 w-auto h-8 px-3 text-sm py-1 border rounded-md cursor-pointer font-light text-blue-gray
-     border-neutral-200/60 hover:bg-neutral-100 hover:text-neutral-600"
-    >
-      <span>contato@gdallagnol.com</span>
-
-      <img src={copy.src} />
-    </button>
+    <div class="relative">
+      <button
+        class="copy-button flex items-center gap-2 w-auto h-8 px-3 text-sm py-1 border rounded-md cursor-pointer font-light text-blue-gray
+      border-neutral-200/60 hover:bg-neutral-100 hover:text-neutral-600"
+        data-copy="contato@gdallagnol.com"
+      >
+        <span>contato@gdallagnol.com</span>
+        <img src={copy.src} alt="Copy icon" />
+      </button>
+      <span
+        class="copy-success-message absolute left-1/2 transform -translate-x-1/2 mt-2 hidden text-sm text-green-600 border p-3 rounded-md shadow-md w-44"
+      >
+        E-mail copiado!
+      </span>
+    </div>
   </header>
 </Container>

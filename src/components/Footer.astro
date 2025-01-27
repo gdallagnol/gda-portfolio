@@ -8,7 +8,14 @@ import Container from './Container.astro';
     <div class="flex flex-col px-6 py-10 gap-8 md:flex-row md:justify-between md:px-12 md:py-16">
       <div>
         <p class="text-2xl leading-8 mb-4 lg:text-4xl">Vamos conversar?</p>
-        <button class="text-white inline-block w-fit underline">contato@gdallagnol.com</button>
+        <div class="relative w-fit">
+          <button class="copy-button text-white inline-block w-fit underline">contato@gdallagnol.com</button>
+          <span
+            class="copy-success-message top-full bg-white absolute left-1/2 transform -translate-x-1/2 mt-2 hidden text-sm text-green-600 border p-3 rounded-md shadow-md w-44"
+          >
+            E-mail copiado!
+          </span>
+        </div>
       </div>
 
       <ul class="space-y-4 md:space-y-6">

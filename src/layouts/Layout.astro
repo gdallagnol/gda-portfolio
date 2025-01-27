@@ -32,3 +32,9 @@ import Header from '@components/Header.astro';
     height: 100%;
   }
 </style>
+
+<script>
+  import { setupCopyToClipboard } from '@utils/copyToClipboard.ts';
+
+  setupCopyToClipboard('.copy-button', 'contato@gdallagnol.com');
+</script>
