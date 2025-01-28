@@ -10,6 +10,5 @@ export default defineConfig({
   server: {
     open: true,
   },
-  site: 'https://rafael-ac.github.io',
-  base: 'gda-portfolio',
+  site: 'https://gdallagnol.com', 
 });
