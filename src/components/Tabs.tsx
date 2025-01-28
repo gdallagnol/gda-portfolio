@@ -83,7 +83,7 @@ export function Tabs() {
           </p>
         </a>
 
-        <a className="space-y-4 block" href="/gda-portfolio/product-design/apisul-web">
+        <a className="space-y-4 block">
           <img src={pd4.src} alt="" className="w-full rounded-2xl" />
           <p className="text-blue-gray text-sm font-extralight">UI | Website Desktop & Mobile</p>
           <p className="text-blue-gray font-light">Grupo Apisul</p>
