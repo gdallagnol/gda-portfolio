@@ -1,19 +1,17 @@
 ---
 import Footer from '@components/Footer.astro';
 import Header from '@components/Header.astro';
----
-export interface Props {
-  title: string;
-}
 
-const { title = "Gabi Dall'Agnol" } = Astro.props;
+const { title } = Astro.props;
+const pageTitle = title || "Gabi Dall'Agnol";   
 ---
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Gabi Dall'Agnol</title>
+    <title>{pageTitle}</title>
     <meta name="description" content="Portfólio Product Design | Branding" />
     <meta name="generator" content={Astro.generator} />
     <meta name="author" content="Gabi Dall'Agnol" />
@@ -27,7 +25,6 @@ const { title = "Gabi Dall'Agnol" } = Astro.props;
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
 
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
     <!-- Fonts -->
