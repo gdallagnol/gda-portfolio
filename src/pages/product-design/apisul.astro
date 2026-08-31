@@ -15,11 +15,9 @@ import img10 from '@assets/pd/apisul/10.png';
 import img11 from '@assets/pd/apisul/11.png';
 import img12 from '@assets/pd/apisul/12.png';
 import Container from '@components/Container.astro';
-
-const title = "Apisul | Product Design";
 ---
 
-<Layout title={title}>
+<Layout>
   <Container>
     <section class="mb-12 flex flex-col gap-6 md:flex-row md:gap-24">
       <div>
@@ -33,6 +31,10 @@ const title = "Apisul | Product Design";
       <div>
         <p class="text-blue-gray mb-3 font-light text-lg">Ano</p>
         <p class="text-cold-gray text-lg">2023</p>
+      </div>
+      <div>
+        <p class="text-blue-gray mb-3 font-light text-lg">Meu papel</p>
+        <p class="text-cold-gray text-lg">Coordenação e Product Design</p>
       </div>
     </section>
 
@@ -64,8 +66,22 @@ const title = "Apisul | Product Design";
             contratar módulos de forma mais rápida e assertiva em uma única plataforma?
           </p>
         </div>
+      </section>
 
-        <Image src={img1_1} alt="" class="rounded-3xl" />
+      <section>
+        <div class="flex flex-col mb-10 md:flex-row md:justify-between">
+          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Processo</h2>
+          <p class="text-cold-gray leading-7 md:basis-2/3 xl:basis-1/2">
+            Como o problema envolvia quatro produtos separados e públicos com necessidades muito diferentes, comecei
+            mapeando o ecossistema antes de partir para as entrevistas. Conversei com executivos para entender a
+            estratégia, com a operação para entender as travas do dia a dia e com transportadoras de portes e
+            localizações diferentes, porque a dor de um autônomo não é a mesma de uma frota grande. O Service Blueprint
+            entrou para ligar o que o cliente enxerga ao que acontece nos bastidores, que era onde estava boa parte do
+            problema.
+          </p>
+        </div>
+
+        <Image src={img1_1} alt="Etapas do processo do projeto" class="rounded-3xl" />
       </section>
 
       <section>
@@ -79,13 +95,26 @@ const title = "Apisul | Product Design";
               segmento, tendências de tecnologia, benchmark dos principais concorrentes e a visão de intérpretes de
               mercado por meio de entrevistas (fundadores de insurtechs consagradas no mercado).
             </p>
-            <ul class="text-cold-gray leading-7 mt-10 space-y-8 list-inside">
+
+            <h3 class="text-xl text-cold-gray mt-10 mb-6">O que ouvimos dos usuários</h3>
+            <ul class="text-cold-gray leading-7 space-y-8 list-inside">
               <li
                 class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
               >
                 Clientes do Grupo Apisul valorizam profundamente identificar oportunidades de melhoria nas operações e
                 esperam soluções práticas nos sistemas digitais.
               </li>
+              <li
+                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
+              >
+                Os clientes dependiam de relatórios mensais ou precisavam solicitar dados de logística, risco e seguros
+                toda vez que precisavam deles. Não havia acesso simples às próprias informações. Esse achado deu origem
+                ao projeto do Portal do Cliente.
+              </li>
+            </ul>
+
+            <h3 class="text-xl text-cold-gray mt-10 mb-6">O que o mercado mostrou</h3>
+            <ul class="text-cold-gray leading-7 space-y-8 list-inside">
               <li
                 class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
               >
@@ -142,15 +171,39 @@ const title = "Apisul | Product Design";
                 transportadoras e autônomos, e ajustando os sistemas para diferentes momentos da jornada de interação.
               </p>
             </section>
+          </div>
+        </div>
+      </section>
 
-            <section>
-              <h3 class="text-xl text-cold-gray mb-4">⚙️ Fortalecer a automação e ampliar a autonomia</h3>
-              <p class="text-cold-gray leading-7">
-                Ampliar a autonomia do cliente para gerir sua operação, incluindo a implantação de dados de forma
-                independente. Automatizar processos como a contratação via site da Apisul, atraindo pequenas
-                transportadoras e autônomos, e ajustando os sistemas para diferentes momentos da jornada de interação.
-              </p>
-            </section>
+      <section>
+        <div class="flex flex-col md:flex-row md:justify-between">
+          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Escolhas do projeto</h2>
+
+          <div class="space-y-8 md:basis-2/3 xl:basis-1/2">
+            <p class="text-cold-gray leading-7">
+              As entrevistas em profundidade e a análise heurística revelaram muito mais oportunidades de melhoria no
+              ApisulLog e no Integra do que caberia no escopo do projeto.
+            </p>
+            <p class="text-cold-gray leading-7">
+              Em vez de prototipar tudo, cruzamos as oportunidades mapeadas com os dados de uso do Google Analytics e
+              prototipamos apenas as funcionalidades mais acessadas. A decisão teve dois motivos. O primeiro era
+              demonstrar de forma concreta como os sistemas ficariam com o novo Style Guide aplicado. O segundo era que
+              o protótipo precisava funcionar como material de convencimento junto aos acionistas, e para isso
+              profundidade em poucas telas valia mais que cobertura superficial de muitas.
+            </p>
+            <p class="text-cold-gray leading-7">
+              A proposta inicial era uma plataforma única reunindo todos os softwares da Apisul. Ficou claro durante o
+              projeto que essa mudança era grande demais para ser decidida ali. O trabalho foi então posicionado como
+              material de discussão estratégica, não como especificação de entrega. Foi o que permitiu abrir a conversa
+              com os acionistas em vez de travá la.
+            </p>
+            <p class="text-cold-gray leading-7">
+              O protótipo não foi construído para ser desenvolvido. Ele existia para tornar tangível a ideia do
+              ecossistema em uma conversa com acionistas, onde uma apresentação conceitual dificilmente sustentaria a
+              decisão. Por isso os testes de usabilidade não buscavam validar telas para implementação. Serviram para
+              confirmar, com usuários reais, que a demanda por uma plataforma com controles mais centralizados e
+              interface mais moderna existia de fato, e não era apenas leitura nossa das entrevistas.
+            </p>
           </div>
         </div>
       </section>
@@ -171,14 +224,38 @@ const title = "Apisul | Product Design";
       <section>
         <div class="flex flex-col md:flex-row md:justify-between md:gap-4">
           <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Resultados e aprendizados</h2>
-          <p class="text-cold-gray leading-7 md:basis-2/3 xl:basis-1/2">
-            A integração do ecossistema de soluções aumentará a eficiência operacional e a satisfação do cliente,
-            atendendo à crescente demanda por automação e inteligência de dados. A jornada de aquisição online e a
-            integração das soluções se mostraram fundamentais para atender às expectativas dos clientes e do mercado. O
-            roadmap do projeto inclui a evolução das telas, a implementação do dark mode e testes contínuos de
-            usabilidade. Em 2024, iniciamos o desenvolvimento do Portal do Cliente, com previsão de lançamento no início
-            de 2025.
-          </p>
+
+          <div class="space-y-8 md:basis-2/3 xl:basis-1/2">
+            <p class="text-cold-gray leading-7">
+              O projeto foi apresentado aos acionistas e destravou duas frentes que não existiam antes.
+            </p>
+            <p class="text-cold-gray leading-7">
+              A primeira foi a modernização do ApisulLog e do Integra, desenvolvida por outra empresa de tecnologia.
+              Apoiei como product designer na etapa de discovery.
+            </p>
+            <p class="text-cold-gray leading-7">
+              A segunda foi o Portal do Cliente, que nasceu diretamente do achado sobre a falta de acesso dos clientes
+              às próprias informações. A proposta reunia em um só lugar os dados de logística, risco e seguros, além de
+              central de ajuda e documentos financeiros. O Portal entrou em desenvolvimento em 2024, com lançamento
+              previsto para o início de 2025, e nele atuei como product designer principal, acompanhando o
+              desenvolvimento junto a um dev e aplicando um novo design system.
+            </p>
+            <p class="text-cold-gray leading-7">
+              Minha entrega neste projeto foi a pesquisa, o protótipo validado, o Style Guide e o roadmap de evolução. A
+              implementação e a medição de resultado ficaram com o time interno da Apisul e com os parceiros de
+              tecnologia.
+            </p>
+
+            <div>
+              <h3 class="text-xl text-cold-gray mb-4">Aprendizado</h3>
+              <p class="text-cold-gray leading-7">
+                Este projeto me mostrou que nem todo protótipo serve para ser construído. Aqui ele funcionou como
+                argumento, e reconhecer isso desde o início mudou o que precisava ser testado e o nível de acabamento
+                necessário. Prototipar todas as oportunidades mapeadas teria consumido o prazo sem aumentar a chance de
+                aprovação.
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- carrossel -->
@@ -200,7 +277,7 @@ const title = "Apisul | Product Design";
           <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">A Equipe</h2>
           <div class="space-y-8 md:basis-2/3 xl:basis-1/2">
             <p class="text-cold-gray leading-7">Aron Krause Litvin (Inovação e Design Estratégico)</p>
-            <p class="text-cold-gray leading-7">Gabriela Dall’Agnol (Coordenadora e Product Designer)</p>
+            <p class="text-cold-gray leading-7">Gabriela Dall’Agnol (Coordenação, pesquisa e Product Design)</p>
             <p class="text-cold-gray leading-7">Stéphanie Gonzaga (Product Designer)</p>
           </div>
         </div>
