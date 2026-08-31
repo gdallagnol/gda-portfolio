@@ -24,7 +24,7 @@ const title = "Mais Nítido | Product Design";
 
 <Layout title={title}>
   <Container>
-    <section class="mb-12 flex flex-col gap-6 md:flex-row md:gap-24">
+    <section class="mb-12 flex flex-col gap-6 md:flex-row md:gap-16">
       <div>
         <p class="text-blue-gray mb-3 font-light text-lg">Segmento</p>
         <p class="text-cold-gray text-lg">Mentoria Executiva e Profissional</p>
@@ -36,6 +36,10 @@ const title = "Mais Nítido | Product Design";
       <div>
         <p class="text-blue-gray mb-3 font-light text-lg">Ano</p>
         <p class="text-cold-gray text-lg">2023-2024</p>
+      </div>
+      <div>
+        <p class="text-blue-gray mb-3 font-light text-lg">Meu papel</p>
+        <p class="text-cold-gray text-lg">Coordenação e Product Design</p>
       </div>
     </section>
 
@@ -60,13 +64,42 @@ const title = "Mais Nítido | Product Design";
       <section>
         <div class="flex flex-col mb-10 md:flex-row md:justify-between">
           <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">O desafio</h2>
-          <p class="text-cold-gray leading-7 md:basis-2/3 xl:basis-1/2">
-            As principais soluções de educação e treinamento são pouco aderentes pois não entregam aprendizado
-            personalizado.
-            <br />
-            Como podemos promover a troca de conhecimento para profissionais que buscam um aprendizado leve e personalizado,
-            propondo solução com bom custo-benefício em termos de tempo e aplicabilidade?
-          </p>
+          <div class="space-y-6 md:basis-2/3 xl:basis-1/2">
+            <p class="text-cold-gray leading-7">
+              As soluções de educação e treinamento disponíveis no mercado entregam conteúdo padronizado e pouco
+              aderente à realidade de cada profissional. A pergunta que orientou o projeto foi como promover a troca de
+              conhecimento entre profissionais de forma leve e personalizada, com bom custo benefício em tempo e
+              aplicabilidade.
+            </p>
+            <p class="text-cold-gray leading-7">
+              O escopo era desenvolver um MVP de uma ferramenta que viabilizasse mentorias dentro das empresas, com
+              mentores internos e externos. Diferente de um projeto que termina na recomendação, este precisava rodar em
+              ambiente real.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="flex flex-col md:flex-row md:justify-between">
+          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Processo</h2>
+          <div class="space-y-6 md:basis-2/3 xl:basis-1/2">
+            <p class="text-cold-gray leading-7">
+              O produto precisava atender dois públicos com interesses distintos. De um lado o RH, que contrata e
+              precisa justificar o investimento. Do outro o profissional, que participa da mentoria e busca algo
+              aplicável à própria carreira.
+            </p>
+            <p class="text-cold-gray leading-7">
+              Conduzi entrevistas em profundidade com cerca de quinze pessoas, entre profissionais de RH, de tecnologia
+              e pessoas que já faziam mentoria por meios informais, complementadas por um formulário online para ampliar
+              o alcance da amostra. A partir dos achados desenhei os fluxos, as telas e o Style Guide do produto.
+            </p>
+            <p class="text-cold-gray leading-7">
+              Na validação usei dois formatos com propósitos diferentes. Os testes moderados via Google Meet mostravam o
+              que as pessoas pensavam enquanto usavam. O Microsoft Clarity mostrava o que elas faziam sem saber que
+              estavam sendo observadas, o que ajudou a confirmar se os fluxos se sustentavam no uso real.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -74,78 +107,25 @@ const title = "Mais Nítido | Product Design";
         <div class="flex flex-col md:flex-row md:justify-between">
           <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Insights das pesquisas</h2>
           <div class="md:basis-2/3 xl:basis-1/2">
-            <p class="text-cold-gray leading-7">
-              Por meio de pesquisas primárias e secundárias, chegamos em algumas hipóteses para a construção da nossa
-              solução.
-            </p>
-            <ul class="text-cold-gray leading-7 mt-10 space-y-8 list-inside">
+            <ul class="text-cold-gray leading-7 space-y-8 list-inside">
               <li
                 class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
               >
-                Na maioria das vezes em que as empresas de mentoria são contatadas, os gestores já chegam com resultados
-                prontos do que querem atingir, como desempenho em projetos/comercial, engajamento. Então as mentorias
-                são formatadas seguindo essas orientações primariamente, para em segundo plano considerarem as
-                necessidades dos mentorados;
+                Quando uma empresa contrata mentoria, o gestor costuma chegar com o resultado já definido, como
+                desempenho comercial ou engajamento. A mentoria é então formatada a partir dessa expectativa, e a
+                necessidade do mentorado entra em segundo plano.
               </li>
               <li
                 class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
               >
-                É importante entregar a visibilidade da curva de aprendizagem para o RH e para o mentorado;
+                Tanto o RH quanto o mentorado precisam enxergar a evolução do aprendizado ao longo do processo, cada um
+                por motivos diferentes.
               </li>
               <li
                 class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
               >
-                Considerar em algum nível a conexão do mentorado com os desafios da empresa/estratégia e entender como
-                isso pode acontecer na prática.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="flex flex-col md:flex-row md:justify-between">
-          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Conheça o Mais Nítido</h2>
-          <div class="md:basis-2/3 xl:basis-1/2">
-            <p class="text-cold-gray leading-7">
-              Um SaaS B2B para evolução de profissionais. As mentorias economizam tempo e agilizam o aprendizado em
-              relação a cursos, treinamentos, palestras e consultorias.
-            </p>
-            <ul class="text-cold-gray leading-7 mt-10 space-y-8 list-inside">
-              <li
-                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
-              >
-                Mapeamento de ofertas e demandas de conhecimento;
-              </li>
-              <li
-                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
-              >
-                Compreensão e organização das expertises internas;
-              </li>
-              <li
-                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
-              >
-                Oferta de benefícios reais para a aprendizagem;
-              </li>
-              <li
-                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
-              >
-                Ampliação do networking dos colaboradores;
-              </li>
-              <li
-                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
-              >
-                Estímulo ao interesse pelo desenvolvimento pessoal;
-              </li>
-              <li
-                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
-              >
-                Aumento da retenção de talentos;
-              </li>
-              <li
-                class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-['•'] before:text-cold-gray"
-              >
-                Promoção do intercâmbio entre os colaboradores e mentores externos.
+                A conexão entre o desafio do mentorado e a estratégia da empresa precisa existir, mas de forma aplicável
+                no dia a dia.
               </li>
             </ul>
           </div>
@@ -157,22 +137,65 @@ const title = "Mais Nítido | Product Design";
           <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Objetivos</h2>
 
           <div class="space-y-6 md:basis-2/3 xl:basis-1/2">
-            <p class="text-xl text-cold-gray mb-4">
-              Desenvolver um MVP com objetivo de criar uma ferramenta para promover a mentoria dentro da empresa com
-              mentores internos (colaboradores) e externos.
-            </p>
+            <section>
+              <h3 class="text-xl text-cold-gray mb-4">🎯 Conectar as pessoas certas</h3>
+              <p class="text-cold-gray leading-7">
+                Mapear estilo, desejos e necessidades por meio de perguntas chave, para que a formação das duplas
+                partisse de compatibilidade real e não de alocação administrativa.
+              </p>
+            </section>
 
-            <p class="text-xl text-cold-gray mb-4">
-              🎯 Oferecer inteligência para conexões relevantes de qualidade a partir da ciência do match (Conjunto de
-              perguntas-chave para mapear estilo, desejos, necessidades).
-            </p>
+            <section>
+              <h3 class="text-xl text-cold-gray mb-4">👨‍💻 Tornar a mentoria parte da valorização de carreira</h3>
+              <p class="text-cold-gray leading-7">
+                Posicionar o aprendizado como benefício percebido pelo profissional, e não como treinamento imposto pela
+                empresa.
+              </p>
+            </section>
 
-            <p class="text-xl text-cold-gray mb-4">
-              👨‍💻 Promover a aprendizagem para valorização da carreira por meio de mentorias online.
-            </p>
+            <section>
+              <h3 class="text-xl text-cold-gray mb-4">🤝 Incentivar a dupla função</h3>
+              <p class="text-cold-gray leading-7">
+                Permitir que o mesmo colaborador atuasse como mentor e como mentorado, aproveitando as expertises que já
+                existiam dentro da empresa.
+              </p>
+            </section>
+          </div>
+        </div>
+      </section>
 
-            <p class="text-xl text-cold-gray mb-4">
-              🤝 Incentivar os colaboradores de empresas a serem mentores e mentorados.
+      <section>
+        <div class="flex flex-col md:flex-row md:justify-between">
+          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Escolhas do projeto</h2>
+
+          <div class="space-y-8 md:basis-2/3 xl:basis-1/2">
+            <p class="text-cold-gray leading-7">
+              O primeiro achado da pesquisa expôs uma tensão que definiu o produto. Quem paga pela mentoria e quem
+              participa dela querem coisas diferentes, e as soluções existentes atendiam apenas o lado de quem paga. A
+              resposta foi a ciência do match, um algoritmo desenvolvido pela Clara Celina que forma as duplas a partir
+              de perguntas respondidas pelo próprio profissional. O mentor deixa de ser uma alocação administrativa e
+              passa a ser resultado do que o mentorado busca, sem que a empresa perca a visibilidade sobre o processo.
+            </p>
+            <p class="text-cold-gray leading-7">
+              Essa visibilidade tomou forma em um painel de acompanhamento para o RH, com os dados das mentorias em
+              andamento, quem está participando e quais mentores concentram mais procura. O painel virou o argumento de
+              valor para quem contrata, porque sustenta a mentoria como investimento acompanhável em vez de despesa
+              recorrente.
+            </p>
+            <p class="text-cold-gray leading-7">
+              A plataforma foi construída em no code, em parceria com a Vistapub. A decisão permitiu que um time pequeno
+              e sem estrutura própria de engenharia chegasse ao mercado com um produto funcional em vez de um protótipo.
+              Ela também impôs limites de interface, e o Style Guide que criei foi adaptado pela Vistapub para caber nas
+              possibilidades da ferramenta escolhida.
+            </p>
+            <p class="text-cold-gray leading-7">
+              A mudança mais desafiadora veio no meio do caminho. O modelo de negócio exigia um mecanismo financeiro que
+              não estava previsto no escopo inicial, e um sistema de créditos entrou no roadmap de forma repentina. A
+              empresa adquire créditos por plano e distribui uma cota para cada colaborador, e cada mentor tem um custo
+              em créditos conforme seu perfil. Isso obrigou a reorganizar fluxos já desenhados. O saldo passou a
+              influenciar a escolha do mentor, e o colaborador precisava entender quanto tinha disponível e o que
+              conseguia com aquilo, sem que a plataforma virasse uma vitrine de preços. Foi a decisão que mais mexeu no
+              produto, porque trouxe o modelo de negócio para dentro da experiência.
             </p>
           </div>
         </div>
@@ -193,24 +216,32 @@ const title = "Mais Nítido | Product Design";
         <Image src={img11} alt="" class="rounded-3xl" />
         <Image src={img12} alt="" class="rounded-3xl" />
         <Image src={img13} alt="" class="rounded-3xl" />
-      <div class="flex gap-6 justify-center">
-        <Image src={img14} alt="" class="rounded-3xl w-1/2 h-auto object-cover overflow-hidden" />
-        <Image src={img15} alt="" class="rounded-3xl w-1/2 h-auto object-cover overflow-hidden" />
-      </div>
+        <div class="flex gap-6 justify-center">
+          <Image src={img14} alt="" class="rounded-3xl w-1/2 h-auto object-cover overflow-hidden" />
+          <Image src={img15} alt="" class="rounded-3xl w-1/2 h-auto object-cover overflow-hidden" />
+        </div>
       </div>
 
       <section>
         <div class="flex flex-col md:flex-row md:justify-between md:gap-4">
-          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Resultados e aprendizados</h2>
-          <p class="text-cold-gray leading-7 md:basis-2/3 xl:basis-1/2">
-            Com o desenvolvimento da plataforma (responsiva - desktop e mobile) com apoio da Vista/pub e a realização de
-            testes de usabilidade moderados e remotos via Google Meet, além da observação do comportamento dos usuários
-            via Microsoft Clarity, foram realizadas diversas atualizações na interface e na experiência para melhorar a
-            usabilidade e lançar o produto no mercado.
-            <br />
-            O Mais Nítido é um produto digital que passará por evolução contínua, com diversas possibilidades de adaptação
-            dependendo do contexto da empresa contratante.
-          </p>
+          <h2 class="text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2">Resultados</h2>
+
+          <div class="space-y-8 md:basis-2/3 xl:basis-1/2">
+            <p class="text-cold-gray leading-7">
+              O Mais Nítido foi lançado e está em uso em contextos públicos, privados e do terceiro setor.
+            </p>
+            <p class="text-cold-gray leading-7">
+              O caso mais visível é o LabCultura.RS, programa da Secretaria de Estado da Cultura em parceria com a
+              Universidade Feevale voltado a projetos da Lei Paulo Gustavo. Desde agosto de 2025, a plataforma conecta
+              produtores culturais a cerca de sessenta mentores de diferentes regiões do Brasil, com quinhentas horas de
+              orientação gratuita, e é o algoritmo de compatibilidade que forma as duplas.
+            </p>
+            <p class="text-cold-gray leading-7">
+              Colocar o produto em operação trouxe um desafio que a fase de desenho não antecipava. Depois do
+              lançamento, a dificuldade deixou de ser a usabilidade e passou a ser manter a comunicação e o engajamento
+              das pessoas ao longo do uso, algo que uma interface bem resolvida sozinha não garante.
+            </p>
+          </div>
         </div>
 
         <!-- carrossel -->
@@ -234,7 +265,7 @@ const title = "Mais Nítido | Product Design";
             <p class="text-cold-gray leading-7">Aron Krause Litvin (Inovação e Design Estratégico)</p>
             <p class="text-cold-gray leading-7">Clara Celina (Research)</p>
             <p class="text-cold-gray leading-7">Daniel Caminha (Founder e Psicólogo)</p>
-            <p class="text-cold-gray leading-7">Gabriela Dall’Agnol (Coordenadora e Product Designer)</p>
+            <p class="text-cold-gray leading-7">Gabriela Dall’Agnol (Coordenação e Product Design)</p>
             <p class="text-cold-gray leading-7">Lucas Weinmann (Vistapub. - No Code Developer & Designer)</p>
           </div>
         </div>
