@@ -54,12 +54,12 @@ export const maisNitido: CaseData = {
       heading: { pt: 'O desafio', en: 'The challenge' },
       paragraphs: {
         pt: [
-          'As soluções de educação e treinamento disponíveis no mercado entregam conteúdo padronizado e pouco aderente à realidade de cada profissional. A pergunta que orientou o projeto foi como promover a troca de conhecimento entre profissionais de forma leve e personalizada, com bom custo benefício em tempo e aplicabilidade.',
-          'O escopo era desenvolver um MVP de uma ferramenta que viabilizasse mentorias dentro das empresas, com mentores internos e externos. Diferente de um projeto que termina na recomendação, este precisava rodar em ambiente real.',
+          'As soluções de educação e treinamento disponíveis no mercado entregam conteúdo padronizado e pouco aderente à realidade de cada profissional. O projeto partiu do desafio de criar uma experiência que promovesse a troca de conhecimento entre profissionais de forma leve e personalizada, equilibrando custo-benefício, tempo e aplicabilidade.',
+          'O escopo era desenvolver um MVP de uma ferramenta que viabilizasse mentorias dentro das empresas, com mentores internos e externos. Diferente de um projeto que termina na recomendação, este precisava sair do conceito e operar em um ambiente real.',
         ],
         en: [
-          'Corporate training programmes deliver standardised content that rarely connects to the reality of any individual professional. The project started from a question: how do you enable knowledge exchange between professionals in a way that is light, personalised and worth the time it requires?',
-          'The scope was an MVP for running mentoring inside companies, drawing on mentors from within and outside the organisation. Unlike a project that concludes with a set of recommendations, this one had to operate in a real environment.',
+          'Education and training solutions available on the market tend to deliver standardised content that is not closely connected to the reality of each professional. The project started with the challenge of creating an experience that could enable knowledge exchange between professionals in a way that was light and personalised, while balancing cost, time and practical applicability.',
+          'The scope was to develop an MVP for a tool that could enable mentoring within companies, with both internal and external mentors. Unlike a project that ends with recommendations, this one had to move beyond the concept and operate in a real environment.',
         ],
       },
     },
@@ -70,13 +70,15 @@ export const maisNitido: CaseData = {
       paragraphs: {
         pt: [
           'O produto precisava atender dois públicos com interesses distintos. De um lado o RH, que contrata e precisa justificar o investimento. Do outro o profissional, que participa da mentoria e busca algo aplicável à própria carreira.',
-          'Conduzi entrevistas em profundidade com cerca de quinze pessoas, entre profissionais de RH, de tecnologia e pessoas que já faziam mentoria por meios informais, complementadas por um formulário online para ampliar o alcance da amostra. A partir dos achados desenhei os fluxos, as telas e o Style Guide do produto.',
-          'Na validação usei dois formatos com propósitos diferentes. Os testes moderados via Google Meet mostravam o que as pessoas pensavam enquanto usavam. O Microsoft Clarity mostrava o que elas faziam sem saber que estavam sendo observadas, o que ajudou a confirmar se os fluxos se sustentavam no uso real.',
+          'A primeira etapa foi transformar os requisitos do produto em uma experiência navegável. Estruturei os principais fluxos, defini o Style Guide a partir da identidade visual do Mais Nítido e desenvolvi as telas e o protótipo da plataforma no Figma.',
+          'Com o protótipo estruturado, levei a solução para validação. Conduzi entrevistas em profundidade com cerca de quinze pessoas, entre profissionais de RH, de tecnologia e pessoas que já faziam mentoria por meios informais, complementadas por um formulário online para ampliar o alcance da amostra. Os aprendizados ajudaram a identificar pontos de fricção e oportunidades de melhoria na experiência já desenhada.',
+          'Na validação usei dois formatos com propósitos diferentes. Os testes moderados via Google Meet mostravam o que as pessoas pensavam enquanto usavam. O Microsoft Clarity mostrava o que elas faziam sem saber que estavam sendo observadas, ajudando a entender se os fluxos se sustentavam no uso real. A combinação dos dois trouxe uma visão mais completa da experiência: o que as pessoas diziam, o que faziam e onde essas duas coisas não coincidiam. A partir disso, refinei os pontos de maior fricção antes da evolução do produto.',
         ],
         en: [
           'The product had to serve two audiences with different interests. HR signs the contract and needs to justify the investment. The professional taking part wants something applicable to their own career.',
-          'I ran in depth interviews with around fifteen people, including HR and technology professionals and people already mentoring through informal channels, complemented by an online survey to widen the sample. The findings shaped the flows, the screens and the product style guide.',
-          'Validation used two formats with distinct purposes. Moderated sessions over Google Meet captured what people were thinking as they worked through the product. Microsoft Clarity captured what they did unobserved, which is what confirmed whether the flows held up in real use.',
+          'The first step was to turn the product requirements into a navigable experience. I structured the main flows, defined the Style Guide based on Mais Nítido’s visual identity, and designed the screens and prototype in Figma.',
+          'Once the prototype was structured, I took the solution into validation. I conducted in-depth interviews with around fifteen people, including HR and technology professionals and people already mentoring through informal channels, complemented by an online survey to broaden the sample. The findings helped identify points of friction and opportunities to improve the experience that had already been designed.',
+          'Validation used two formats with distinct purposes. Moderated sessions over Google Meet captured what people were thinking as they worked through the product. Microsoft Clarity captured what they did without knowing they were being observed, helping assess whether the flows held up in real use. Combining the two provided a more complete view of the experience: what people said, what they did, and where the two did not align. From there, I refined the areas of greatest friction before further evolving the product.',
         ],
       },
     },
@@ -143,14 +145,14 @@ export const maisNitido: CaseData = {
         pt: [
           'O primeiro achado da pesquisa expôs uma tensão que definiu o produto. Quem paga pela mentoria e quem participa dela querem coisas diferentes, e as soluções existentes atendiam apenas o lado de quem paga. A resposta foi a ciência do match, um algoritmo desenvolvido pela Clara Celina que forma as duplas a partir de perguntas respondidas pelo próprio profissional. O mentor deixa de ser uma alocação administrativa e passa a ser resultado do que o mentorado busca, sem que a empresa perca a visibilidade sobre o processo.',
           'Essa visibilidade tomou forma em um painel de acompanhamento para o RH, com os dados das mentorias em andamento, quem está participando e quais mentores concentram mais procura. O painel virou o argumento de valor para quem contrata, porque sustenta a mentoria como investimento acompanhável em vez de despesa recorrente.',
-          'A plataforma foi construída em no code, em parceria com a Vistapub. A decisão permitiu que um time pequeno e sem estrutura própria de engenharia chegasse ao mercado com um produto funcional em vez de um protótipo. Ela também impôs limites de interface, e o Style Guide que criei foi adaptado pela Vistapub para caber nas possibilidades da ferramenta escolhida.',
+          'A plataforma foi construída em no-code, em parceria com a Vistapub. A decisão permitiu que um time pequeno e sem estrutura própria de engenharia chegasse ao mercado com um produto funcional em vez de um protótipo. Ela também impôs limites de interface, e o Style Guide que criei foi adaptado pela Vistapub para caber nas possibilidades da ferramenta escolhida.',
           'A mudança mais desafiadora veio no meio do caminho. O modelo de negócio exigia um mecanismo financeiro que não estava previsto no escopo inicial, e um sistema de créditos entrou no roadmap de forma repentina. A empresa adquire créditos por plano e distribui uma cota para cada colaborador, e cada mentor tem um custo em créditos conforme seu perfil. Isso obrigou a reorganizar fluxos já desenhados. O saldo passou a influenciar a escolha do mentor, e o colaborador precisava entender quanto tinha disponível e o que conseguia com aquilo, sem que a plataforma virasse uma vitrine de preços. Foi a decisão que mais mexeu no produto, porque trouxe o modelo de negócio para dentro da experiência.',
         ],
         en: [
           'The first research finding exposed a tension that shaped the product. Those who pay for mentoring and those who take part in it want different things, and the existing solutions addressed only the paying side. The response was the matching science, an algorithm developed by Clara Celina that forms pairs from questions the professional answers themselves. The mentor is no longer an administrative assignment but a result of what the mentee is looking for, without the company losing visibility over the process.',
           'That visibility took the form of a dashboard for HR, covering sessions in progress, who is taking part and which mentors are most requested. It became the value argument for whoever signs the contract, because it presents mentoring as a trackable investment rather than a recurring expense.',
-          'The platform was built with no code tools in partnership with Vistapub. This allowed a small team with no engineering structure of its own to reach the market with a working product rather than a prototype. It also imposed interface constraints, and Vistapub adapted the style guide I had created to fit what the chosen tool could support.',
-          'The most demanding change arrived midway through. The business model required a payment mechanism that had not been anticipated in the original scope, and a credit system entered the roadmap without warning. Companies purchase credits through a plan and allocate a quota to each employee, and every mentor carries a credit cost according to their profile. This meant reworking flows that were already designed. Available balance now influenced mentor selection, and employees needed to understand how much they had and what it would give them, without the platform turning into a price list. It was the decision that changed the product most, because it brought the business model into the experience itself.',
+          'The platform was built with no-code tools in partnership with Vistapub. This allowed a small team with no engineering structure of its own to reach the market with a working product rather than a prototype. It also imposed interface constraints, and Vistapub adapted the Style Guide I had created to fit what the chosen tool could support.',
+          'The most demanding change arrived midway through. The business model required a payment mechanism that had not been anticipated in the original scope, and a credit system entered the roadmap unexpectedly. Companies purchase credits through a plan and allocate a quota to each employee, and every mentor carries a credit cost according to their profile. This meant reworking flows that were already designed. Available balance now influenced mentor selection, and employees needed to understand how much they had and what it would give them, without the platform turning into a price list. It was the decision that changed the product most, because it brought the business model into the experience itself.',
         ],
       },
     },
@@ -167,6 +169,7 @@ export const maisNitido: CaseData = {
         },
       ],
     },
+
     {
       type: 'pair',
       images: [
@@ -186,6 +189,7 @@ export const maisNitido: CaseData = {
         },
       ],
     },
+
     {
       type: 'gallery',
       images: [
@@ -242,7 +246,7 @@ export const maisNitido: CaseData = {
           src: img12,
           alt: {
             pt: 'Style Guide do produto, com paleta de cores, tipografia e componentes.',
-            en: 'Product style guide with color palette, typography and components.',
+            en: 'Product Style Guide with colour palette, typography and components.',
           },
         },
         {
@@ -254,6 +258,7 @@ export const maisNitido: CaseData = {
         },
       ],
     },
+
     {
       type: 'pair',
       images: [
@@ -284,9 +289,9 @@ export const maisNitido: CaseData = {
           'Hoje o caso mais visível é o LabCultura.RS, programa da Secretaria de Estado da Cultura do Rio Grande do Sul em parceria com a Universidade Feevale, voltado a projetos da Lei Paulo Gustavo. Desde agosto de 2025, a plataforma conecta produtores culturais a cerca de sessenta mentores de diferentes regiões do Brasil, com quinhentas horas de orientação gratuita, e é o algoritmo de compatibilidade que forma as duplas.',
         ],
         en: [
-          'Mais Nítido launched and is now in use across public sector, private and non profit organisations.',
-          'Putting the product into operation raised a challenge the design phase had not anticipated. After launch, the difficulty was no longer usability but sustaining communication and engagement over time, something a well resolved interface cannot guarantee on its own.',
-          'The most visible case today is LabCultura.RS, a programme run by the Rio Grande do Sul State Department of Culture in partnership with Universidade Feevale, supporting projects funded by the Paulo Gustavo Act. Since August 2025 the platform has connected cultural producers with around sixty mentors across Brazil, offering five hundred hours of free guidance, with the matching algorithm forming every pair.',
+          'Mais Nítido launched and is now in use across public sector, private and non-profit organisations.',
+          'Putting the product into operation raised a challenge the design phase had not anticipated. After launch, the difficulty was no longer usability but sustaining communication and engagement over time, something a well-resolved interface cannot guarantee on its own.',
+          'The most visible case today is LabCultura.RS, a programme run by the Rio Grande do Sul State Department of Culture in partnership with Universidade Feevale, supporting projects funded by the Paulo Gustavo Act. Since August 2025, the platform has connected cultural producers with around sixty mentors across Brazil, offering five hundred hours of free guidance, with the matching algorithm forming every pair.',
         ],
       },
     },
@@ -322,4 +327,4 @@ export const maisNitido: CaseData = {
       ],
     },
   ],
-}
+};
