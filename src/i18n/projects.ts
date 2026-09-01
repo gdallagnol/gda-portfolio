@@ -57,12 +57,26 @@ export const productDesign: Project[] = [
     image: pd2,
     client: 'Mais Nítido',
     tags: {
-      pt: 'UX & UI | Plataforma | B2B2C',
-      en: 'UX & UI | Platform | B2B2C',
+      pt: 'UX & UI | Plataforma | B2B',
+      en: 'UX & UI | Platform | B2B',
     },
     headline: {
-      pt: 'Uma plataforma para desenvolvimento e evolução profissional.',
-      en: 'A platform for professional development and growth.',
+      pt: 'Uma plataforma de mentoria que conecta pessoas por compatibilidade.',
+      en: 'A mentoring platform that pairs people by compatibility.',
+    },
+  },
+  {
+    id: 'apisul-portal',
+    path: '/product-design/apisul-portal',
+    image: pd4,
+    client: 'Grupo Apisul',
+    tags: {
+      pt: 'Pesquisa | UX & UI | Plataforma | B2B',
+      en: 'Research | UX & UI | Platform | B2B',
+    },
+    headline: {
+      pt: 'Autonomia para o cliente acessar a própria operação através de um portal.',
+      en: 'A portal giving customers direct access to their own operation.',
     },
   },
   {
@@ -77,20 +91,6 @@ export const productDesign: Project[] = [
     headline: {
       pt: 'Site para apresentar o novo posicionamento e marca de uma empresa de TI.',
       en: 'A website introducing the new positioning and brand of an IT company.',
-    },
-  },
-  {
-    // Sem `path`: case ainda não publicado, o card fica sem link.
-    id: 'apisul-web',
-    image: pd4,
-    client: 'Grupo Apisul',
-    tags: {
-      pt: 'Estratégia | UX & UI | Plataforma | B2B',
-      en: 'Strategy | UX & UI | Platform | B2B',
-    },
-    headline: {
-      pt: 'Transformando dados em decisões estratégicas.',
-      en: 'Turning data into strategic decisions.',
     },
   },
 ];
@@ -164,7 +164,7 @@ export const branding: Project[] = [
     tags: { pt: 'Identidade Visual', en: 'Visual Identity' },
     headline: {
       pt: 'Segurança e estabilidade na construção.',
-      en: 'Safety and stability in civil construction.',
+      en: 'Safety and stability in construction.',
     },
   },
   {

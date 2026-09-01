@@ -108,6 +108,27 @@ const nextHref = next?.path ? (lang === 'pt' ? next.path : `/${lang}${next.path}
             );
           }
 
+          if (block.type === 'carousel') {
+            // Faixa que rola sozinha. A lista e duplicada para o laco ser continuo.
+            return (
+              <div class="case-marquee -mx-6 lg:-mx-14 2xl:-mx-36" role="group" aria-label={meta.title}>
+                <div class="case-marquee__track">
+                  {[0, 1].map((copy) =>
+                    block.images.map((img) => (
+                      <Image
+                        src={img.src}
+                        alt={copy === 0 ? img.alt[lang] : ''}
+                        aria-hidden={copy === 1 ? 'true' : undefined}
+                        class="case-marquee__item rounded-3xl"
+                        loading="lazy"
+                      />
+                    ))
+                  )}
+                </div>
+              </div>
+            );
+          }
+
           if (block.type === 'pair') {
             return (
               <div class="flex gap-6 justify-center">
@@ -224,3 +245,49 @@ const nextHref = next?.path ? (lang === 'pt' ? next.path : `/${lang}${next.path}
     }
   </Container>
 </Layout>
+
+<style>
+  .case-marquee {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 4rem, black calc(100% - 4rem), transparent);
+  }
+
+  .case-marquee__track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    animation: case-marquee 60s linear infinite;
+  }
+
+  .case-marquee:hover .case-marquee__track {
+    animation-play-state: paused;
+  }
+
+  .case-marquee__item {
+    height: 22rem;
+    width: auto;
+    max-width: none;
+    flex-shrink: 0;
+  }
+
+  @keyframes case-marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      /* metade do percurso, porque a lista aparece duas vezes */
+      transform: translateX(calc(-50% - 0.75rem));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .case-marquee {
+      overflow-x: auto;
+      mask-image: none;
+    }
+
+    .case-marquee__track {
+      animation: none;
+    }
+  }
+</style>

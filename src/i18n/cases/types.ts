@@ -34,6 +34,7 @@ export type CaseBlock =
   | { type: 'image'; image: CaseImage }
   | { type: 'captioned'; heading: T; image: CaseImage }
   | { type: 'gallery'; images: CaseImage[] }
+  | { type: 'carousel'; images: CaseImage[] }
   | { type: 'pair'; images: [CaseImage, CaseImage] }
   | { type: 'text'; heading: T; paragraphs: TList }
   | {
