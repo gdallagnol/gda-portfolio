@@ -1,0 +1,13 @@
+---
+import { getLangFromUrl, getAlternatePath } from '@i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const ptPath = getAlternatePath(Astro.url, 'pt');
+const enPath = getAlternatePath(Astro.url, 'en');
+---
+
+<div class="flex items-center gap-2 text-sm font-light">
+  <a href={ptPath} class={lang === 'pt' ? 'text-blue-black' : 'text-blue-gray hover:text-blue-black'}>PT</a>
+  <span class="text-blue-gray/40">/</span>
+  <a href={enPath} class={lang === 'en' ? 'text-blue-black' : 'text-blue-gray hover:text-blue-black'}>EN</a>
+</div>

@@ -1,183 +1,120 @@
 import { Root, List, Trigger, Content } from '@radix-ui/react-tabs';
-import pd1Apisul from '@assets/pd-1.png';
-import pd2 from '@assets/pd-2.png';
-import pd3 from '@assets/pd-3.png';
-import pd4 from '@assets/pd-4.png';
+import { productDesign, branding, type Project } from '@i18n/projects';
+import { ui, defaultLang } from '@i18n/ui';
 
-import brandingTaller from '@assets/branding/taller/home.png';
+type Lang = keyof typeof ui;
 
-import brandingTechsensSquare from '@assets/branding/techsens/home-square.png';
-import brandingTechsensWide from '@assets/branding/techsens/home-wide.png';
+const triggerClass =
+  'px-2 pb-1 data-[state=inactive]:mb-[2px] data-[state=active]:border-b-2 data-[state=active]:border-blue-black data-[state=active]:text-blue-black';
 
-import brandingNoiaSquare from '@assets/branding/noia/home-square.png';
-import brandingNoiaWide from '@assets/branding/noia/home-wide.png';
+const contentClass =
+  'mt-10 space-y-20 data-[state=inactive]:animate-fadeOut data-[state=inactive]:hidden data-[state=active]:animate-fadeIn';
 
-import brandingPousadaSquare from '@assets/branding/pousada/home-square.png';
-import brandingPousadaWide from '@assets/branding/pousada/home-wide.png';
+function localize(path: string, lang: Lang) {
+  return lang === defaultLang ? path : `/${lang}${path}`;
+}
 
-import brandingRanchoSquare from '@assets/branding/rancho/home-square.png';
-import brandingRanchoWide from '@assets/branding/rancho/home-wide.png';
+/**
+ * Botão sobre a imagem do card. Sempre visível, para funcionar no toque.
+ * Em telas com ponteiro, expande de pílula para círculo e inverte as cores.
+ */
+function OpenBadge({ label }: { label: string }) {
+  return (
+    <span
+      aria-hidden="true"
+      className="pointer-events-none absolute bottom-5 right-5 z-10 flex h-11 w-16 items-center justify-center rounded-full bg-white text-cold-gray shadow-sm transition-[width,background-color,color] duration-300 ease-out group-hover:w-11 group-hover:bg-cold-gray group-hover:text-white motion-reduce:transition-none"
+      title={label}
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </span>
+  );
+}
 
-import brandingSilvaSquare from '@assets/branding/silva/home-square.png';
-import brandingSilvaWide from '@assets/branding/silva/home-wide.png';
+function Card({ project, lang }: { project: Project; lang: Lang }) {
+  const openLabel = ui[lang]['card.open'] ?? ui[defaultLang]['card.open'];
 
-import brandingAmaterasuSquare from '@assets/branding/amaterasu/home-square.png';
-import brandingAmaterasuWide from '@assets/branding/amaterasu/home-wide.png';
+  // Sem link, a imagem fica estática. Com link, ganha o zoom no hover.
+  const imgClass = 'block w-full rounded-2xl';
+  const zoomClass =
+    'block w-full rounded-2xl transition-transform duration-500 ease-out group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100';
 
-export function Tabs() {
+  const media = (className: string) =>
+    project.imageSquare ? (
+      <picture>
+        <source srcSet={project.imageSquare.src} media="(min-width: 768px)" />
+        <source srcSet={project.image.src} media="(max-width: 767px)" />
+        <img src={project.image.src} alt="" className={className} />
+      </picture>
+    ) : (
+      <img src={project.image.src} alt="" className={className} />
+    );
+
+  const text = (
+    <>
+      <p className="text-blue-gray text-sm font-extralight">{project.tags[lang]}</p>
+      <p className="text-blue-gray font-light">{project.client}</p>
+      <p className="text-cold-gray text-xl font-light">{project.headline[lang]}</p>
+    </>
+  );
+
+  if (!project.path) {
+    return (
+      <div className="block space-y-4">
+        {media(imgClass)}
+        {text}
+      </div>
+    );
+  }
+
+  return (
+    <a className="group block space-y-4" href={localize(project.path, lang)}>
+      <span className="relative block overflow-hidden rounded-2xl leading-none">
+        {media(zoomClass)}
+        <OpenBadge label={openLabel} />
+      </span>
+      {text}
+    </a>
+  );
+}
+
+export function Tabs({ lang = defaultLang }: { lang?: Lang }) {
+  const t = (key: 'tabs.product' | 'tabs.branding') => ui[lang][key] ?? ui[defaultLang][key];
+
+  const [first, ...rest] = branding;
+  const pairs: Project[][] = [];
+  for (let i = 0; i < rest.length; i += 2) {
+    pairs.push(rest.slice(i, i + 2));
+  }
+
   return (
     <Root defaultValue="tab1">
-      <List
-        className="inline-flex h-9 items-center justify-center text-blue-gray gap-6"
-        aria-label="Manage your account"
-      >
-        <Trigger
-          className="px-2 pb-1 data-[state=inactive]:mb-[2px] data-[state=active]:border-b-2
-          data-[state=active]:border-blue-black data-[state=active]:text-blue-black"
-          value="tab1"
-        >
-          PRODUCT DESIGN
+      <List className="inline-flex h-9 items-center justify-center text-blue-gray gap-6" aria-label="Projetos">
+        <Trigger className={triggerClass} value="tab1">
+          {t('tabs.product')}
         </Trigger>
-        <Trigger
-          className=" px-2 pb-1 data-[state=inactive]:mb-[2px] data-[state=active]:border-b-2
-          data-[state=active]:border-blue-black data-[state=active]:text-blue-black"
-          value="tab2"
-        >
-          BRANDING
+        <Trigger className={triggerClass} value="tab2">
+          {t('tabs.branding')}
         </Trigger>
       </List>
 
-      {/* animating the Content component doesnt work properly */}
-      {/* try to wrap the content in a div, change opacity and then animate */}
-      {/* https://www.restack.io/p/radix-ui-tabs-animation-answer-cat-ai */}
-
-      {/* PRODUCT DESIGN */}
-      <Content
-        className="mt-10 space-y-20 data-[state=inactive]:animate-fadeOut data-[state=inactive]:hidden data-[state=active]:animate-fadeIn"
-        value="tab1"
-      >
-        <a className="space-y-4 block mb-20" href="https://gdallagnol.com/product-design/apisul">
-          <img src={pd1Apisul.src} alt="" className="w-full rounded-2xl" />
-          <p className="text-blue-gray text-sm font-extralight">Estratégia | UX & UI | Plataforma | B2B</p>
-          <p className="text-blue-gray font-light">Grupo Apisul</p>
-          <p className="text-cold-gray text-xl font-light">
-            Centralizando fluxos e dados em uma plataforma modular e intuitiva.
-          </p>
-        </a>
-
-        <a className="space-y-4 block" href="https://gdallagnol.com/product-design/mais-nitido">
-          <img src={pd2.src} alt="" className="w-full rounded-2xl" />
-          <p className="text-blue-gray text-sm font-extralight">UX & UI | Plataforma | B2B</p>
-          <p className="text-blue-gray font-light">Mais Nítido</p>
-          <p className="text-cold-gray text-xl font-light">
-            Possibilitando uma evolução profissional prática e fluída.
-          </p>
-        </a>
-
-        <a className="space-y-4 block" href="https://gdallagnol.com/product-design/dbc">
-          <img src={pd3.src} alt="" className="w-full rounded-2xl" />
-          <p className="text-blue-gray text-sm font-extralight">UI | Website Desktop & Mobile</p>
-          <p className="text-blue-gray font-light">DBC</p>
-          <p className="text-cold-gray text-xl font-light">
-            Site para apresentar o novo posicionamento e marca de uma empresa de TI.
-          </p>
-        </a>
-
-        <a className="space-y-4 block">
-          <img src={pd4.src} alt="" className="w-full rounded-2xl" />
-          <p className="text-blue-gray text-sm font-extralight">UI | Website Desktop & Mobile</p>
-          <p className="text-blue-gray font-light">Grupo Apisul</p>
-          <p className="text-cold-gray text-xl font-light">Transformando dados em decisões estratégicas.</p>
-        </a>
+      <Content className={contentClass} value="tab1">
+        {productDesign.map((project) => (
+          <Card key={project.id} project={project} lang={lang} />
+        ))}
       </Content>
 
-      {/* BRANDING */}
-      <Content
-        className="mt-10 space-y-20 data-[state=inactive]:animate-fadeOut data-[state=inactive]:hidden data-[state=active]:animate-fadeIn"
-        value="tab2"
-      >
-        <a className="block space-y-4" href="https://gdallagnol.com/branding/taller">
-          <img src={brandingTaller.src} alt="" className="rounded-2xl" />
-          <p className="text-blue-gray text-sm font-extralight">Identidade Visual</p>
-          <p className="text-blue-gray font-light">Taller Arquitetura</p>
-          <p className="text-cold-gray text-xl font-light">
-            Precisão e geometria no design de soluções arquitetônicas.
-          </p>
-        </a>
+      <Content className={contentClass} value="tab2">
+        <Card project={first} lang={lang} />
 
-        <div className="flex flex-col gap-20 md:flex-row md:gap-6 md:justify-between">
-          <a className="block space-y-4" href="https://gdallagnol.com/branding/techsens">
-            <picture>
-              <source srcSet={brandingTechsensSquare.src} media="(min-width: 768px)" />
-              <source srcSet={brandingTechsensWide.src} media="(max-width: 767px)" />
-              <img src={brandingTechsensWide.src} alt="" />
-            </picture>
-
-            <p className="text-blue-gray text-sm font-extralight">Identidade Visual</p>
-            <p className="text-blue-gray font-light">techsens</p>
-            <p className="text-cold-gray text-xl font-light">Inovação e funcionalidade em automação.</p>
-          </a>
-
-          <a className="block space-y-4" href="https://gdallagnol.com/branding/noia-grafica">
-            <picture>
-              <source srcSet={brandingNoiaSquare.src} media="(min-width: 768px)" />
-              <source srcSet={brandingNoiaWide.src} media="(max-width: 767px)" />
-              <img src={brandingNoiaWide.src} alt="" />
-            </picture>
-            <p className="text-blue-gray text-sm font-extralight">Identidade Visual</p>
-            <p className="text-blue-gray font-light">Nóia Gráfica</p>
-            <p className="text-cold-gray text-xl font-light">Conectando arte urbana e movimento independente.</p>
-          </a>
-        </div>
-
-        <div className="flex flex-col gap-20 md:flex-row md:gap-6 md:justify-between">
-          <a className="block space-y-4" href="https://gdallagnol.com/branding/rancho-raposo">
-            <picture>
-              <source srcSet={brandingRanchoSquare.src} media="(min-width: 768px)" />
-              <source srcSet={brandingRanchoWide.src} media="(max-width: 767px)" />
-              <img src={brandingRanchoWide.src} alt="" />
-            </picture>
-
-            <p className="text-blue-gray text-sm font-extralight">Identidade Visual</p>
-            <p className="text-blue-gray font-light">Rancho Raposo</p>
-            <p className="text-cold-gray text-xl font-light">Conceito de aconchego e tradição dos ranchos.</p>
-          </a>
-
-          <a className="block space-y-4" href="https://gdallagnol.com/branding/pousada-rainha">
-            <picture>
-              <source srcSet={brandingPousadaSquare.src} media="(min-width: 768px)" />
-              <source srcSet={brandingPousadaWide.src} media="(max-width: 767px)" />
-              <img src={brandingPousadaWide.src} alt="" />
-            </picture>
-            <p className="text-blue-gray text-sm font-extralight">Identidade Visual</p>
-            <p className="text-blue-gray font-light">Pousada da Rainha</p>
-            <p className="text-cold-gray text-xl font-light">Design inspirado no aconchego e símbolos marítimos.</p>
-          </a>
-        </div>
-        <div className="flex flex-col gap-20 md:flex-row md:gap-6 md:justify-between">
-          <a className="block space-y-4" href="https://gdallagnol.com/branding/silva-schardong">
-            <picture>
-              <source srcSet={brandingSilvaSquare.src} media="(min-width: 768px)" />
-              <source srcSet={brandingSilvaWide.src} media="(max-width: 767px)" />
-              <img src={brandingSilvaWide.src} alt="" />
-            </picture>
-            <p className="text-blue-gray text-sm font-extralight">Identidade Visual</p>
-            <p className="text-blue-gray font-light">Silva Schardong</p>
-            <p className="text-cold-gray text-xl font-light">Segurança e estabilidade na construção.</p>
-          </a>
-
-          <a className="block space-y-4" href="https://gdallagnol.com/branding/amaterasu">
-            <picture>
-              <source srcSet={brandingAmaterasuSquare.src} media="(min-width: 768px)" />
-              <source srcSet={brandingAmaterasuWide.src} media="(max-width: 767px)" />
-              <img src={brandingAmaterasuWide.src} alt="" />
-            </picture>
-
-            <p className="text-blue-gray text-sm font-extralight">Identidade Visual</p>
-            <p className="text-blue-gray font-light">Amaterasu</p>
-            <p className="text-cold-gray text-xl font-light">Reflexão da elegância e mitologia japonesa no design.</p>
-          </a>
-        </div>
+        {pairs.map((pair) => (
+          <div key={pair[0].id} className="flex flex-col gap-20 md:flex-row md:gap-6 md:justify-between">
+            {pair.map((project) => (
+              <Card key={project.id} project={project} lang={lang} />
+            ))}
+          </div>
+        ))}
       </Content>
     </Root>
   );

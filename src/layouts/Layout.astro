@@ -1,29 +1,43 @@
 ---
 import Footer from '@components/Footer.astro';
 import Header from '@components/Header.astro';
+import { getLangFromUrl, useTranslations, getAlternatePath } from '@i18n/utils';
 
 const { title } = Astro.props;
-const pageTitle = title || "Gabi Dall'Agnol";   
+const pageTitle = title || "Gabi Dall'Agnol";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const htmlLang = lang === 'pt' ? 'pt-BR' : 'en';
+const site = 'https://gdallagnol.com';
+const ptUrl = site + getAlternatePath(Astro.url, 'pt');
+const enUrl = site + getAlternatePath(Astro.url, 'en');
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={htmlLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
-    <meta name="description" content="Portfólio Product Design | Branding" />
+    <meta name="description" content={t('meta.description')} />
     <meta name="generator" content={Astro.generator} />
     <meta name="author" content="Gabi Dall'Agnol" />
-    <meta name="keywords" content="Designer, Product Design, UX, Branding, Portfólio, Gabi Dall'Agnol, Design Gráfico" />
+    <meta name="keywords" content={t('meta.keywords')} />
+
+    <!-- Versões por idioma -->
+    <link rel="alternate" hreflang="pt-BR" href={ptUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="x-default" href={ptUrl} />
 
     <!-- Open Graph / SEO -->
-    <meta property="og:title" content="Gabi Dall'Agnol" />
-    <meta property="og:description" content="Portfólio Product Design | Branding" />
-    <meta property="og:url" content="https://gdallagnol.com" />
-    <meta property="og:image" content="https://gdallagnol.com/og-image.webp" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={t('meta.description')} />
+    <meta property="og:url" content={site + Astro.url.pathname} />
+    <meta property="og:image" content={`${site}/og-image.webp`} />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale" content={t('meta.locale')} />
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
@@ -41,14 +55,86 @@ const pageTitle = title || "Gabi Dall'Agnol";
   </body>
 </html>
 
-<style>
+<style is:global>
   html,
   body {
     margin: 0;
     width: 100%;
     height: 100%;
   }
+
+  /* Mantem a cor do site tambem quando a rolagem passa do topo. */
+  html {
+    background-color: theme('colors.background');
+  }
+
+  /* Transição entre páginas, nativa do navegador. Não carrega JavaScript. */
+  @view-transition {
+    navigation: auto;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Aparição das imagens conforme a rolagem.
+     A classe em <html> só é adicionada por script, então sem JavaScript
+     o conteúdo permanece visível. */
+  .js-reveal [data-reveal] {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  .js-reveal [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    @view-transition {
+      navigation: none;
+    }
+
+    .js-reveal [data-reveal],
+    .js-reveal [data-reveal].is-visible {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
 </style>
+
+<script is:inline>
+  (() => {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced || !('IntersectionObserver' in window)) return;
+
+    document.documentElement.classList.add('js-reveal');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      },
+      { rootMargin: '0px 0px -12% 0px', threshold: 0.05 }
+    );
+
+    for (const el of document.querySelectorAll('[data-reveal]')) {
+      observer.observe(el);
+    }
+  })();
+</script>
 
 <script>
   import { setupCopyToClipboard } from '@utils/copyToClipboard.ts';

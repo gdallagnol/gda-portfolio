@@ -2,31 +2,41 @@
 import logo from '@assets/logo.svg';
 import copy from '@assets/copy.svg';
 import Container from '@components/Container.astro';
+import LanguageSwitcher from '@components/LanguageSwitcher.astro';
+import { getLangFromUrl, useTranslations, localizePath } from '@i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const homeHref = localizePath('/', lang);
 ---
 
 <Container>
-    <header class="flex py-10 justify-between mb-8 lg:mb-32">
-      <a href="https://gdallagnol.com/">
-        <img src={logo.src} alt="" class="" />
-      </a>
-  
-      <p class="text-blue-black hidden md:block">Gabi Dall'Agnol</p>
-      <p class="text-blue-black hidden md:block">Designer</p>
+  <header class="flex py-10 justify-between items-center mb-8 lg:mb-32">
+    <a href={homeHref}>
+      <img src={logo.src} alt="Gabi Dall'Agnol" />
+    </a>
 
-    <div class="relative">
-      <button
-        class="copy-button flex items-center gap-2 w-auto h-8 px-3 text-sm py-1 border rounded-md cursor-pointer font-light text-blue-gray
-      border-neutral-200/60 hover:bg-neutral-100 hover:text-neutral-600"
-        data-copy="contato@gdallagnol.com"
-      >
-        <span>contato@gdallagnol.com</span>
-        <img src={copy.src} alt="Copy icon" />
-      </button>
-      <span
-        class="copy-success-message absolute left-1/2 transform -translate-x-1/2 mt-2 hidden text-sm text-green-600 border p-3 rounded-md shadow-md w-44"
-      >
-        E-mail copiado!
-      </span>
+    <p class="text-blue-black hidden md:block">Gabi Dall'Agnol</p>
+    <p class="text-blue-black hidden md:block">{t('header.role')}</p>
+
+    <div class="flex items-center gap-4">
+      <LanguageSwitcher />
+
+      <div class="relative">
+        <button
+          class="copy-button flex items-center gap-2 w-auto h-8 px-3 text-sm py-1 border rounded-md cursor-pointer font-light text-blue-gray
+        border-neutral-200/60 hover:bg-neutral-100 hover:text-neutral-600"
+          data-copy="contato@gdallagnol.com"
+        >
+          <span>contato@gdallagnol.com</span>
+          <img src={copy.src} alt="" />
+        </button>
+        <span
+          class="copy-success-message absolute left-1/2 transform -translate-x-1/2 mt-2 hidden text-sm text-green-600 border p-3 rounded-md shadow-md w-44"
+        >
+          {t('copy.success')}
+        </span>
+      </div>
     </div>
   </header>
 </Container>

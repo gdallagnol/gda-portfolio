@@ -10,5 +10,12 @@ export default defineConfig({
   server: {
     open: true,
   },
-  site: 'https://gdallagnol.com', 
+  site: 'https://gdallagnol.com',
+  i18n: {
+    locales: ['pt', 'en'],
+    defaultLocale: 'pt',
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
 });
