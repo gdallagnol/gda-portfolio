@@ -3,7 +3,7 @@ import Footer from '@components/Footer.astro';
 import Header from '@components/Header.astro';
 import { getLangFromUrl, useTranslations, getAlternatePath } from '@i18n/utils';
 
-const { title } = Astro.props;
+const { title, description, noindex } = Astro.props;
 const pageTitle = title || "Gabi Dall'Agnol";
 
 const lang = getLangFromUrl(Astro.url);
@@ -13,6 +13,25 @@ const htmlLang = lang === 'pt' ? 'pt-BR' : 'en';
 const site = 'https://gdallagnol.com';
 const ptUrl = site + getAlternatePath(Astro.url, 'pt');
 const enUrl = site + getAlternatePath(Astro.url, 'en');
+const pageDescription = description || t('meta.description');
+
+const perfil = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: "Gabriela Dall'Agnol",
+  alternateName: "Gabi Dall'Agnol",
+  url: site,
+  image: `${site}/og-image.png`,
+  jobTitle: lang === 'pt' ? 'Service Designer e UX Researcher' : 'Service Designer and UX Researcher',
+  worksFor: { '@type': 'Organization', name: 'Nimble Evolution' },
+  alumniOf: { '@type': 'CollegeOrUniversity', name: 'ESPM' },
+  email: 'contato@gdallagnol.com',
+  sameAs: [
+    'https://linkedin.com/in/gabriela-dall-agnol',
+    'https://www.behance.net/gabrieladallagnol',
+    'https://medium.com/@gdallagnol',
+  ],
+};
 ---
 
 <!doctype html>
@@ -21,10 +40,11 @@ const enUrl = site + getAlternatePath(Astro.url, 'en');
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
-    <meta name="description" content={t('meta.description')} />
+    <meta name="description" content={pageDescription} />
     <meta name="generator" content={Astro.generator} />
     <meta name="author" content="Gabi Dall'Agnol" />
-    <meta name="keywords" content={t('meta.keywords')} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    <link rel="canonical" href={site + Astro.url.pathname} />
 
     <!-- Versões por idioma -->
     <link rel="alternate" hreflang="pt-BR" href={ptUrl} />
@@ -33,11 +53,17 @@ const enUrl = site + getAlternatePath(Astro.url, 'en');
 
     <!-- Open Graph / SEO -->
     <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={t('meta.description')} />
+    <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={site + Astro.url.pathname} />
-    <meta property="og:image" content={`${site}/og-image.webp`} />
+    <meta property="og:image" content={`${site}/og-image.png`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={t('meta.locale')} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(perfil)} />
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 

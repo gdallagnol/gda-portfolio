@@ -25,6 +25,10 @@ export const techsens: CaseData = {
     segment: { pt: 'Tecnologia / Automação Residencial', en: 'Technology / Home Automation' },
     client: 'Techsens',
     year: '2024',
+    description: {
+      pt: 'Identidade visual da Techsens, empresa de automação residencial, inspirada em circuitos e sensores eletrônicos.',
+      en: 'Visual identity for Techsens, a home automation company, inspired by circuits and electronic sensors.',
+    },
     title: 'Techsens',
   },
 

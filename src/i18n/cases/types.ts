@@ -19,6 +19,8 @@ export type CaseMeta = {
   /** Opcional: nem todo case declara o papel. */
   role?: T;
   title: string;
+  /** Descricao para buscadores e compartilhamento. Entre 120 e 160 caracteres. */
+  description?: T;
   /** Primeira parte do subtitulo. Opcional: alguns cases so tem titulo. */
   subtitle?: T;
   /** Link opcional no meio do subtitulo. */

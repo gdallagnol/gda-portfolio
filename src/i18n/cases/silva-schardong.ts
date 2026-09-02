@@ -20,6 +20,10 @@ export const silvaSchardong: CaseData = {
     segment: { pt: 'Construção / Engenharia', en: 'Construction / Engineering' },
     client: 'Silva Schardong',
     year: '2024',
+    description: {
+      pt: 'Identidade visual da Silva Schardong, construtora, com ícone inspirado no conceito de alicerce e na simbologia de apoio estrutural.',
+      en: 'Visual identity for Silva Schardong, a construction company, with an icon built from the idea of a foundation and structural support.',
+    },
     title: 'Silva Schardong',
   },
 

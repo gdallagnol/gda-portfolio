@@ -23,6 +23,10 @@ export const amaterasu: CaseData = {
     segment: { pt: 'Gastronomia', en: 'Food and Drink' },
     client: { pt: 'Amaterasu (fictício)', en: 'Amaterasu (fictional)' },
     year: '2019',
+    description: {
+      pt: 'Projeto autoral de identidade visual para o Amaterasu, restaurante japonês contemporâneo, com a garça como símbolo principal.',
+      en: 'Self initiated visual identity for Amaterasu, a contemporary Japanese restaurant, with the heron as its central symbol.',
+    },
     title: 'Amaterasu',
   },
 

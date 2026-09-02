@@ -21,6 +21,10 @@ export const ranchoRaposo: CaseData = {
     segment: { pt: 'Turismo / Hospedagem', en: 'Travel / Hospitality' },
     client: 'Rancho Raposo',
     year: '2023',
+    description: {
+      pt: 'Identidade visual do Rancho Raposo, pousada inspirada no estilo de vida dos ranchos, com tipografia suave e elementos orgânicos.',
+      en: 'Visual identity for Rancho Raposo, a guesthouse inspired by ranch life, using soft typography and organic elements.',
+    },
     title: 'Rancho Raposo',
   },
 

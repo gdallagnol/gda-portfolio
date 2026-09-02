@@ -1,16 +1,20 @@
 import type { CaseData } from './types';
 
 // ATENCAO: confira o nome exato do primeiro arquivo com `ls src/assets/pd/apisul-portal`
-import imgHome from '@assets/pd/apisul-portal/img-home-seguros-portaldocliente.png';
-import imgOportunidade from '@assets/pd/apisul-portal/img-oportunidade.png';
-import imgSuporte from '@assets/pd/apisul-portal/img-suporte.png';
+import imgHome from '@assets/pd/apisul-portal/img-home-seguros-portaldocliente.webp';
+import imgOportunidade from '@assets/pd/apisul-portal/img-oportunidade.webp';
+import imgSuporte from '@assets/pd/apisul-portal/img-suporte.webp';
 
 export const apisulPortal: CaseData = {
   meta: {
     segment: { pt: 'Transporte e Logística', en: 'Transport and Logistics' },
     client: 'Grupo Apisul',
     year: '2024-2025',
-    role: { pt: 'Coordenação e Product Design', en: 'Coordination and Product Design' },
+    role: { pt: 'Product Design e pesquisa', en: 'Product Design and research' },
+    description: {
+      pt: 'Desenho de um portal que dá ao cliente acesso direto aos dados de logística, risco e seguros da própria operação, sem depender do gerente de conta.',
+      en: 'Design of a portal giving customers direct access to their own logistics, risk and insurance data, without going through an account manager.',
+    },
     title: 'Portal do Cliente',
     subtitle: {
       pt: 'Autonomia para o cliente acessar a ',

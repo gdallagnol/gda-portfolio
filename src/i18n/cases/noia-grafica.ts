@@ -19,6 +19,10 @@ export const noiaGrafica: CaseData = {
     segment: { pt: 'Cultura', en: 'Culture' },
     client: 'Nóia Gráfica',
     year: '2024',
+    description: {
+      pt: 'Identidade visual da feira Nóia Gráfica 2, inspirada na arte urbana dos anos 90 e na estética da serigrafia.',
+      en: 'Visual identity for the Nóia Gráfica 2 fair, drawing on nineties street art and screen printing aesthetics.',
+    },
     title: 'Nóia Gráfica',
   },
 

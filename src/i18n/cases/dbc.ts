@@ -11,6 +11,10 @@ export const dbc: CaseData = {
     client: 'DBC',
     year: '2022',
     role: { pt: 'UI Design', en: 'UI Design' },
+    description: {
+      pt: 'Interface do site institucional da DBC, criado para apresentar o novo posicionamento e a nova marca de uma empresa de tecnologia.',
+      en: 'Interface design for the DBC website, built to introduce the new brand and positioning of a technology company.',
+    },
     title: 'DBC',
     subtitle: { pt: 'Um ', en: 'A ' },
     subtitleLink: {

@@ -33,7 +33,10 @@ const next: Project | undefined =
 const nextHref = next?.path ? (lang === 'pt' ? next.path : `/${lang}${next.path}`) : undefined;
 ---
 
-<Layout title={pageTitle ?? `${meta.title} | Gabi Dall'Agnol`}>
+<Layout
+  title={pageTitle ?? `${meta.title} | Gabi Dall'Agnol`}
+  description={meta.description ? meta.description[lang] : undefined}
+>
   <Container>
     <!-- Ficha tecnica do projeto -->
     <section class="mb-12 flex flex-col gap-6 md:flex-row md:gap-16" aria-label={meta.title}>

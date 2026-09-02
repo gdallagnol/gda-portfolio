@@ -1,20 +1,20 @@
 import type { CaseData } from './types';
 
-import img1 from '@assets/pd/mais-nitido/01.png';
-import img2 from '@assets/pd/mais-nitido/02.png';
-import img3 from '@assets/pd/mais-nitido/03.png';
-import img4 from '@assets/pd/mais-nitido/04.png';
-import img5 from '@assets/pd/mais-nitido/05.png';
-import img6 from '@assets/pd/mais-nitido/06.png';
-import img7 from '@assets/pd/mais-nitido/07.png';
-import img8 from '@assets/pd/mais-nitido/08.png';
-import img9 from '@assets/pd/mais-nitido/09.png';
-import img10 from '@assets/pd/mais-nitido/10.png';
-import img11 from '@assets/pd/mais-nitido/11.png';
-import img12 from '@assets/pd/mais-nitido/12.png';
-import img13 from '@assets/pd/mais-nitido/13.png';
-import img14 from '@assets/pd/mais-nitido/14.png';
-import img15 from '@assets/pd/mais-nitido/15.png';
+import img1 from '@assets/pd/mais-nitido/01.webp';
+import img2 from '@assets/pd/mais-nitido/02.webp';
+import img3 from '@assets/pd/mais-nitido/03.webp';
+import img4 from '@assets/pd/mais-nitido/04.webp';
+import img5 from '@assets/pd/mais-nitido/05.webp';
+import img6 from '@assets/pd/mais-nitido/06.webp';
+import img7 from '@assets/pd/mais-nitido/07.webp';
+import img8 from '@assets/pd/mais-nitido/08.webp';
+import img9 from '@assets/pd/mais-nitido/09.webp';
+import img10 from '@assets/pd/mais-nitido/10.webp';
+import img11 from '@assets/pd/mais-nitido/11.webp';
+import img12 from '@assets/pd/mais-nitido/12.webp';
+import img13 from '@assets/pd/mais-nitido/13.webp';
+import img14 from '@assets/pd/mais-nitido/14.webp';
+import img15 from '@assets/pd/mais-nitido/15.webp';
 
 /**
  * Os textos alternativos abaixo descrevem as telas de forma geral.
@@ -26,6 +26,10 @@ export const maisNitido: CaseData = {
     client: 'Mais Nítido',
     year: '2023-2024',
     role: { pt: 'Coordenação e Product Design', en: 'Coordination and Product Design' },
+    description: {
+      pt: 'Pesquisa e desenho de uma plataforma de mentoria corporativa que forma duplas a partir de compatibilidade real, hoje em uso no setor público e privado.',
+      en: 'Research and design of a corporate mentoring platform that pairs people by real compatibility, now in use across public and private organisations.',
+    },
     title: 'Mais Nítido',
     subtitle: {
       pt: 'Uma plataforma de mentoria que conecta ',

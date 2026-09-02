@@ -3,14 +3,14 @@ import Layout from '@layouts/Layout.astro';
 import About from '@components/About.astro';
 import Container from '@components/Container.astro';
 import { Tabs } from '@components/Tabs';
-import backgroundGlass from '@assets/background-glass.png';
+import backgroundGlass from '@assets/background-glass.webp';
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout>
+<Layout title={lang === 'pt' ? "Gabi Dall'Agnol | Service Designer e UX Researcher" : "Gabi Dall'Agnol | Service Designer and UX Researcher"}>
   <Container>
     <div class="hidden md:block md:relative">
       <img

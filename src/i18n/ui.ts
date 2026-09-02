@@ -7,7 +7,7 @@ export const defaultLang = 'pt';
 
 export const ui = {
   pt: {
-    'meta.description': 'Portfólio Product Design | Branding',
+    'meta.description': 'Portfólio de Gabi Dall\'Agnol, Service Designer e UX Researcher. Pesquisa, design de serviços, produto digital e identidade visual.',
     'meta.keywords': 'Designer, Product Design, UX, Branding, Portfólio, Gabi Dall\'Agnol, Design Gráfico',
     'meta.locale': 'pt_BR',
 
@@ -42,7 +42,7 @@ export const ui = {
     'card.open': 'Ver o case',
   },
   en: {
-    'meta.description': 'Product Design & Branding Portfolio',
+    'meta.description': 'Portfolio of Gabi Dall\'Agnol, Service Designer and UX Researcher. Research, service design, digital product and visual identity.',
     'meta.keywords': 'Designer, Product Design, UX, Branding, Portfolio, Gabi Dall\'Agnol, Graphic Design',
     'meta.locale': 'en_US',
 
@@ -51,9 +51,9 @@ export const ui = {
 
     'footer.cta': 'Let\'s talk?',
 
-    'home.title.1': 'Connecting people,',
-    'home.title.2': 'business and strategy',
-    'home.title.3': 'through design.',
+    'home.title.1': 'Designer building',
+    'home.title.2': 'connections between',
+    'home.title.3': 'people, business and strategic solutions.',
 
     'tabs.product': 'PRODUCT DESIGN',
     'tabs.branding': 'BRANDING',

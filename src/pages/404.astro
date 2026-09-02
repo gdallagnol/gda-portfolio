@@ -2,7 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import Container from '@components/Container.astro';
 import arrow from '@assets/arrow.svg';
-import bgGlass2 from '@assets/background-glass-3.png';
+import bgGlass2 from '@assets/background-glass-3.webp';
 import { getLangFromUrl, useTranslations, localizePath } from '@i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -11,7 +11,7 @@ const homeHref = localizePath('/', lang);
 const pageTitle = lang === 'pt' ? 'Página não encontrada | Gabi Dall\'Agnol' : 'Page not found | Gabi Dall\'Agnol';
 ---
 
-<Layout title={pageTitle}>
+<Layout title={pageTitle} noindex>
   <Container>
     <h1 class="text-2xl lg:text-6xl text-cold-gray font-light mb-16">
       {t('404.title.1')}

@@ -1,17 +1,21 @@
 import type { CaseData } from './types';
 
-import img1 from '@assets/pd/apisul/01.png';
-import img1_1 from '@assets/pd/apisul/01-1.png';
-import img2 from '@assets/pd/apisul/02.png';
-import img3 from '@assets/pd/apisul/03.png';
-import img5 from '@assets/pd/apisul/05.png';
-import img6 from '@assets/pd/apisul/06.png';
-import img7 from '@assets/pd/apisul/07.png';
-import img8 from '@assets/pd/apisul/08.png';
-import img9 from '@assets/pd/apisul/09.png';
-import img10 from '@assets/pd/apisul/10.png';
-import img11 from '@assets/pd/apisul/11.png';
-import img12 from '@assets/pd/apisul/12.png';
+import img1 from '@assets/pd/apisul/01.webp';
+import img1_1 from '@assets/pd/apisul/01-1.webp';
+import img2 from '@assets/pd/apisul/02.webp';
+import img3 from '@assets/pd/apisul/03.webp';
+import img5 from '@assets/pd/apisul/05.webp';
+import img6 from '@assets/pd/apisul/06.webp';
+import img7 from '@assets/pd/apisul/07.webp';
+import img8 from '@assets/pd/apisul/08.webp';
+import img9 from '@assets/pd/apisul/09.webp';
+import img10 from '@assets/pd/apisul/10.webp';
+import img11 from '@assets/pd/apisul/11.webp';
+import img12 from '@assets/pd/apisul/12.webp';
+import carrossel1 from '@assets/pd/apisul/carrossel1.webp';
+import carrossel2 from '@assets/pd/apisul/carrossel2.webp';
+import carrossel3 from '@assets/pd/apisul/carrossel3.webp';
+import carrossel4 from '@assets/pd/apisul/carrossel4.webp';
 
 export const apisul: CaseData = {
   meta: {
@@ -19,6 +23,10 @@ export const apisul: CaseData = {
     client: 'Grupo Apisul',
     year: '2023',
     role: { pt: 'Coordenação e Product Design', en: 'Coordination and Product Design' },
+    description: {
+      pt: 'Pesquisa e desenho de um ecossistema integrado para o Grupo Apisul, unindo seguros, logística, risco e sinistros em uma única plataforma.',
+      en: 'Research and design of an integrated ecosystem for Grupo Apisul, bringing insurance, logistics, risk and claims into a single platform.',
+    },
     title: 'Plataforma Apisul',
     subtitle: {
       pt: 'Pesquisa e desenho de um ',
@@ -51,8 +59,8 @@ export const apisul: CaseData = {
           'A pergunta que orientou o projeto foi como construir um ecossistema integrado que permitisse aos clientes contratar módulos de forma mais rápida e assertiva em uma única plataforma.',
         ],
         en: [
-          'Grupo Apisul offers insurance, risk management, logistics, payments, and claims services, each running on a separate platform. This fragmentation complicates both purchasing and implementation, while leaving customer data distributed across systems that do not communicate with one another.',
-          'The project set out to determine how these services could operate as a single integrated ecosystem, allowing customers to select and activate the modules they need without navigating five different products.',
+          'Grupo Apisul offers insurance, risk management, logistics, payments and claims services, each running on a separate platform. This fragmentation complicates both purchasing and implementation, and leaves customer data distributed across systems that do not communicate with each other.',
+          'The project set out to determine whether these services could operate as a single integrated ecosystem, one where customers select and activate the modules they need without navigating five different products.',
         ],
       },
     },
@@ -62,12 +70,10 @@ export const apisul: CaseData = {
       heading: { pt: 'Processo', en: 'Process' },
       paragraphs: {
         pt: [
-          'Como o problema envolvia cinco produtos diferentes, comecei pela etapa de empatia buscando compreender o ecossistema como um todo. Primeiro, mapeei como cada solução funcionava e se relacionava com as demais, criando uma visão das conexões que formavam essa experiência. Com esse panorama, defini as diferentes perspectivas que precisavam ser investigadas e estruturei a pesquisa para aprofundar esse entendimento.',
-          'O processo completo, das primeiras descobertas ao resultado final, combinou diferentes métodos e ferramentas em cada etapa.',
+          'Como o problema envolvia cinco produtos separados e públicos com necessidades muito diferentes, comecei mapeando o ecossistema antes de partir para as entrevistas. Conversei com executivos para entender a estratégia, com a operação para entender as travas do dia a dia e com transportadoras de portes e localizações diferentes, porque a dor de um autônomo não é a mesma de uma frota grande. Cada etapa pedia uma pergunta diferente, e as ferramentas foram escolhidas a partir disso.',
         ],
         en: [
-          'Because the problem involved five different products, I started with the empathy stage by first understanding the ecosystem as a whole. I mapped how each solution worked and related to the others, creating a view of the connections that shaped the overall experience. With this broader perspective, I identified the different viewpoints that needed to be investigated and structured the research to deepen that understanding.',
-          'The complete process, from the initial discoveries to the final outcome, combined different methods and tools at each stage.',
+          'With five products and several distinct audiences involved, I mapped the ecosystem before beginning any interviews. I then spoke with executives about strategy, with the operations team about the obstacles they encounter daily, and with carriers across a range of sizes and regions. That range mattered: the constraints facing an independent driver differ substantially from those facing a company managing a large fleet. Each stage of the work raised a different question, and the methods followed from there.',
         ],
       },
     },
@@ -78,7 +84,7 @@ export const apisul: CaseData = {
         src: img1_1,
         alt: {
           pt: 'Diagrama do processo em cinco etapas: empatia, definição, ideação, prototipação e teste, refino e resultado, com as ferramentas usadas em cada uma.',
-          en: 'Five-stage process diagram covering empathy, definition, ideation, prototyping and testing, refinement, and results, with the methods used at each stage.',
+          en: 'Five stage process diagram covering empathy, definition, ideation, prototyping and testing, and refinement, with the methods used at each stage.',
         },
       },
     },
@@ -88,7 +94,7 @@ export const apisul: CaseData = {
       heading: { pt: 'Insights das pesquisas', en: 'Research insights' },
       intro: {
         pt: 'Foram realizadas entrevistas em profundidade com executivos das áreas, colaboradores da operação e clientes externos, entre transportadoras de diversos portes e embarcadores. Para a leitura de mercado, fiz uma desk research com dados do segmento, tendências de tecnologia e benchmark dos concorrentes, somada a entrevistas com fundadores de insurtechs consagradas.',
-        en: 'The research combined two approaches. I conducted in-depth interviews with executives, operations staff, and external customers, including carriers of different sizes and shippers. Alongside this, I conducted desk research covering industry data, technology trends, competitor benchmarking, and interviews with founders of established insurtechs.',
+        en: 'The research combined two approaches. In depth interviews with executives, operations staff and external customers, ranging from independent drivers to large shippers. Alongside that, a market study covering industry data, technology trends, competitor benchmarking and interviews with founders of established insurtechs.',
       },
       groups: [
         {
@@ -100,7 +106,7 @@ export const apisul: CaseData = {
             ],
             en: [
               'Customers place high value on identifying opportunities to improve their operations, and they expect the systems they use to support that directly.',
-              'Access to their own data was indirect. To review logistics, risk, or insurance information, customers depended on monthly reports or had to request the data each time they needed it.',
+              'Access to their own data was indirect. To review logistics, risk or insurance information, customers depended on monthly reports or had to request the data each time they needed it.',
             ],
           },
         },
@@ -129,7 +135,7 @@ export const apisul: CaseData = {
           title: { pt: 'Promover a integração das soluções', en: 'Bring the products together' },
           text: {
             pt: 'Unificar produtos e serviços em uma plataforma com segmentação de uso conforme o comportamento do cliente, para que a contratação parta da necessidade e não da estrutura interna da empresa.',
-            en: 'Consolidate products and services into a single platform organized around customer behaviour, so that purchasing decisions start from a business need rather than from the company’s internal structure.',
+            en: 'Consolidate products and services into a single platform organized around customer behaviour, so that purchasing decisions start from a business need rather than from the company internal structure.',
           },
         },
         {
@@ -148,7 +154,7 @@ export const apisul: CaseData = {
           title: { pt: 'Ampliar a autonomia do cliente', en: 'Give customers more autonomy' },
           text: {
             pt: 'Permitir que o cliente gerisse a própria operação de forma independente, incluindo a implantação de dados e a contratação automatizada via site, o que abria caminho para atender pequenas transportadoras e autônomos sem depender de atendimento comercial.',
-            en: 'Enable customers to manage their own operations independently, including uploading their own data and purchasing online. This also created a path to serve small carriers and independent drivers, a segment the traditional sales model could not reach economically.',
+            en: 'Enable customers to manage their own operation independently, including uploading their own data and purchasing online. This also created a path to serve small carriers and independent drivers, a segment the traditional sales model could not reach economically.',
           },
         },
       ],
@@ -159,16 +165,14 @@ export const apisul: CaseData = {
       heading: { pt: 'Escolhas do projeto', en: 'Project decisions' },
       paragraphs: {
         pt: [
-          'O protótipo foi criado para tornar concreta a proposta de integrar as cinco soluções da Apisul em uma única plataforma e levar essa visão para discussão com os acionistas. Como a definição de uma plataforma desse porte estava além do escopo do projeto, o objetivo não era entregar uma especificação de desenvolvimento, mas explorar como essa experiência poderia funcionar na prática.',
-          'As possibilidades exploradas no protótipo partiram dos aprendizados da pesquisa. A jornada de aquisição online, por exemplo, surgiu das entrevistas com fundadores de insurtechs e dos dados de mercado, que apontavam para modelos de contratação digital sem intermediação. Por isso, foi direcionada a pequenas transportadoras e autônomos, públicos que ficavam fora do modelo comercial tradicional. A central de ajuda respondeu à dificuldade dos clientes em acessar informações e obter suporte sem depender do WhatsApp. Já o Style Guide surgiu da análise heurística, que revelou produtos desenvolvidos de forma independente, sem padronização de componentes e com interfaces defasadas.',
-          'Não seria possível representar todo o ecossistema no nível de profundidade necessário. Por isso, além das evidências da pesquisa, considerei as prioridades do negócio e os dados de uso do Google Analytics para definir o recorte. Como os seguros já eram o carro chefe da Apisul, o direcionamento era fortalecer o ApisulLog e o Integra como produtos com valor próprio. Priorizamos, então, as funcionalidades mais acessadas e concentramos o esforço em poucas experiências, aprofundando o que seria mais relevante para a discussão com os acionistas.',
-          'Por fim, realizamos dois ciclos de usabilidade para verificar se a proposta fazia sentido para os usuários. Os testes ajudaram a confirmar a percepção de valor na centralização dos controles e na modernização da experiência, dando mais segurança para a apresentação da proposta.',
+          'O protótipo tinha um propósito específico. A proposta de reunir todas as frentes de soluções em uma plataforma única era grande demais para ser decidida dentro do projeto, então ele não foi tratado como especificação de desenvolvimento, e sim como o material que tornaria a ideia tangível em uma conversa com os acionistas. Isso definiu o nível de acabamento e o que precisava ser testado: os dois ciclos de usabilidade serviram para confirmar com usuários reais que a demanda por controles centralizados e interface moderna existia de fato.',
+          'Cada frente que entrou no protótipo tinha uma evidência por trás. A jornada de aquisição online veio das entrevistas com fundadores de insurtechs e dos dados de mercado, que apontavam para contratação digital sem intermediação, e foi desenhada para pequenas transportadoras e autônomos, que ficavam fora do modelo comercial tradicional. A central de ajuda com atendimento assíncrono veio das entrevistas com clientes, já que o suporte acontecia por WhatsApp e não havia onde consultar informações sozinho. O Style Guide veio da análise heurística, que expôs sistemas evoluídos sem padronização de componentes e com interfaces defasadas em relação ao mercado.',
+          'Nem tudo cabia. O recorte partiu de um direcionamento do cliente: como os seguros já eram o carro chefe da Apisul, a intenção era fortalecer o ApisulLog e o Integra como produtos com valor próprio. Mesmo assim, mapeamos mais oportunidades do que caberia no prazo, então cruzei os achados com os dados de uso do Google Analytics e prototipamos apenas as funcionalidades mais acessadas. Para um material que precisava convencer, profundidade em poucas telas valia mais que cobertura superficial de muitas.',
         ],
         en: [
-          'The prototype was created to make the proposal of integrating Apisul’s five solutions into a single platform tangible and bring that vision into discussion with the shareholders. Since defining a platform of this scale was beyond the scope of the project, the goal was not to deliver a development specification, but to explore how this experience could work in practice.',
-          'The possibilities explored in the prototype were grounded in research findings. The online purchasing journey, for example, emerged from interviews with insurtech founders and market data pointing to digital purchasing models without intermediaries. It was therefore designed for small carriers and independent drivers, audiences that fell outside the traditional sales model. The help centre responded to customers’ difficulty accessing information and obtaining support without relying on WhatsApp. The Style Guide, in turn, emerged from the heuristic review, which revealed independently developed products with no shared component standards and interfaces that lagged behind current market expectations.',
-          'It was not possible to represent the entire ecosystem at the level of depth required. In addition to the research evidence, I considered business priorities and Google Analytics usage data to define the scope. Since insurance was already Apisul’s core business, the direction was to strengthen ApisulLog and Integra as products with value in their own right. We therefore prioritised the most accessed features and concentrated the effort on a few experiences, going deeper where it would matter most for the shareholder discussion.',
-          'Finally, we ran two rounds of usability testing to assess whether the proposal made sense to users. The sessions helped confirm the perceived value of centralising controls and modernising the experience, providing greater confidence in presenting the proposal.',
+          'The prototype served a specific purpose. Consolidating every product line into one platform was a decision beyond the scope of the project, so the prototype was never treated as a development specification. Its role was to make the concept tangible in a conversation with shareholders. That determined both the level of finish required and what needed testing. The two rounds of usability sessions were not there to validate screens for implementation, but to confirm with real users that the demand for centralised controls and a modern interface was genuine rather than our own reading of the interviews.',
+          'Each area included in the prototype had research behind it. The online purchase journey came from the insurtech interviews and the market data, both pointing toward digital purchasing without intermediaries, and was designed for small carriers and independent drivers who fell outside the traditional sales model. The help centre with asynchronous support came from the customer interviews, which revealed that support ran entirely through WhatsApp with no self service reference available. The style guide came from the heuristic review, which exposed five systems that had each evolved independently, with no shared components and interfaces well behind current market standards.',
+          'The scope had limits. The client set the direction: insurance was already the core business, so the objective was to strengthen ApisulLog and Integra as products in their own right. Even within that scope, we identified more opportunities than the timeline allowed. I cross referenced the findings against Google Analytics usage data and we prototyped only the most accessed features. For material intended to support a decision, depth across a few screens carried more weight than broad but shallow coverage.',
         ],
       },
     },
@@ -187,7 +191,7 @@ export const apisul: CaseData = {
           src: img3,
           alt: {
             pt: 'Etapa do formulário de cotação com os campos de dados operacionais, rotas e frota.',
-            en: 'Quote form step with fields for operational data, routes, and fleet information.',
+            en: 'Quote form step with fields for operational data, routes and fleet information.',
           },
         },
         {
@@ -222,7 +226,7 @@ export const apisul: CaseData = {
           src: img9,
           alt: {
             pt: 'Tabela de dados com filtros, ordenação e controle de densidade das colunas.',
-            en: 'Data table with filters, sorting, and column density controls.',
+            en: 'Data table with filters, sorting and column density controls.',
           },
         },
         {
@@ -243,7 +247,7 @@ export const apisul: CaseData = {
           src: img12,
           alt: {
             pt: 'Central de ajuda aberta ao lado da tela de gerenciamento de risco, com busca e tópicos de suporte.',
-            en: 'Help centre open beside the risk management screen, with search and support topics.',
+            en: 'Help center open beside the risk management screen, with search and support topics.',
           },
         },
       ],
@@ -259,11 +263,45 @@ export const apisul: CaseData = {
           'A segunda foi o Portal do Cliente, um produto novo que nasceu do achado sobre a dificuldade de acesso dos clientes aos próprios dados. A proposta era reunir em um só lugar as informações de logística, risco e seguros, somadas a uma central de ajuda e aos documentos financeiros. Entrou em desenvolvimento no final de 2024 e foi lançado em 2025. Atuei como product designer principal, acompanhando o desenvolvimento junto a um dev. Em vez de construir uma biblioteca do zero, adotamos uma biblioteca de componentes de mercado com a identidade da Apisul aplicada, o que modernizou a interface e acelerou bastante a entrega.',
         ],
         en: [
-          'The delivery here was strategic rather than technical. The research, the prototype, and the Style Guide formed a consolidated view of how to modernise Apisul’s digital products, and that view was presented to the shareholders. It supported the two initiatives that followed.',
-          'The first was the modernisation of ApisulLog and Integra, developed by an external technology company. I continued on the project as the product designer on the Apisul side, reviewing design deliverables alongside the partner team and researching market applications of artificial intelligence. This study informed a list of potential new features for ApisulLog.',
-          'The second was the Customer Portal, a new product that emerged directly from the finding about customers’ restricted access to their own data. It brought logistics, risk, and insurance information into a single place, together with a help centre and financial documents. Development began in late 2024, and the product launched in 2025. I led the design and worked closely with one developer throughout. Rather than building a component library from scratch, we adopted an existing one and applied Apisul’s branding to it, which modernised the interface and significantly accelerated delivery.',
+          'The delivery here was strategic rather than technical. The research, the prototype and the style guide formed a consolidated view of how to modernise Apisul digital products, and that view is what the shareholders evaluated. It supported the two initiatives that followed.',
+          'The first was the modernisation of ApisulLog and Integra, developed by an external technology company. I continued on the project as product designer on the Apisul side, reviewing design deliverables alongside the partner team and researching market applications of artificial intelligence, a study that informed a list of potential new features for ApisulLog.',
+          'The second was the Customer Portal, a new product that emerged directly from the finding about restricted data access. It brought logistics, risk and insurance information into a single place, together with a help centre and financial documents. Development began in late 2024 and the product launched in 2025. I led the design and worked closely with one developer throughout. Rather than building a component library from scratch, we adopted an existing one and applied Apisul branding to it, which modernised the interface and reduced the time to launch considerably.',
         ],
       },
+    },
+
+    {
+      type: 'carousel',
+      images: [
+        {
+          src: carrossel1,
+          alt: {
+            pt: 'Tela da plataforma Apisul com a visão consolidada da operação.',
+            en: 'Apisul platform screen showing a consolidated view of the operation.',
+          },
+        },
+        {
+          src: carrossel2,
+          alt: {
+            pt: 'Detalhe da interface com os componentes padronizados do Style Guide.',
+            en: 'Interface detail showing the standardised components from the style guide.',
+          },
+        },
+        {
+          src: carrossel3,
+          alt: {
+            pt: 'Tela do fluxo de contratação online.',
+            en: 'Screen from the online purchase flow.',
+          },
+        },
+        {
+          src: carrossel4,
+          alt: {
+            pt: 'Detalhe da central de ajuda dentro da plataforma.',
+            en: 'Detail of the help centre inside the platform.',
+          },
+        },
+      ],
     },
 
     {
@@ -289,8 +327,8 @@ export const apisul: CaseData = {
           en: 'Gabriela Dall’Agnol (Coordination, research and Product Design)',
         },
         {
-          pt: 'Stéphanie Gonzaga (Design)',
-          en: 'Stéphanie Gonzaga (Design)',
+          pt: 'Stéphanie Gonzaga (Product Designer)',
+          en: 'Stéphanie Gonzaga (Product Designer)',
         },
       ],
     },

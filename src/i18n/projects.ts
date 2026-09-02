@@ -1,29 +1,29 @@
 import type { ImageMetadata } from 'astro';
 
-import pd1Apisul from '@assets/pd-1.png';
-import pd2 from '@assets/pd-2.png';
-import pd3 from '@assets/pd-3.png';
-import pd4 from '@assets/pd-4.png';
+import pd1Apisul from '@assets/pd-1.webp';
+import pd2 from '@assets/pd-2.webp';
+import pd3 from '@assets/pd-3.webp';
+import pd4 from '@assets/pd-4.webp';
 
-import brandingTaller from '@assets/branding/taller/home.png';
+import brandingTaller from '@assets/branding/taller/home.webp';
 
-import brandingTechsensSquare from '@assets/branding/techsens/home-square.png';
-import brandingTechsensWide from '@assets/branding/techsens/home-wide.png';
+import brandingTechsensSquare from '@assets/branding/techsens/home-square.webp';
+import brandingTechsensWide from '@assets/branding/techsens/home-wide.webp';
 
-import brandingNoiaSquare from '@assets/branding/noia/home-square.png';
-import brandingNoiaWide from '@assets/branding/noia/home-wide.png';
+import brandingNoiaSquare from '@assets/branding/noia/home-square.webp';
+import brandingNoiaWide from '@assets/branding/noia/home-wide.webp';
 
-import brandingPousadaSquare from '@assets/branding/pousada/home-square.png';
-import brandingPousadaWide from '@assets/branding/pousada/home-wide.png';
+import brandingPousadaSquare from '@assets/branding/pousada/home-square.webp';
+import brandingPousadaWide from '@assets/branding/pousada/home-wide.webp';
 
-import brandingRanchoSquare from '@assets/branding/rancho/home-square.png';
-import brandingRanchoWide from '@assets/branding/rancho/home-wide.png';
+import brandingRanchoSquare from '@assets/branding/rancho/home-square.webp';
+import brandingRanchoWide from '@assets/branding/rancho/home-wide.webp';
 
-import brandingSilvaSquare from '@assets/branding/silva/home-square.png';
-import brandingSilvaWide from '@assets/branding/silva/home-wide.png';
+import brandingSilvaSquare from '@assets/branding/silva/home-square.webp';
+import brandingSilvaWide from '@assets/branding/silva/home-wide.webp';
 
-import brandingAmaterasuSquare from '@assets/branding/amaterasu/home-square.png';
-import brandingAmaterasuWide from '@assets/branding/amaterasu/home-wide.png';
+import brandingAmaterasuSquare from '@assets/branding/amaterasu/home-square.webp';
+import brandingAmaterasuWide from '@assets/branding/amaterasu/home-wide.webp';
 
 export type Project = {
   id: string;

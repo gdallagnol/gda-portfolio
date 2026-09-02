@@ -20,6 +20,10 @@ export const pousadaRainha: CaseData = {
     segment: { pt: 'Turismo / Hospedagem', en: 'Travel / Hospitality' },
     client: 'Pousada da Rainha',
     year: '2022',
+    description: {
+      pt: 'Identidade visual da Pousada da Rainha, em Xangri-Lá, construída a partir da geometria da concha do Nautilus e de referências marítimas.',
+      en: 'Visual identity for Pousada da Rainha in Xangri-Lá, built from the geometry of a nautilus shell and maritime references.',
+    },
     title: 'Pousada da Rainha',
   },
 

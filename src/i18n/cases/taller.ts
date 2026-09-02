@@ -25,6 +25,10 @@ export const taller: CaseData = {
     segment: { pt: 'Arquitetura', en: 'Architecture' },
     client: 'Taller Arq.',
     year: '2021',
+    description: {
+      pt: 'Identidade visual da Taller Arq., ateliê de arquitetura, construída a partir de geometria e minimalismo.',
+      en: 'Visual identity for Taller Arq., an architecture studio, built from geometry and minimalism.',
+    },
     title: 'Taller Arq.',
   },
 
