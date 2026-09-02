@@ -1,6 +1,5 @@
 import type { CaseData } from './types';
 
-import img1 from '@assets/branding/pousada/01.gif';
 import img2 from '@assets/branding/pousada/02.webp';
 import img4 from '@assets/branding/pousada/04.webp';
 import img5 from '@assets/branding/pousada/05.webp';
@@ -29,13 +28,11 @@ export const pousadaRainha: CaseData = {
 
   blocks: [
     {
-      type: 'image',
-      image: {
-        src: img1,
-        alt: {
-          pt: 'Animação do ícone da Pousada da Rainha, baseado na espiral da concha do Nautilus.',
-          en: 'Animated Pousada da Rainha icon, based on the spiral of a nautilus shell.',
-        },
+      type: 'video',
+      src: '/video/pousada.mp4',
+      alt: {
+        pt: 'Animação do ícone da Pousada da Rainha, baseado na espiral da concha do Nautilus.',
+        en: 'Animated Pousada da Rainha icon, based on the spiral of a nautilus shell.',
       },
     },
 

@@ -1,6 +1,5 @@
 import type { CaseData } from './types';
 
-import img1 from '@assets/branding/taller/01.gif';
 import img2 from '@assets/branding/taller/02.webp';
 import img3 from '@assets/branding/taller/03.webp';
 import img4 from '@assets/branding/taller/04.webp';
@@ -34,14 +33,11 @@ export const taller: CaseData = {
 
   blocks: [
     {
-      type: 'image',
-      image: {
-        src: img1,
-        raw: true,
-        alt: {
-          pt: 'Animação do símbolo da Taller Arq., construído a partir de formas geométricas.',
-          en: 'Animated Taller Arq. symbol, built from geometric shapes.',
-        },
+      type: 'video',
+      src: '/video/taller.mp4',
+      alt: {
+        pt: 'Animação do símbolo da Taller Arq., construído a partir de formas geométricas.',
+        en: 'Animated Taller Arq. symbol, built from geometric shapes.',
       },
     },
 

@@ -111,6 +111,22 @@ const nextHref = next?.path ? (lang === 'pt' ? next.path : `/${lang}${next.path}
             );
           }
 
+          if (block.type === 'video') {
+            // Substitui GIF: mesmo comportamento visual, fracao do peso.
+            return (
+              <video
+                src={block.src}
+                autoplay
+                loop
+                muted
+                playsinline
+                preload="metadata"
+                aria-label={block.alt[lang]}
+                class="w-full rounded-3xl"
+              />
+            );
+          }
+
           if (block.type === 'carousel') {
             // Faixa que rola sozinha. A lista e duplicada para o laco ser continuo.
             return (
@@ -231,7 +247,7 @@ const nextHref = next?.path ? (lang === 'pt' ? next.path : `/${lang}${next.path}
         <nav class="mb-24 border-t border-blue-gray/20 pt-10" aria-label={t('case.next')}>
           <a href={nextHref} class="group flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <span>
-              <span class="text-blue-gray font-light text-lg block mb-2">{t('case.next')}</span>
+              <span class="text-blue-gray font-light text-lg block mb-2">{t('case.next')} · {next.client}</span>
               <span class="text-cold-gray text-2xl font-light md:text-4xl">{next.headline[lang]}</span>
             </span>
             <span

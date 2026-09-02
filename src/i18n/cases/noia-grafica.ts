@@ -1,6 +1,5 @@
 import type { CaseData } from './types';
 
-import img1 from '@assets/branding/noia/01.gif';
 import img2 from '@assets/branding/noia/02.webp';
 import img3 from '@assets/branding/noia/03.webp';
 import img4 from '@assets/branding/noia/04.webp';
@@ -28,13 +27,11 @@ export const noiaGrafica: CaseData = {
 
   blocks: [
     {
-      type: 'image',
-      image: {
-        src: img1,
-        alt: {
-          pt: 'Animação da identidade visual da Nóia Gráfica, com formas simples em alto contraste.',
-          en: 'Animated Nóia Gráfica identity, using simple high contrast shapes.',
-        },
+      type: 'video',
+      src: '/video/noia.mp4',
+      alt: {
+        pt: 'Animação da identidade visual da Nóia Gráfica, com formas simples em alto contraste.',
+        en: 'Animated Nóia Gráfica identity, using simple high contrast shapes.',
       },
     },
 

@@ -37,6 +37,8 @@ export type CaseBlock =
   | { type: 'captioned'; heading: T; image: CaseImage }
   | { type: 'gallery'; images: CaseImage[] }
   | { type: 'carousel'; images: CaseImage[] }
+  /** Video curto em laco, no lugar de GIF. O caminho e relativo a pasta public. */
+  | { type: 'video'; src: string; alt: T }
   | { type: 'pair'; images: [CaseImage, CaseImage] }
   | { type: 'text'; heading: T; paragraphs: TList }
   | {
