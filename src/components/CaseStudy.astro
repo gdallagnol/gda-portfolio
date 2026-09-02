@@ -19,7 +19,8 @@ const { meta, blocks } = data;
 
 const bullet = 'relative pl-6 before:absolute before:left-0 before:top-3 before:h-1.5 before:w-1.5 before:rounded-full before:bg-cold-gray';
 const headingClass = 'text-2xl text-cold-gray mb-6 md:basis-1/3 xl:basis-1/2';
-const bodyClass = 'md:basis-2/3 xl:basis-1/2';
+// max-w-[68ch] mantem a linha abaixo de ~75 caracteres, faixa confortavel de leitura
+const bodyClass = 'md:basis-2/3 xl:basis-1/2 max-w-[68ch]';
 const newTab = lang === 'pt' ? 'abre em nova aba' : 'opens in a new tab';
 
 // Descobre o proximo projeto da mesma categoria, a partir da URL atual.
@@ -120,6 +121,7 @@ const nextHref = next?.path ? (lang === 'pt' ? next.path : `/${lang}${next.path}
                 loop
                 muted
                 playsinline
+                controls
                 preload="metadata"
                 aria-label={block.alt[lang]}
                 class="w-full rounded-3xl"
@@ -128,16 +130,16 @@ const nextHref = next?.path ? (lang === 'pt' ? next.path : `/${lang}${next.path}
           }
 
           if (block.type === 'carousel') {
-            // Faixa que rola sozinha. A lista e duplicada para o laco ser continuo.
+            // Faixa em laco continuo. A lista aparece duas vezes para o loop nao ter emenda.
             return (
-              <div class="case-marquee -mx-6 lg:-mx-14 2xl:-mx-36" role="group" aria-label={meta.title}>
+              <div class="case-marquee -mx-6 lg:-mx-14 2xl:-mx-36" role="group" aria-label={meta.title} tabindex="0">
                 <div class="case-marquee__track">
-                  {[0, 1].map((copy) =>
+                  {[0, 1].map((copia) =>
                     block.images.map((img) => (
                       <Image
                         src={img.src}
-                        alt={copy === 0 ? img.alt[lang] : ''}
-                        aria-hidden={copy === 1 ? 'true' : undefined}
+                        alt={copia === 0 ? img.alt[lang] : ''}
+                        aria-hidden={copia === 1 ? 'true' : undefined}
                         class="case-marquee__item rounded-3xl"
                         loading="lazy"
                       />
@@ -188,7 +190,7 @@ const nextHref = next?.path ? (lang === 'pt' ? next.path : `/${lang}${next.path}
                     {block.intro && <p class="text-cold-gray leading-7">{block.intro[lang]}</p>}
                     {block.groups.map((group) => (
                       <div>
-                        {group.subhead && <h3 class="text-xl text-cold-gray mt-10 mb-6">{group.subhead[lang]}</h3>}
+                        {group.subhead && <h3 class="text-xl text-blue-gray mt-10 mb-6">{group.subhead[lang]}</h3>}
                         <ul class="text-cold-gray leading-7 space-y-8">
                           {group.items[lang].map((item) => (
                             <li class={bullet}>{item}</li>
@@ -247,7 +249,9 @@ const nextHref = next?.path ? (lang === 'pt' ? next.path : `/${lang}${next.path}
         <nav class="mb-24 border-t border-blue-gray/20 pt-10" aria-label={t('case.next')}>
           <a href={nextHref} class="group flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <span>
-              <span class="text-blue-gray font-light text-lg block mb-2">{t('case.next')} · {next.client}</span>
+              <span class="text-blue-gray font-light text-lg block mb-2">
+                {t('case.next')} · {typeof next.client === 'string' ? next.client : next.client[lang]}
+              </span>
               <span class="text-cold-gray text-2xl font-light md:text-4xl">{next.headline[lang]}</span>
             </span>
             <span
@@ -275,10 +279,12 @@ const nextHref = next?.path ? (lang === 'pt' ? next.path : `/${lang}${next.path}
     display: flex;
     gap: 1.5rem;
     width: max-content;
-    animation: case-marquee 60s linear infinite;
+    animation: case-marquee 40s linear infinite;
   }
 
-  .case-marquee:hover .case-marquee__track {
+  /* Pausa no ponteiro e tambem quando algo dentro recebe foco pelo teclado. */
+  .case-marquee:hover .case-marquee__track,
+  .case-marquee:focus-within .case-marquee__track {
     animation-play-state: paused;
   }
 
@@ -299,6 +305,7 @@ const nextHref = next?.path ? (lang === 'pt' ? next.path : `/${lang}${next.path}
     }
   }
 
+  /* Quem pediu menos movimento no sistema ve uma faixa estatica e rolavel. */
   @media (prefers-reduced-motion: reduce) {
     .case-marquee {
       overflow-x: auto;

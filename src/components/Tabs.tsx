@@ -53,9 +53,9 @@ function Card({ project, lang }: { project: Project; lang: Lang }) {
 
   const text = (
     <>
-      <p className="text-blue-gray text-sm font-extralight">{project.tags[lang]}</p>
-      <p className="text-blue-gray font-light">{project.client}</p>
-      <p className="text-cold-gray text-xl font-light">{project.headline[lang]}</p>
+      <p className="text-blue-gray text-sm">{project.tags[lang]}</p>
+      <p className="text-blue-gray text-lg font-light">{project.client}</p>
+      <p className="text-cold-gray text-2xl font-light">{project.headline[lang]}</p>
     </>
   );
 

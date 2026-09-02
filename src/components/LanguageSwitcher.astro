@@ -1,13 +1,17 @@
 ---
-import { getLangFromUrl, getAlternatePath } from '@i18n/utils';
+import { getLangFromUrl, getAlternatePath, useTranslations } from '@i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const ptPath = getAlternatePath(Astro.url, 'pt');
 const enPath = getAlternatePath(Astro.url, 'en');
+
+// min-w e min-h garantem os 24px de alvo exigidos pela WCAG 2.5.8
+const base = 'inline-flex min-h-6 min-w-6 items-center justify-center px-1 text-sm font-light';
 ---
 
-<div class="flex items-center gap-2 text-sm font-light">
-  <a href={ptPath} class={lang === 'pt' ? 'text-blue-black' : 'text-blue-gray hover:text-blue-black'}>PT</a>
-  <span class="text-blue-gray/40">/</span>
-  <a href={enPath} class={lang === 'en' ? 'text-blue-black' : 'text-blue-gray hover:text-blue-black'}>EN</a>
+<div class="flex items-center gap-1">
+  <a href={ptPath} aria-label={t('lang.pt')} aria-current={lang === 'pt' ? 'true' : undefined} class={`${base} ${lang === 'pt' ? 'text-blue-black' : 'text-blue-gray hover:text-blue-black'}`}>PT</a>
+  <span class="text-blue-gray/40" aria-hidden="true">/</span>
+  <a href={enPath} aria-label={t('lang.en')} aria-current={lang === 'en' ? 'true' : undefined} class={`${base} ${lang === 'en' ? 'text-blue-black' : 'text-blue-gray hover:text-blue-black'}`}>EN</a>
 </div>

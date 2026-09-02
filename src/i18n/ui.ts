@@ -40,6 +40,11 @@ export const ui = {
     'case.role': 'Meu papel',
     'case.next': 'Próximo projeto',
     'card.open': 'Ver o case',
+    'motion.pause': 'Pausar animação',
+    'motion.play': 'Retomar animação',
+    'lang.pt': 'Ver o site em português',
+    'lang.en': 'Ver o site em inglês',
+    'skip': 'Ir para o conteúdo',
   },
   en: {
     'meta.description': 'Portfolio of Gabi Dall\'Agnol, Service Designer and UX Researcher. Research, service design, digital product and visual identity.',
@@ -75,5 +80,10 @@ export const ui = {
     'case.role': 'My role',
     'case.next': 'Next project',
     'card.open': 'View case study',
+    'motion.pause': 'Pause animation',
+    'motion.play': 'Resume animation',
+    'lang.pt': 'View this site in Portuguese',
+    'lang.en': 'View this site in English',
+    'skip': 'Skip to content',
   },
 } as const;

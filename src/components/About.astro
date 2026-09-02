@@ -39,7 +39,7 @@ const experience = [
       </div>
       <div class="xl:basis-1/2">
         <div class="space-y-5">
-          {c.paragraphs.map((paragraph) => <p class="text-blue-black font-light">{paragraph}</p>)}
+          {c.paragraphs.map((paragraph) => <p class="text-blue-black font-light leading-7 max-w-[68ch]">{paragraph}</p>)}
         </div>
 
         <div class="mt-10 space-y-10">
@@ -49,7 +49,7 @@ const experience = [
             c.services.map((service) => (
               <div class="space-y-2">
                 <p class="text-blue-black text-xl">{service.title}</p>
-                <p class="text-blue-black font-light">{service.text}</p>
+                <p class="text-blue-black font-light leading-7 max-w-[68ch]">{service.text}</p>
               </div>
             ))
           }

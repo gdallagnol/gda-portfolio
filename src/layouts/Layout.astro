@@ -3,7 +3,7 @@ import Footer from '@components/Footer.astro';
 import Header from '@components/Header.astro';
 import { getLangFromUrl, useTranslations, getAlternatePath } from '@i18n/utils';
 
-const { title, description, noindex } = Astro.props;
+const { title, description, noindex, hideFooter } = Astro.props;
 const pageTitle = title || "Gabi Dall'Agnol";
 
 const lang = getLangFromUrl(Astro.url);
@@ -73,15 +73,43 @@ const perfil = {
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
   </head>
   <body class="bg-background">
+    <a href="#conteudo" class="skip-link">{t('skip')}</a>
+
     <Header />
 
-    <slot />
+    <div id="conteudo">
+      <slot />
+    </div>
 
-    <Footer />
+    {!hideFooter && <Footer />}
   </body>
 </html>
 
 <style is:global>
+  /* Link de atalho: so aparece quando recebe foco pelo teclado. */
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -100%;
+    z-index: 100;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    background: theme('colors.cold-gray');
+    color: white;
+    transition: top 0.2s ease;
+  }
+
+  .skip-link:focus {
+    top: 1rem;
+  }
+
+  /* Indicador de foco visivel em todos os elementos interativos. */
+  :where(a, button, [tabindex]):focus-visible {
+    outline: 2px solid theme('colors.cold-gray');
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
   html,
   body {
     margin: 0;
