@@ -9,7 +9,6 @@ import img6 from '@assets/branding/rancho/06.webp';
 import img7 from '@assets/branding/rancho/07.webp';
 import img8 from '@assets/branding/rancho/08.webp';
 import img9 from '@assets/branding/rancho/09.webp';
-import img10 from '@assets/branding/rancho/10.webp';
 
 const alt = (n: number) => ({
   pt: `Aplicação da identidade visual do Rancho Raposo, imagem ${n}.`,
@@ -66,7 +65,6 @@ export const ranchoRaposo: CaseData = {
         { src: img7, alt: alt(6) },
         { src: img8, alt: alt(7) },
         { src: img9, alt: alt(8) },
-        { src: img10, alt: alt(9) },
       ],
     },
   ],
