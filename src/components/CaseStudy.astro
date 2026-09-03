@@ -282,10 +282,12 @@ const nextHref = next?.path ? (lang === 'pt' ? next.path : `/${lang}${next.path}
     animation: case-marquee 40s linear infinite;
   }
 
-  /* Pausa no ponteiro e tambem quando algo dentro recebe foco pelo teclado. */
-  .case-marquee:hover .case-marquee__track,
-  .case-marquee:focus-within .case-marquee__track {
-    animation-play-state: paused;
+  /* Pausa apenas onde existe ponteiro: no toque isso travaria a animacao. */
+    @media (hover: hover) and (pointer: fine) {
+    .case-marquee:hover .case-marquee__track,
+    .case-marquee:focus-within .case-marquee__track {
+      animation-play-state: paused;
+    }
   }
 
   .case-marquee__item {
