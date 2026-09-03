@@ -117,14 +117,13 @@ const nextHref = next?.path ? (lang === 'pt' ? next.path : `/${lang}${next.path}
             return (
               <video
                 src={block.src}
-                autoplay
                 loop
                 muted
                 playsinline
-                controls
                 preload="metadata"
                 aria-label={block.alt[lang]}
                 class="w-full rounded-3xl"
+                data-auto-video
               />
             );
           }
@@ -279,11 +278,11 @@ const nextHref = next?.path ? (lang === 'pt' ? next.path : `/${lang}${next.path}
     display: flex;
     gap: 1.5rem;
     width: max-content;
-    animation: case-marquee 40s linear infinite;
+    animation: case-marquee 60s linear infinite;
   }
 
   /* Pausa apenas onde existe ponteiro: no toque isso travaria a animacao. */
-    @media (hover: hover) and (pointer: fine) {
+  @media (hover: hover) and (pointer: fine) {
     .case-marquee:hover .case-marquee__track,
     .case-marquee:focus-within .case-marquee__track {
       animation-play-state: paused;
@@ -319,3 +318,17 @@ const nextHref = next?.path ? (lang === 'pt' ? next.path : `/${lang}${next.path}
     }
   }
 </style>
+
+<script>
+  // Os videos substituem GIFs: tocam sozinhos, mas ficam parados
+  // para quem pediu menos movimento nas preferencias do sistema.
+  const semMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!semMovimento) {
+    for (const video of document.querySelectorAll('video[data-auto-video]')) {
+      if (video instanceof HTMLVideoElement) {
+        video.play().catch(() => {});
+      }
+    }
+  }
+</script>
