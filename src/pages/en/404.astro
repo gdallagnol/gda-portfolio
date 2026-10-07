@@ -11,11 +11,11 @@ const homeHref = localizePath('/', lang);
 const pageTitle = lang === 'pt' ? 'Página não encontrada | Gabi Dall\'Agnol' : 'Page not found | Gabi Dall\'Agnol';
 ---
 
-<Layout title={pageTitle} noindex>
+<!-- Sem rodape: a imagem decorativa transborda e cobriria o footer. -->
+<Layout title={pageTitle} noindex hideFooter>
   <Container>
     <h1 class="text-2xl lg:text-6xl text-cold-gray font-light mb-16">
-      {t('404.title.1')}
-      <span class="xl:whitespace-nowrap">{t('404.title.2')}</span>
+      {t('404.title.1')} <span class="xl:whitespace-nowrap">{t('404.title.2')}</span>
       <span class="xl:whitespace-nowrap">{t('404.title.3')}</span>
     </h1>
 
@@ -25,7 +25,7 @@ const pageTitle = lang === 'pt' ? 'Página não encontrada | Gabi Dall\'Agnol' :
     </a>
 
     <div class="hidden xl:block xl:relative">
-      <img src={bgGlass2.src} alt="" class="xl:h-[40rem] xl:absolute xl:right-0 xl:top-[-15rem]" />
+      <img src={bgGlass2.src} alt="" aria-hidden="true" class="xl:h-[40rem] xl:absolute xl:right-0 xl:top-[-15rem]" />
     </div>
   </Container>
 </Layout>
