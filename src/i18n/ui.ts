@@ -7,8 +7,8 @@ export const defaultLang = 'pt';
 
 export const ui = {
   pt: {
-    'meta.description': 'Portfólio de Gabi Dall\'Agnol, Service Designer e UX Researcher. Pesquisa, design de serviços, produto digital e identidade visual.',
-    'meta.keywords': 'Designer, Product Design, UX, Branding, Portfólio, Gabi Dall\'Agnol, Design Gráfico',
+    'meta.description': 'Portfólio de Gabi Dall\'Agnol, Product Designer com base em UX Research e Service Design. Produto digital, pesquisa, design de serviços e identidade visual.',
+    'meta.keywords': 'Designer, Product Designer, Product Design, UX, UX Research, Service Design, Branding, Portfólio, Gabi Dall\'Agnol, Design Gráfico',
     'meta.locale': 'pt_BR',
 
     'header.role': 'Designer',
@@ -47,8 +47,8 @@ export const ui = {
     'skip': 'Ir para o conteúdo',
   },
   en: {
-    'meta.description': 'Portfolio of Gabi Dall\'Agnol, Service Designer and UX Researcher. Research, service design, digital product and visual identity.',
-    'meta.keywords': 'Designer, Product Design, UX, Branding, Portfolio, Gabi Dall\'Agnol, Graphic Design',
+    'meta.description': 'Portfolio of Gabi Dall\'Agnol, a Product Designer with a background in UX research and service design. Digital products, research, service design, and visual identity.',
+    'meta.keywords': 'Designer, Product Designer, Product Design, UX, UX Research, Service Design, Branding, Portfolio, Gabi Dall\'Agnol, Graphic Design',
     'meta.locale': 'en_US',
 
     'header.role': 'Designer',
