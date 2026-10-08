@@ -4,9 +4,9 @@ export const about = {
 
     paragraphs: [
 
-      'Trabalho com design desde 2016, combinando repertórios de identidade visual, produto digital, pesquisa e design de serviços, hoje com foco maior nas duas últimas frentes. Essa trajetória, entre estratégia, marca, interface e operação, me deu diferentes perspectivas para enxergar um problema em camadas, do que a pessoa vê ao que acontece nos bastidores.',
+      'Trabalho com design desde 2016 e com produto digital desde 2021, combinando repertórios de identidade visual, produto digital, pesquisa e design de serviços. Essa trajetória, entre estratégia, marca, interface e operação, me deu diferentes perspectivas para enxergar um problema em camadas, do que a pessoa vê ao que acontece nos bastidores.',
 
-      'Atualmente, atuo como Service Designer e UX Researcher. Conduzo entrevistas em profundidade, conecto o que ouço com dados de uso e transformo essas descobertas em personas, jornadas e blueprints. O diálogo é parte central do meu método.',
+      'Atualmente, atuo como UX Designer e Service Designer. Conduzo entrevistas em profundidade, conecto o que ouço com dados de uso e transformo essas descobertas em personas, jornadas e blueprints. O diálogo é parte central do meu método.',
 
       'Meu propósito no design é identificar interdependências e encontrar onde as conexões se interrompem, transformando o que está fragmentado em uma visão sistêmica. Isso pode tomar a forma de uma estratégia, um artefato ou uma interface. O objetivo é o mesmo: tornar relações complexas mais compreensíveis e acessíveis para diferentes pessoas e contextos.',
 
@@ -18,7 +18,7 @@ export const about = {
 
         title: 'Para times de produto',
 
-        text: 'Conduzo pesquisas qualitativas e quantitativas e transformo os achados em decisões de design fundamentadas em evidências.',
+        text: 'Conduzo pesquisas qualitativas e quantitativas e transformo os achados em fluxos, protótipos e interfaces fundamentados em evidências.',
 
       },
 
@@ -44,7 +44,7 @@ export const about = {
 
     roles: {
 
-      service: 'Service Designer',
+      service: 'UX Designer e Service Designer',
 
       product: 'Product Designer e Service Designer',
 
@@ -52,7 +52,7 @@ export const about = {
 
       designer: 'Designer',
 
-      ad: 'Diretora de Arte',
+      ad: 'Web Designer',
 
     },
 
@@ -88,9 +88,9 @@ export const about = {
 
     paragraphs: [
 
-      'I’ve been working in design since 2016, combining experience across visual identity, digital products, research, and service design, with a current focus on research and service design. This background, shaped by strategy, brand, interface, and operations, has given me different perspectives to look at problems in layers, from what people see to what happens behind the scenes.',
+      'I’ve been working in design since 2016 and in digital products since 2021, combining experience across visual identity, digital products, research, and service design. This background, shaped by strategy, brand, interface, and operations, has given me different perspectives to look at problems in layers, from what people see to what happens behind the scenes.',
 
-      'I currently work as a Service Designer and UX Researcher. I conduct in-depth interviews, connect what I hear with product usage data, and turn those findings into personas, journeys, and blueprints. Dialogue is central to how I work.',
+      'I currently work as a UX Designer and Service Designer. I conduct in-depth interviews, connect what I hear with product usage data, and turn those findings into personas, journeys, and blueprints. Dialogue is central to how I work.',
 
       'My purpose in design is to identify interdependencies and uncover where connections break down, turning what is fragmented into a systemic view. This can take the form of a strategy, an artefact, or an interface. The objective is the same: to make complex relationships more understandable and accessible to different people and contexts.',
 
@@ -102,7 +102,7 @@ export const about = {
 
         title: 'For product teams',
 
-        text: 'I conduct qualitative and quantitative research and turn insights into evidence-based design decisions.',
+        text: 'I conduct qualitative and quantitative research and turn insights into evidence-based flows, prototypes, and interfaces.',
 
       },
 
@@ -128,7 +128,7 @@ export const about = {
 
     roles: {
 
-      service: 'Service Designer',
+      service: 'UX Designer and Service Designer',
 
       product: 'Product Designer and Service Designer',
 
@@ -136,7 +136,7 @@ export const about = {
 
       designer: 'Designer',
 
-      ad: 'Art Director',
+      ad: 'Web Designer',
 
     },
 
@@ -146,7 +146,7 @@ export const about = {
 
       {
 
-        title: "Master's in Strategic UX Design Management",
+        title: 'Postgraduate Program in Strategic UX Design Management',
 
         years: '2023 - 2025',
 
