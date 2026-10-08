@@ -14,12 +14,13 @@ const pageTitle = lang === 'pt' ? 'Página não encontrada | Gabi Dall\'Agnol' :
 <!-- Sem rodape: a imagem decorativa transborda e cobriria o footer. -->
 <Layout title={pageTitle} noindex hideFooter>
   <Container>
-    <h1 class="text-2xl lg:text-6xl text-cold-gray font-light mb-16">
+    <!-- relative z-10 mantem o texto e o botao acima da imagem decorativa. -->
+    <h1 class="relative z-10 text-2xl lg:text-6xl text-cold-gray font-light mb-16">
       {t('404.title.1')} <span class="xl:whitespace-nowrap">{t('404.title.2')}</span>
       <span class="xl:whitespace-nowrap">{t('404.title.3')}</span>
     </h1>
 
-    <a class="bg-cold-gray rounded-full text-white p-5 items-center inline-flex gap-8" href={homeHref}>
+    <a class="relative z-10 bg-cold-gray rounded-full text-white p-5 items-center inline-flex gap-8" href={homeHref}>
       {t('404.back')}
       <img src={arrow.src} alt="" />
     </a>
