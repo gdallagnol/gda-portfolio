@@ -43,26 +43,12 @@ export const productDesign: Project[] = [
     image: pd1Apisul,
     client: 'Grupo Apisul',
     tags: {
-      pt: 'Estratégia | UX & UI | Plataforma | B2B',
-      en: 'Strategy | UX & UI | Platform | B2B',
+      pt: 'Pesquisa | Estratégia | UX & UI | B2B',
+      en: 'Research | Strategy | UX & UI | B2B',
     },
     headline: {
-      pt: 'Centralizando fluxos e dados em uma plataforma modular e intuitiva.',
-      en: 'Bringing flows and data together into one modular, intuitive platform.',
-    },
-  },
-  {
-    id: 'mais-nitido',
-    path: '/product-design/mais-nitido',
-    image: pd2,
-    client: 'Mais Nítido',
-    tags: {
-      pt: 'UX & UI | Plataforma | B2B',
-      en: 'UX & UI | Platform | B2B',
-    },
-    headline: {
-      pt: 'Uma plataforma de mentoria que conecta pessoas por compatibilidade.',
-      en: 'A mentoring platform that pairs people by compatibility.',
+      pt: 'Cinco soluções, uma visão: pesquisa e protótipo para integrar o ecossistema Apisul.',
+      en: 'Five services, one vision: research and prototyping to integrate the Apisul ecosystem.',
     },
   },
   {
@@ -71,12 +57,26 @@ export const productDesign: Project[] = [
     image: pd4,
     client: 'Grupo Apisul',
     tags: {
+      pt: 'Produto | UX & UI | Plataforma | B2B',
+      en: 'Product | UX & UI | Platform | B2B',
+    },
+    headline: {
+      pt: 'Um portal que reúne indicadores, documentos e suporte para o cliente.',
+      en: 'A portal bringing indicators, documents and support together for customers.',
+    },
+  },
+  {
+    id: 'mais-nitido',
+    path: '/product-design/mais-nitido',
+    image: pd2,
+    client: 'Mais Nítido',
+    tags: {
       pt: 'Pesquisa | UX & UI | Plataforma | B2B',
       en: 'Research | UX & UI | Platform | B2B',
     },
     headline: {
-      pt: 'Autonomia para o cliente acessar a própria operação através de um portal.',
-      en: 'A portal giving customers direct access to their own operation.',
+      pt: 'Uma plataforma de mentoria que conecta pessoas por compatibilidade.',
+      en: 'A mentoring platform that pairs people by compatibility.',
     },
   },
   {

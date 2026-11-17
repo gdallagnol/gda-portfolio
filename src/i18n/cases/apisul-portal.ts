@@ -10,78 +10,182 @@ export const apisulPortal: CaseData = {
     segment: { pt: 'Transporte e Logística', en: 'Transport and Logistics' },
     client: 'Grupo Apisul',
     year: '2024-2025',
-    role: { pt: 'Product Design e pesquisa', en: 'Product Design and research' },
+    role: { pt: 'Product Designer principal', en: 'Lead Product Designer' },
     description: {
-      pt: 'Desenho de um portal que dá ao cliente acesso direto aos dados de logística, risco e seguros da própria operação, sem depender do gerente de conta.',
-      en: 'Design of a portal giving customers direct access to their own logistics, risk and insurance data, without going through an account manager.',
+      pt: 'Desenho de um portal que dá ao cliente acesso direto aos próprios dados de logística, risco e seguros, sem depender do gerente de conta.',
+      en: 'Design of a portal that gives customers direct access to their own logistics, risk and insurance data, without relying on an account manager.',
     },
     title: 'Portal do Cliente',
     subtitle: {
-      pt: 'Autonomia para o cliente acessar a ',
-      en: 'A portal giving customers direct ',
+      pt: 'Indicadores, documentos e suporte ',
+      en: 'Indicators, documents and support ',
     },
     subtitleNoWrap: {
-      pt: 'própria operação através de um portal.',
-      en: 'access to their own operation.',
+      pt: 'em um só lugar.',
+      en: 'in one place.',
     },
+    tools: ['Figma', 'FigJam'],
   },
 
   blocks: [
+    // Resumo
+    {
+      type: 'summary',
+      heading: { pt: 'Resumo do projeto', en: 'Project summary' },
+      items: [
+        {
+          label: { pt: 'Contexto', en: 'Context' },
+          text: {
+            pt: 'A pesquisa do ecossistema Apisul revelou um problema comum a transportadoras de todos os portes: não havia um lugar centralizado para consultar os indicadores e os documentos da própria operação, como boletos e apólices.',
+            en: 'The Apisul ecosystem research revealed a problem shared by carriers of every size: there was no central place to see the indicators and documents of their own operation, such as invoices and policies.',
+          },
+        },
+        {
+          label: { pt: 'O que fiz', en: 'What I did' },
+          text: {
+            pt: 'Atuei como product designer principal: defini quais dados de cada solução o Portal deveria exibir e desenhei o produto, a área administrativa e o fluxo de atendimento automatizado.',
+            en: 'As lead product designer, I defined which data from each service the Portal should display and designed the product, the admin area and the automated support flow.',
+          },
+        },
+        {
+          label: { pt: 'Resultado', en: 'Outcome' },
+          text: {
+            pt: 'O Portal entrou em desenvolvimento no final de 2024. Deixei a Apisul antes do lançamento, durante o desenvolvimento da área administrativa, com três indicadores definidos para acompanhar o resultado.',
+            en: 'The Portal went into development in late 2024. I left Apisul before launch, while the admin area was being developed, with three measures defined to track the outcome.',
+          },
+        },
+      ],
+      facts: [
+        { value: '6', label: { pt: 'meses de projeto', en: 'months on the project' } },
+        { value: '3', label: { pt: 'pessoas no time principal: design, desenvolvimento e PO', en: 'people in the core team: design, development and product owner' } },
+        { value: '3', label: { pt: 'indicadores definidos para acompanhamento após o lançamento', en: 'measures defined for tracking after launch' } },
+      ],
+    },
+
+    // Desafio
     {
       type: 'text',
       heading: { pt: 'O desafio', en: 'The challenge' },
       paragraphs: {
         pt: [
-          'O Portal do Cliente nasceu de um achado do projeto do ecossistema Apisul. Nas entrevistas em profundidade com cerca de doze transportadoras, de pequeno, médio e grande porte e de diferentes regiões do país, um mesmo problema apareceu independentemente do porte ou de quantas soluções o cliente tinha contratado: não havia onde consultar de forma centralizada as informações da própria operação.',
-          'Para acessar boletos, apólices ou dados de risco, o cliente dependia do corretor ou do gerente da conta. Cada consulta era uma solicitação, e cada solicitação dependia da disponibilidade de outra pessoa.',
-          'O dado existia. Havia fluxo de informação em abundância dentro da Apisul. O que não existia era organização.',
+          'O Portal do Cliente nasceu de um achado da pesquisa do ecossistema Apisul. Nas entrevistas em profundidade com cerca de doze transportadoras, de diferentes portes e regiões do país, o mesmo problema apareceu de forma consistente, independentemente do tamanho da empresa ou do número de soluções contratadas: não havia um lugar centralizado para consultar os indicadores e os documentos da própria operação.',
+          'Para acessar boletos, apólices ou dados de risco, o cliente dependia do corretor ou do gerente de conta. Cada consulta virava uma solicitação, e cada solicitação dependia da disponibilidade de outra pessoa.',
         ],
         en: [
-          'The Customer Portal came out of a finding from the Apisul ecosystem project. Across in depth interviews with around twelve carriers, small to large and spread across different regions of the country, the same problem surfaced regardless of company size or how many services they had contracted: there was nowhere to see all the information about their own operation in one place.',
-          'To reach an invoice, a policy or risk data, customers depended on their broker or account manager. Every query was a request, and every request depended on someone else being available.',
-          'The data was there. Information moved through Apisul in volume. What was missing was any structure to it.',
+          'The Customer Portal grew out of a finding from the Apisul ecosystem research. In in depth interviews with around twelve carriers of different sizes and regions, the same problem came up consistently, regardless of company size or the number of services contracted: there was no central place to see the indicators and documents of their own operation.',
+          'To access invoices, policies or risk data, customers relied on their broker or account manager. Every query became a request, and every request depended on someone else being available.',
         ],
+      },
+      link: {
+        href: '/product-design/apisul',
+        label: { pt: 'Ver a pesquisa no case Plataforma Apisul', en: 'See the research in the Apisul Platform case study' },
+      },
+    },
+    {
+      type: 'highlight',
+      label: { pt: 'O problema em uma frase', en: 'The problem in one sentence' },
+      text: {
+        pt: 'A informação existia em abundância dentro da Apisul. O que faltava era organizá-la para o cliente.',
+        en: 'Apisul had information in abundance. What was missing was a way to organise it for the customer.',
       },
     },
 
+    // Processo
     {
-      type: 'text',
+      type: 'decisions',
       heading: { pt: 'Processo', en: 'Process' },
-      paragraphs: {
-        pt: [
-          'A pergunta mais difícil do projeto era quais dados de cada solução importam para o cliente. Seguros, logística, risco e sinistros geram informação em volumes e naturezas diferentes, e a resposta estava com os gerentes de cada área.',
-          'Só que ela não veio. Não por falta de disposição, mas porque eles próprios não tinham clareza sobre o que era relevante para quem estava do outro lado. A cultura da empresa era de resolver o problema quando ele chegava, e mapear necessidade de forma antecipada não fazia parte do repertório.',
-          'Como esperar não era opção, fui atrás da informação onde ela existia. Vasculhei a documentação dos sistemas de cada solução e montei uma base provisória do que poderia ser exibido, para que houvesse algo concreto sobre o que discutir. Era um rascunho, e foi assumido como tal. O refinamento ficou em aberto, dependendo de um envolvimento das áreas que o projeto não conseguiu destravar.',
-          'O mesmo padrão apareceu na central de ajuda. A necessidade era evidente desde a pesquisa, com dúvidas recorrentes sobre apólices e boletos, mas não havia registro estruturado dessas demandas para partir de algum lugar.',
-        ],
-        en: [
-          'The hardest question in the project was which data from each service actually matters to the customer. Insurance, logistics, risk and claims generate information in different volumes and of different kinds, and the answer sat with the managers of each area.',
-          'It never came. Not for lack of willingness, but because they had no clear view themselves of what mattered to the person on the other side. The company culture was built around solving problems as they arrived, and mapping needs ahead of time was not part of how it operated.',
-          'Since waiting was not an option, I went after the information where it did exist. I worked through the system documentation for each service and put together a provisional set of what could be displayed, so there would be something concrete to discuss. It was a draft, and it was treated as one. Refining it stayed open, dependent on an involvement from those areas that the project never managed to unlock.',
-          'The same pattern showed up in the help centre. The need was clear from the research, with recurring questions about policies and invoices, but there was no structured record of those requests to start from.',
-        ],
-      },
+      items: [
+        {
+          title: { pt: 'Definição dos dados', en: 'Defining the data' },
+          paragraphs: {
+            pt: [
+              'A questão central do projeto era definir quais dados de cada solução eram relevantes para o cliente. Seguros, logística, risco e sinistros geram informações de naturezas e volumes muito diferentes, e essa definição dependia dos gestores de cada área.',
+              'Essa resposta não veio. Não por falta de disposição, mas porque as próprias áreas não tinham clareza sobre o que era relevante do ponto de vista do cliente. A cultura da empresa era reativa, voltada a resolver demandas à medida que surgiam, e o mapeamento antecipado de necessidades não fazia parte da rotina.',
+            ],
+            en: [
+              'The central question of the project was which data from each service mattered to the customer. Insurance, logistics, risk and claims generate information of very different kinds and volumes, and that definition depended on the managers of each area.',
+              "That answer never came. Not for lack of willingness, but because the areas themselves had no clear view of what mattered from the customer's perspective. The company culture was reactive, focused on solving requests as they arrived, and mapping needs in advance was not part of the routine.",
+            ],
+          },
+        },
+        {
+          title: { pt: 'Uma base provisória para destravar o projeto', en: 'A provisional base to unblock the project' },
+          paragraphs: {
+            pt: [
+              'Para não paralisar o projeto, busquei a informação onde ela já existia. Analisei a documentação dos sistemas de cada solução e estruturei uma base provisória do que poderia ser exibido, cruzando o que estava disponível nos sistemas com o que os clientes tinham relatado nas entrevistas do projeto do ecossistema. Assim, criei um ponto de partida concreto para as discussões. A base foi apresentada e assumida como rascunho, e o refinamento dependia de um envolvimento das áreas que o projeto não chegou a obter.',
+            ],
+            en: [
+              'To keep the project moving, I looked for the information where it already existed. I reviewed the system documentation for each service and structured a provisional set of what could be displayed, cross referencing what was available in the systems with what customers had reported in the ecosystem project interviews. This created a concrete starting point for discussion. It was presented and accepted as a draft, and refining it depended on an involvement from the areas that the project never secured.',
+            ],
+          },
+        },
+        {
+          title: { pt: 'Organização do atendimento', en: 'Organising support' },
+          paragraphs: {
+            pt: [
+              'A central de ajuda seguiu o mesmo padrão. A necessidade era clara desde a pesquisa, com dúvidas recorrentes sobre apólices e boletos, mas não havia um registro estruturado dessas demandas que servisse de ponto de partida.',
+            ],
+            en: [
+              'The help centre followed the same pattern. The need was clear from the research, with recurring questions about policies and invoices, but there was no structured record of those requests to start from.',
+            ],
+          },
+        },
+      ],
     },
 
+    // Decisoes
     {
-      type: 'text',
-      heading: { pt: 'Escolhas do projeto', en: 'Project decisions' },
-      paragraphs: {
-        pt: [
-          'A biblioteca de componentes não foi construída do zero. Junto ao PM, definimos uma biblioteca de mercado e adaptei a identidade da Apisul sobre ela, o que reduziu o tempo de desenvolvimento com um time pequeno. Trabalhei seis meses no projeto, com um desenvolvedor e um PO, e foi ao longo desse período que o escopo mostrou o que faltava.',
-          'A área administrativa não estava prevista. Ela apareceu durante o desenvolvimento, quando ficou claro que o Portal precisava de alguém do outro lado gerenciando o que aparece: quais notificações são enviadas, quais perguntas entram no FAQ, quais oportunidades são exibidas e qual a situação de cada cliente.',
-          'As oportunidades responderam a um objetivo de negócio explícito. A Apisul queria ampliar cross-sell e upsell, e o Portal permitia apresentar uma solução no contexto dos dados da operação do próprio cliente. Alguém que contrata seguros e não contrata logística vê a proposta enquanto olha os próprios números, não em uma ligação comercial.',
-          'Também investiguei a frente de atendimento automatizado. Como o WhatsApp era o principal canal entre a Apisul e os clientes, buscamos uma empresa de chatbots para entender o que seria possível. Desenhei o fluxo e levantei referências de mercado para embasar a conversa.',
-        ],
-        en: [
-          'The component library was not built from scratch. Together with the PM we chose an existing one and I adapted Apisul branding onto it, which cut development time for a small team. I spent six months on the project with one developer and a PO, and it was over that time that the scope revealed what was missing.',
-          'The admin area was never in the plan. It appeared during development, once it became clear the Portal needed someone on the other side managing what shows up: which notifications go out, which questions make it into the FAQ, which offers are displayed and where each customer stands.',
-          'The offers answered an explicit business goal. Apisul wanted to grow cross sell and upsell, and the Portal made it possible to present a service in the context of the customer own operational data. Someone who buys insurance but not logistics sees the offer while looking at their own numbers, rather than on a sales call.',
-          'I also explored automated support. WhatsApp was the main channel between Apisul and its customers, so we approached a chatbot company to understand what was feasible. I designed the flow and gathered market references to ground the conversation.',
-        ],
-      },
+      type: 'decisions',
+      heading: { pt: 'Decisões do projeto', en: 'Project decisions' },
+      items: [
+        {
+          title: { pt: 'Uma biblioteca de mercado como base', en: 'An existing library as the foundation' },
+          paragraphs: {
+            pt: [
+              'Em vez de construir a biblioteca de componentes do zero, definimos com o PM uma biblioteca de mercado, sobre a qual adaptei a identidade visual da Apisul. A escolha reduziu o tempo de desenvolvimento, um fator decisivo para um time enxuto.',
+            ],
+            en: [
+              'Rather than building the component library from scratch, the product manager and I chose an existing one, onto which I adapted the Apisul visual identity. The choice reduced development time, a decisive factor for a lean team.',
+            ],
+          },
+        },
+        {
+          title: { pt: 'Uma área administrativa fora do escopo inicial', en: 'An admin area outside the initial scope' },
+          paragraphs: {
+            pt: [
+              'Durante o desenvolvimento, ficou claro que o Portal precisava de uma gestão do lado da Apisul: definir quais notificações seriam enviadas, quais perguntas entrariam no FAQ, quais oportunidades seriam exibidas e qual era a situação de cada cliente. A área administrativa foi incorporada ao escopo para atender a essa necessidade.',
+            ],
+            en: [
+              'During development, it became clear that the Portal needed to be managed on the Apisul side: deciding which notifications to send, which questions to include in the FAQ, which offers to display and where each customer stood. The admin area was added to the scope to meet that need.',
+            ],
+          },
+        },
+        {
+          title: { pt: 'Oportunidades no contexto dos dados', en: 'Offers in the context of the data' },
+          paragraphs: {
+            pt: [
+              'As oportunidades atendiam a um objetivo de negócio explícito: ampliar o cross sell e o upsell. O Portal permitia apresentar uma solução no contexto dos dados da operação do próprio cliente. Assim, quem contrata seguros, mas não contrata logística, conhece a proposta enquanto acompanha os próprios números, e não em uma ligação comercial.',
+            ],
+            en: [
+              "The offers served an explicit business goal: growing cross sell and upsell. The Portal made it possible to present a service in the context of the customer's own operational data. A customer who buys insurance but not logistics sees the offer while reviewing their own numbers, rather than on a sales call.",
+            ],
+          },
+        },
+        {
+          title: { pt: 'Atendimento automatizado', en: 'Automated support' },
+          paragraphs: {
+            pt: [
+              'Como o WhatsApp era o principal canal de contato entre a Apisul e os clientes, buscamos uma empresa especializada em chatbots para avaliar o que seria viável. Desenhei o fluxo de atendimento e reuni referências de mercado para embasar a conversa.',
+            ],
+            en: [
+              'Since WhatsApp was the main channel between Apisul and its customers, we approached a company specialising in chatbots to assess what was feasible. I designed the support flow and gathered market references to inform the discussion.',
+            ],
+          },
+        },
+      ],
     },
 
+    // Telas
     {
       type: 'carousel',
       images: [
@@ -96,7 +200,7 @@ export const apisulPortal: CaseData = {
           src: imgOportunidade,
           alt: {
             pt: 'Banner de oportunidade apresentando uma solução da Apisul dentro dos dados da operação do cliente.',
-            en: 'Offer banner presenting an Apisul service within the customer own operational data.',
+            en: "Offer banner presenting an Apisul service within the customer's own operational data.",
           },
         },
         {
@@ -109,19 +213,37 @@ export const apisulPortal: CaseData = {
       ],
     },
 
+    // Resultados
     {
-      type: 'text',
-      heading: { pt: 'Resultados e aprendizados', en: 'Results and learnings' },
-      paragraphs: {
-        pt: [
-          'Saí da Apisul antes do lançamento, então não acompanhei a adoção. A entrega foi o desenho do produto, a definição de quais dados deveriam ser buscados em cada solução, a área administrativa e a base para o atendimento automatizado.',
-          'Três indicadores responderiam se o Portal funcionou. O volume de solicitações de boleto e apólice recebidas por gerentes de conta, comparado ao período anterior. O número de contatos por WhatsApp com dúvidas básicas sobre apólice e boleto, que a Apisul já registrava e poderia comparar antes e depois. E, nas oportunidades, a taxa de clique e a conversão em contratação por tipo de solução, que era a hipótese de cross-sell.',
-        ],
-        en: [
-          'I left Apisul before launch, so I never saw the Portal in use. What I delivered was the product design, a definition of which data should be pulled from each service, the admin area and the groundwork for automated support.',
-          'Three measures would answer whether it worked. The volume of invoice and policy requests reaching account managers, compared against the period before launch. The number of WhatsApp messages asking basic questions about policies and invoices, which Apisul already logged and could compare before and after. And for the offers, click through and conversion into a signed service, which was the cross sell hypothesis.',
-        ],
+      type: 'cards',
+      heading: { pt: 'Resultados', en: 'Results' },
+      intro: {
+        pt: 'Deixei a Apisul antes do lançamento, quando a área administrativa estava em desenvolvimento, e por isso não acompanhei a adoção do Portal. Minhas entregas foram o desenho do produto, a definição dos dados de cada solução, a área administrativa e a base para o atendimento automatizado. Para acompanhar o resultado após o lançamento, deixei definidos três indicadores.',
+        en: "I left Apisul before launch, while the admin area was being developed, so I did not follow the adoption of the Portal. My deliverables were the product design, the definition of each service's data, the admin area and the groundwork for automated support. To track the outcome after launch, I defined three measures.",
       },
+      items: [
+        {
+          label: { pt: 'Solicitações aos gerentes de conta', en: 'Requests to account managers' },
+          text: {
+            pt: 'Volume de pedidos de boletos e apólices recebidos pelos gerentes de conta, comparado ao período anterior ao lançamento.',
+            en: 'Volume of invoice and policy requests received by account managers, compared with the period before launch.',
+          },
+        },
+        {
+          label: { pt: 'Dúvidas por WhatsApp', en: 'Questions over WhatsApp' },
+          text: {
+            pt: 'Número de contatos com dúvidas básicas sobre apólices e boletos, que a Apisul já registrava e poderia comparar antes e depois.',
+            en: 'Number of messages with basic questions about policies and invoices, which Apisul already logged and could compare before and after.',
+          },
+        },
+        {
+          label: { pt: 'Conversão das oportunidades', en: 'Offer conversion' },
+          text: {
+            pt: 'Taxa de clique e de contratação por tipo de solução, para validar a hipótese de cross sell.',
+            en: 'Click through and purchase rate by type of service, to validate the cross sell hypothesis.',
+          },
+        },
+      ],
     },
   ],
 };
