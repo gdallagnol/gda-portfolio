@@ -58,8 +58,8 @@ export const maisNitido: CaseData = {
         {
           label: { pt: 'Contexto', en: 'Context' },
           text: {
-            pt: 'Programas de treinamento corporativo entregam conteúdo padronizado e pouco aderente à realidade de cada profissional.',
-            en: 'Corporate training programmes deliver standardised content that rarely fits the reality of each professional.',
+            pt: 'Treinamentos corporativos tendem a ser padronizados. O Mais Nítido conecta profissionais a mentores por compatibilidade, para tornar o aprendizado mais assertivo.',
+            en: 'Corporate training tends to be standardised. Mais Nítido connects professionals with mentors by compatibility, to make learning more effective.',
           },
         },
         {

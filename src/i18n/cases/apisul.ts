@@ -91,11 +91,11 @@ export const apisul: CaseData = {
       paragraphs: {
         pt: [
           'O Grupo Apisul oferece soluções em seguros, gerenciamento de risco, logística, meios de pagamento e sinistros. Cada uma está em uma plataforma diferente, o que torna mais complexas a contratação e a implantação e dispersa os dados dos clientes.',
-          'Para a empresa, essa separação tinha dois custos. Ficava difícil oferecer uma nova solução a quem já era cliente de outra, o que limitava o cross sell e o upsell. E a contratação dependia do atendimento comercial, um modelo que não alcançava pequenas transportadoras e autônomos.',
+          'Para a empresa, essa separação tinha dois custos. Ficava difícil oferecer uma nova solução a quem já era cliente de outra, o que limitava o cross sell e o upsell. E a contratação acontecia apenas pelo atendimento comercial, sem um canal digital que o complementasse para alcançar autônomos e oferecer às pequenas transportadoras uma solução mais direcionada ao seu porte.',
         ],
         en: [
           'Grupo Apisul offers insurance, risk management, logistics, payments and claims services. Each one runs on a separate platform, which makes purchasing and implementation more complex and scatters customer data.',
-          'For the business, that separation had two costs. It was hard to offer a new service to someone already using another, which limited cross sell and upsell. And purchasing depended on the sales team, a model that could not reach small carriers and independent drivers.',
+          'For the business, that separation had two costs. It was hard to offer a new service to someone already using another, which limited cross sell and upsell. And purchasing happened only through the sales team, with no digital channel to complement it, reach independent drivers and offer small carriers a solution better suited to their size.',
         ],
       },
     },
@@ -271,8 +271,8 @@ export const apisul: CaseData = {
           icon: 'user-check',
           title: { pt: 'Ampliar a autonomia do cliente', en: 'Give customers more autonomy' },
           text: {
-            pt: 'Permitir que o cliente gerisse a própria operação de forma independente, incluindo a implantação de dados e a contratação automatizada via site, o que abria caminho para atender pequenas transportadoras e autônomos sem depender de atendimento comercial.',
-            en: 'Enable customers to manage their own operation independently, including uploading their own data and purchasing online. This also created a path to serve small carriers and independent drivers, a segment the traditional sales model could not reach economically.',
+            pt: 'Permitir que o cliente gerisse a própria operação de forma independente, incluindo a implantação de dados e a contratação automatizada via site, o que abria caminho para atender autônomos e pequenas transportadoras com uma jornada digital, complementar ao atendimento comercial.',
+            en: 'Enable customers to manage their own operation independently, including uploading their own data and purchasing online. This also created a path to serve independent drivers and small carriers through a digital journey that complements the sales team.',
           },
         },
       ],
@@ -280,18 +280,31 @@ export const apisul: CaseData = {
 
     {
       type: 'decisions',
-      heading: { pt: 'Escopo do protótipo', en: 'Prototype scope' },
+      heading: { pt: 'Decisões do projeto', en: 'Project decisions' },
       items: [
         {
           title: { pt: 'Um protótipo para apoiar uma decisão', en: 'A prototype to support a decision' },
           paragraphs: {
             pt: [
-              'Unificar as cinco soluções em uma única plataforma era uma decisão de negócio, e cabia aos acionistas. Por isso, o protótipo não foi pensado para ser desenvolvido, e sim para mostrar a proposta de forma concreta na apresentação a eles.',
-              'Isso definiu o nível de acabamento e o que precisava ser validado antes da apresentação. Preparei um relatório completo da pesquisa, uma versão executiva e o pitch deck, e apresentei o protótipo aos acionistas em reunião.',
+              'Unificar as cinco soluções em uma única plataforma era uma decisão de grande porte: envolvia muitas regras de negócio, um esforço e um investimento significativos e uma mudança brusca no modelo de negócio. Em vez de partir direto para a construção, o projeto buscava tornar a proposta visível, para que os acionistas pudessem avaliá-la antes de investir.',
+              'Esse objetivo definiu o nível de acabamento do protótipo e o que precisava ser validado antes da apresentação. Também definiu o formato da entrega: além do protótipo, preparei um relatório completo da pesquisa, uma versão executiva e o pitch deck, e apresentei a proposta aos acionistas em reunião.',
             ],
             en: [
-              'Unifying the five services into a single platform was a business decision, and it belonged to the shareholders. So the prototype was not designed to be built, but to show the proposal in concrete form when it was presented to them.',
-              'That set the level of finish and what needed to be validated before the presentation. I prepared a full research report, an executive version and the pitch deck, and presented the prototype to the shareholders in a meeting.',
+              'Unifying the five services into a single platform was a major decision: it involved many business rules, significant effort and investment, and an abrupt change to the business model. Rather than moving straight to building it, the project set out to make the proposal visible, so the shareholders could assess it before investing.',
+              'That goal set the level of finish of the prototype and what needed to be validated before the presentation. It also shaped the deliverable: alongside the prototype, I prepared a full research report, an executive version and the pitch deck, and presented the proposal to the shareholders in a meeting.',
+            ],
+          },
+        },
+        {
+          title: { pt: 'Uma arquitetura organizada pelo que o cliente gerencia', en: 'An architecture organised around what the customer manages' },
+          paragraphs: {
+            pt: [
+              'Nas sessões presenciais de inception com o cliente, dedicadas a debater funcionalidades e ideias, surgiu a proposta de organizar a plataforma por aquilo a que cada solução se destina, ou seja, veículos, cargas e pessoas, e não pelo nome dos produtos, como seguros, gerenciamento de risco e logística.',
+              'Com isso, o cliente encontra o que precisa a partir do que gerencia na própria operação. Essa lógica foi aplicada à arquitetura de informação do protótipo: ao menu e à organização das telas.',
+            ],
+            en: [
+              'In the in person inception sessions with the client, dedicated to discussing features and ideas, the proposal emerged to organise the platform around what each service is for, namely vehicles, cargo and people, rather than around product names such as insurance, risk management and logistics.',
+              "Customers find what they need starting from what they manage in their own operation. This logic was applied to the prototype's information architecture: the menu and the organisation of the screens.",
             ],
           },
         },
@@ -325,8 +338,8 @@ export const apisul: CaseData = {
         {
           label: { pt: 'Contratação online', en: 'Online purchase' },
           text: {
-            pt: 'A jornada que permite a pequenas transportadoras e autônomos contratar sem passar pelo atendimento comercial. Surgiu das entrevistas com fundadores de insurtechs e dos dados de mercado, que apontavam para a contratação digital sem intermediação.',
-            en: 'The journey that lets small carriers and independent drivers buy without going through the sales team. It came from the insurtech interviews and the market data, both pointing toward digital purchasing without intermediaries.',
+            pt: 'Uma jornada digital de contratação, pensada para autônomos e pequenas transportadoras, como canal complementar ao atendimento comercial. Surgiu das entrevistas com fundadores de insurtechs e dos dados de mercado, que apontavam para a contratação digital sem intermediação.',
+            en: 'A digital purchase journey designed for independent drivers and small carriers, as a channel that complements the sales team. It came from the insurtech interviews and the market data, both pointing toward digital purchasing without intermediaries.',
           },
           screens: [
             {
