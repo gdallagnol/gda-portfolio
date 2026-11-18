@@ -99,23 +99,23 @@ export const apisulPortal: CaseData = {
           title: { pt: 'Definição dos dados', en: 'Defining the data' },
           paragraphs: {
             pt: [
-              'A questão central do projeto era definir quais dados de cada solução eram relevantes para o cliente. Seguros, logística, risco e sinistros geram informações de naturezas e volumes muito diferentes, e essa definição dependia dos gestores de cada área.',
-              'Essa resposta não veio. Não por falta de disposição, mas porque as próprias áreas não tinham clareza sobre o que era relevante do ponto de vista do cliente. A cultura da empresa era reativa, voltada a resolver demandas à medida que surgiam, e o mapeamento antecipado de necessidades não fazia parte da rotina.',
+              'A questão central do projeto era definir quais dados de cada solução eram relevantes para o cliente. Seguros, logística, risco e sinistros geram informações de naturezas e volumes muito diferentes, e essa definição envolvia os gestores de cada área.',
+              'Como as equipes estavam concentradas na operação do dia a dia, ainda não existia um mapeamento do que era mais relevante do ponto de vista do cliente. Essa definição precisaria ser construída ao longo do próprio projeto.',
             ],
             en: [
-              'The central question of the project was which data from each service mattered to the customer. Insurance, logistics, risk and claims generate information of very different kinds and volumes, and that definition depended on the managers of each area.',
-              "That answer never came. Not for lack of willingness, but because the areas themselves had no clear view of what mattered from the customer's perspective. The company culture was reactive, focused on solving requests as they arrived, and mapping needs in advance was not part of the routine.",
+              'The central question of the project was which data from each service mattered to the customer. Insurance, logistics, risk and claims generate information of very different kinds and volumes, and that definition involved the managers of each area.',
+              "With the teams focused on day to day operations, there was not yet a map of what mattered most from the customer's perspective. That definition would need to be built during the project itself.",
             ],
           },
         },
         {
-          title: { pt: 'Uma base provisória para destravar o projeto', en: 'A provisional base to unblock the project' },
+          title: { pt: 'Uma base provisória como ponto de partida', en: 'A provisional base as a starting point' },
           paragraphs: {
             pt: [
-              'Para não paralisar o projeto, busquei a informação onde ela já existia. Analisei a documentação dos sistemas de cada solução e estruturei uma base provisória do que poderia ser exibido, cruzando o que estava disponível nos sistemas com o que os clientes tinham relatado nas entrevistas do projeto do ecossistema. Assim, criei um ponto de partida concreto para as discussões. A base foi apresentada e assumida como rascunho, e o refinamento dependia de um envolvimento das áreas que o projeto não chegou a obter.',
+              'Para dar andamento ao projeto, busquei a informação onde ela já existia. Analisei a documentação dos sistemas de cada solução e estruturei uma base provisória do que poderia ser exibido, cruzando o que estava disponível nos sistemas com o que os clientes tinham relatado nas entrevistas do projeto do ecossistema. Assim, criei um ponto de partida concreto para as discussões. A base foi apresentada como rascunho, com o refinamento previsto para as etapas seguintes, junto com as áreas.',
             ],
             en: [
-              'To keep the project moving, I looked for the information where it already existed. I reviewed the system documentation for each service and structured a provisional set of what could be displayed, cross referencing what was available in the systems with what customers had reported in the ecosystem project interviews. This created a concrete starting point for discussion. It was presented and accepted as a draft, and refining it depended on an involvement from the areas that the project never secured.',
+              'To move the project forward, I looked for the information where it already existed. I reviewed the system documentation for each service and structured a provisional set of what could be displayed, cross referencing what was available in the systems with what customers had reported in the ecosystem project interviews. This created a concrete starting point for discussion. It was presented as a draft, with refinement planned for the following stages, together with the areas.',
             ],
           },
         },
@@ -123,10 +123,10 @@ export const apisulPortal: CaseData = {
           title: { pt: 'Organização do atendimento', en: 'Organising support' },
           paragraphs: {
             pt: [
-              'A central de ajuda seguiu o mesmo padrão. A necessidade era clara desde a pesquisa, com dúvidas recorrentes sobre apólices e boletos, mas não havia um registro estruturado dessas demandas que servisse de ponto de partida.',
+              'A central de ajuda seguiu o mesmo padrão. A necessidade era clara desde a pesquisa, com dúvidas recorrentes sobre apólices e boletos, e essas demandas ainda não tinham um registro estruturado, o que tornou o ponto de partida mais exploratório.',
             ],
             en: [
-              'The help centre followed the same pattern. The need was clear from the research, with recurring questions about policies and invoices, but there was no structured record of those requests to start from.',
+              'The help centre followed the same pattern. The need was clear from the research, with recurring questions about policies and invoices, and those requests did not yet have a structured record, which made the starting point more exploratory.',
             ],
           },
         },
