@@ -1,0 +1,89 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '@layouts/Layout.astro';
+import About from '@components/About.astro';
+import Container from '@components/Container.astro';
+import GlassKnot from '@components/GlassKnot.astro';
+import { Tabs } from '@components/Tabs';
+import glassKnotStill from '@assets/glass-knot.webp';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// linha 1: primeira parte da frase sem a última palavra
+const firstPart = `${t('home.title.1')} ${t('home.title.2')}`.trim();
+const cut = firstPart.lastIndexOf(' ');
+const line1 = firstPart.slice(0, cut);
+const carry = firstPart.slice(cut + 1);
+
+// linhas 2 e 3: as duas últimas palavras ficam sempre juntas na linha 3
+const restWords = t('home.title.3').trim().split(/\s+/);
+const line3 = restWords.slice(-2).join(' ');
+const line2Rest = restWords.slice(0, -2).join(' ');
+---
+
+<Layout title={lang === 'pt' ? "Gabi Dall'Agnol | Product Designer, UX Research e Service Design" : "Gabi Dall'Agnol | Product Designer, UX Research and Service Design"}>
+  <Container>
+    <section class="hero relative mb-12 md:-mt-12 lg:-mt-16">
+      <h1
+        class="relative z-10 text-[2rem] leading-[2.5rem] text-cold-gray font-light md:text-[2.5rem] md:leading-[3.5rem] lg:text-[4rem] lg:leading-[5rem]"
+      >
+        <span class="reveal block" style="--d:0ms">{line1}</span>
+        <span class="reveal block" style="--d:120ms">{carry} {line2Rest}</span>
+        <span class="reveal block whitespace-nowrap" style="--d:240ms">{line3}</span>
+      </h1>
+
+      <!-- Celular e tablet: imagem do vidro, leve e sem 3D -->
+      <div class="settle mt-6 ml-auto w-[55vw] max-w-[14rem] md:-mt-10 md:max-w-[16rem] xl:hidden" aria-hidden="true">
+        <Image
+          src={glassKnotStill}
+          alt=""
+          widths={[320, 520]}
+          sizes="(min-width: 768px) 16rem, 55vw"
+          class="glass-float block h-auto w-full"
+          loading="eager"
+        />
+      </div>
+
+      <!-- Desktop: vidro 3D -->
+      <div class="hero-glass hidden xl:block" aria-hidden="true">
+        <div class="settle">
+          <GlassKnot />
+        </div>
+      </div>
+    </section>
+
+    <main class="relative z-10 md:mt-16">
+      <Tabs client:load lang={lang} />
+    </main>
+  </Container>
+
+  <About />
+</Layout>
+
+<style is:global>
+  .hero-glass {
+    position: absolute;
+    right: -3rem;
+    top: 54%;
+    transform: translateY(-50%);
+    width: min(32rem, calc((100% - 52rem) * 1.55));
+    pointer-events: none;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: none; }
+  }
+  @keyframes settle {
+    from { opacity: 0; transform: scale(.96); }
+    to   { opacity: 1; transform: none; }
+  }
+  .reveal { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; animation-delay: var(--d, 0ms); }
+  .settle { animation: settle 1.4s cubic-bezier(.2,.7,.2,1) both; animation-delay: .3s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .settle { animation: none; }
+  }
+</style>

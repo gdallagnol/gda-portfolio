@@ -1,0 +1,31 @@
+---
+---
+<div class="glass-knot" id="glass-knot" aria-hidden="true"></div>
+
+<style>
+  .glass-knot { position: relative; width: 100%; aspect-ratio: 1; pointer-events: none; }
+  /* O 3D entra com um fade suave assim que o primeiro quadro fica pronto. */
+  .glass-knot :global(canvas) {
+    position: absolute; inset: 0; width: 100%; height: 100%; display: block;
+    opacity: 0; transform: scale(0.97);
+    transition: opacity 0.7s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .glass-knot.is-live :global(canvas) { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .glass-knot :global(canvas) { transition: none; transform: none; }
+  }
+</style>
+
+<script>
+  // O 3D so existe em telas grandes; no celular e no tablet nada e baixado.
+  const host = document.getElementById('glass-knot');
+  const largeScreen = window.matchMedia('(min-width: 1280px)').matches;
+
+  // Vidro do topo da home: comeca a carregar o 3D imediatamente, sem esperar a rolagem.
+  if (host && largeScreen) {
+    import('../lib/glassSculpture.js').then(({ mountSculpture }) => {
+      mountSculpture(host, 'knot');
+      requestAnimationFrame(() => requestAnimationFrame(() => host.classList.add('is-live')));
+    });
+  }
+</script>

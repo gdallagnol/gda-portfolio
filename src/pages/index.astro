@@ -1,0 +1,106 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '@layouts/Layout.astro';
+import About from '@components/About.astro';
+import Container from '@components/Container.astro';
+import GlassKnot from '@components/GlassKnot.astro';
+import { Tabs } from '@components/Tabs';
+import glassKnotStill from '@assets/glass-knot.webp';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// linha 1: primeira parte da frase sem a última palavra
+const firstPart = `${t('home.title.1')} ${t('home.title.2')}`.trim();
+const cut = firstPart.lastIndexOf(' ');
+const line1 = firstPart.slice(0, cut);
+const carry = firstPart.slice(cut + 1);
+
+// linhas 2 e 3: as duas últimas palavras ficam sempre juntas na linha 3
+const restWords = t('home.title.3').trim().split(/\s+/);
+const line3 = restWords.slice(-2).join('\u00A0'); // espaço inseparável: nunca quebra entre as duas
+const line2Rest = restWords.slice(0, -2).join(' ');
+---
+
+<Layout title={lang === 'pt' ? "Gabi Dall'Agnol | Product Designer, UX Research e Service Design" : "Gabi Dall'Agnol | Product Designer, UX Research and Service Design"}>
+  <Container>
+    <section class="hero relative mb-12 md:-mt-12 lg:-mt-16">
+      <h1
+        class="relative z-10 text-[2rem] leading-[2.5rem] text-cold-gray font-light md:text-[2.5rem] md:leading-[3.5rem] lg:text-[4rem] lg:leading-[5rem]"
+      >
+        <!-- No celular o texto corre livre (quebra natural); a partir do tablet, três linhas fixas. -->
+        <span class="reveal md:block" style="--d:0ms">{line1}</span>{' '}
+        <span class="reveal md:block" style="--d:120ms">{carry} {line2Rest}</span>{' '}
+        <span class="reveal md:block" style="--d:240ms">{line3}</span>
+      </h1>
+
+      <!-- Celular: o vidro fica por tras da frase, a direita, suave, como fundo. -->
+      <div
+        class="pointer-events-none absolute -right-4 top-1/2 w-[13rem] -translate-y-1/2 opacity-60 md:hidden"
+        aria-hidden="true"
+      >
+        <Image
+          src={glassKnotStill}
+          alt=""
+          widths={[320, 480]}
+          sizes="13rem"
+          class="glass-float block h-auto w-full"
+          loading="eager"
+        />
+      </div>
+
+      <!-- Tablet: o vidro fica ao lado da ultima linha, no espaco livre a direita. -->
+      <div
+        class="settle pointer-events-none absolute -right-2 -bottom-32 hidden w-[14rem] md:block lg:w-[15rem] xl:hidden"
+        aria-hidden="true"
+      >
+        <Image
+          src={glassKnotStill}
+          alt=""
+          widths={[320, 480]}
+          sizes="(min-width: 1024px) 15rem, 14rem"
+          class="glass-float block h-auto w-full"
+          loading="eager"
+        />
+      </div>
+
+      <!-- Desktop: vidro 3D -->
+      <div class="hero-glass hidden xl:block" aria-hidden="true">
+        <GlassKnot />
+      </div>
+    </section>
+
+    <main class="relative z-10 md:mt-16">
+      <Tabs client:load lang={lang} />
+    </main>
+  </Container>
+
+  <About />
+</Layout>
+
+<style is:global>
+  .hero-glass {
+    position: absolute;
+    right: -3rem;
+    top: 90%;
+    transform: translateY(-50%);
+    width: min(32rem, calc((100% - 52rem) * 1.55));
+    pointer-events: none;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: none; }
+  }
+  @keyframes settle {
+    from { opacity: 0; transform: scale(.96); }
+    to   { opacity: 1; transform: none; }
+  }
+  .reveal { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; animation-delay: var(--d, 0ms); }
+  .settle { animation: settle .9s cubic-bezier(.2,.7,.2,1) both; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .settle { animation: none; }
+  }
+</style>

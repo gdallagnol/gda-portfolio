@@ -1,0 +1,131 @@
+---
+import { Image } from 'astro:assets';
+import photo from '@assets/img-gabi.webp';
+import logoNimble from '@assets/companies/nimble.webp';
+import logoNomade from '@assets/companies/nomade.webp';
+import logoMatriz from '@assets/companies/matriz.webp';
+import logoDf2 from '@assets/companies/df2.webp';
+import logoOrium from '@assets/companies/orium.webp';
+import glassRibbonStill from '@assets/glass-ribbon.webp';
+import GlassRibbon from '@components/GlassRibbon.astro';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import { about } from '@i18n/about';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const c = about[lang];
+
+// título da seção de serviços
+const impactTitle = lang === 'pt' ? 'Onde e como eu atuo?' : 'How I work';
+
+const experience = [
+  { role: c.roles.service, logo: logoNimble, company: 'Nimble Evolution', period: `2025 — ${c.period.current}` },
+  { role: c.roles.product, logo: logoNomade, company: 'Nômade Code', period: '2021 — 2025' },
+  { role: c.roles.designerAd, logo: logoMatriz, company: 'Agência Matriz', period: '2018 — 2021' },
+  { role: c.roles.designer, logo: logoDf2, company: 'DF2 Design', period: '2017 — 2018' },
+  { role: c.roles.ad, logo: logoOrium, company: 'Orium Data-Driven Marketing', period: '2016 — 2017' },
+];
+---
+
+<div class="bg-lilac-blue text-blue-black py-20 mt-20">
+  <!-- espaçamento único entre as seções: 5rem no celular, 7rem em telas grandes -->
+  <div class="container mx-auto px-6 lg:px-14 2xl:px-36 flex flex-col gap-20 xl:gap-28">
+
+    <!-- Sobre -->
+    <section class="xl:flex">
+      <div class="xl:basis-1/2">
+        <h2 class="text-2xl">{t('about.title')}</h2>
+
+        <div class="max-w-80">
+          <img src={photo.src} alt={c.photoAlt} class="mt-10 max-h-72" />
+          <p class="text-blue-black text-xl font-light mt-10">{t('about.greeting')}</p>
+        </div>
+      </div>
+
+      <div class="mt-10 space-y-5 xl:mt-0 xl:basis-1/2">
+        {c.paragraphs.map((paragraph) => <p class="text-blue-black font-light leading-7 max-w-[68ch]">{paragraph}</p>)}
+      </div>
+    </section>
+
+    <!-- Onde e como eu atuo -->
+    <section class="space-y-10 xl:flex xl:space-y-0">
+      <div class="relative xl:basis-1/2">
+        <h3 class="relative z-10 text-2xl">{impactTitle}</h3>
+
+        <!-- Celular e tablet: a fita fica ao lado do titulo, no espaco livre a direita.
+             Nao cria um bloco vazio antes dos servicos. -->
+        <div
+          class="glass-float pointer-events-none absolute -right-4 -top-12 w-[10rem] md:-right-2 md:-top-14 md:w-[13rem] xl:hidden"
+          aria-hidden="true"
+        >
+          <Image
+            src={glassRibbonStill}
+            alt=""
+            widths={[320, 420]}
+            sizes="(min-width: 768px) 13rem, 10rem"
+            class="block h-auto w-full"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Desktop: fita 3D flutuante, não ocupa espaço no layout -->
+        <div
+          class="hidden xl:block"
+          aria-hidden="true"
+          style="position: absolute; left: 3rem; top: calc(50% + 7rem); transform: translateY(-50%); width: 38rem; pointer-events: none;"
+        >
+          <GlassRibbon />
+        </div>
+      </div>
+
+      <div class="relative z-10 space-y-10 xl:basis-1/2">
+        {
+          c.services.map((service) => (
+            <div class="space-y-2">
+              <p class="text-blue-black text-xl">{service.title}</p>
+              <p class="text-blue-black font-light leading-7 max-w-[68ch]">{service.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Experiência -->
+    <section class="relative z-10 space-y-7 xl:flex xl:space-y-0">
+      <h3 class="text-2xl xl:basis-1/2">{t('about.experience')}</h3>
+
+      <div class="space-y-10 xl:basis-1/2">
+        {
+          experience.map((item) => (
+            <div class="space-y-5">
+              <p class="text-xl font-light">{item.role}</p>
+              <div class="flex gap-5 items-center">
+                <img src={item.logo.src} alt="" class="h-8 hidden md:block" />
+                <p class="font-light text-blue-gray">
+                  {item.company} ({item.period})
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Formação -->
+    <section class="relative z-10 space-y-7 xl:flex xl:space-y-0">
+      <h3 class="text-2xl xl:basis-1/2">{t('about.education')}</h3>
+
+      <div class="space-y-10 xl:basis-1/2">
+        {
+          c.education.map((item) => (
+            <div class="space-y-5">
+              <p class="text-xl font-light">{item.title}</p>
+              <p class="font-light text-blue-gray">{item.years}</p>
+              <p class="font-light text-blue-gray">{item.school}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</div>
